@@ -83,6 +83,8 @@ class CTCPrefixScorer(BatchPartialScorerInterface):
         tscore = torch.as_tensor(
             presub_score - prev_score, device=x.device, dtype=x.dtype
         )
+        #ys = self.chardict[y[-1]] if y.shape[0] > 1 else None
+        #print(ys,ids,tscore,"cache scores")
         return tscore, (presub_score, new_st)
 
     def batch_init_state(self, x: torch.Tensor):

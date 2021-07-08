@@ -236,6 +236,7 @@ class Decoder(BatchScorerInterface, torch.nn.Module):
             self.output_layer = None
 
     def forward(self, tgt, tgt_mask, memory, memory_mask):
+        #print("in forward")
         """Forward decoder.
 
         :param torch.Tensor tgt: input token ids, int64 (batch, maxlen_out)
@@ -265,6 +266,8 @@ class Decoder(BatchScorerInterface, torch.nn.Module):
             x = self.after_norm(x)
         if self.output_layer is not None:
             x = self.output_layer(x)
+        #logging.info( "Shape x{}".format(x.shape))
+        #logging.info( "Shape mask {}".format(tgt_mask.shape))
         return x, tgt_mask
 
     def forward_one_step(self, tgt, tgt_mask, memory, cache=None):
@@ -281,6 +284,7 @@ class Decoder(BatchScorerInterface, torch.nn.Module):
             `y.shape` is (batch, maxlen_out, token)
         :rtype: Tuple[torch.Tensor, List[torch.Tensor]]
         """
+        #print("in forward")
         x = self.embed(tgt)
         if cache is None:
             cache = [None] * len(self.decoders)
@@ -297,7 +301,8 @@ class Decoder(BatchScorerInterface, torch.nn.Module):
             y = x[:, -1]
         if self.output_layer is not None:
             y = torch.log_softmax(self.output_layer(y), dim=-1)
-
+        #logging.info( "Shape x{}".format(x.shape))
+        #logging.info( "Shape mask {}".format(tgt_mask.shape))
         return y, new_cache
 
     # beam search API (see ScorerInterface)
