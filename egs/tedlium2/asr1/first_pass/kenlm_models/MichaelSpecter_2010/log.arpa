@@ -1,0 +1,45 @@
+# Input file: /exp/drumil/espnet/egs/tedlium2/asr1/first_pass/corrects/MichaelSpecter_2010
+# Token count: 165
+# Smoothing: Modified Kneser-Ney
+\data\
+ngram 1=36
+
+\1-grams:
+-2.133163	<unk>
+0	<s>
+-0.7787156	</s>
+-1.6014338	know
+-1.6014338	want
+-1.6014338	going
+-1.6014338	we're
+-1.6014338	right
+-1.6014338	that's
+-1.6014338	one
+-1.6014338	i'm
+-1.6014338	science
+-1.6014338	he's
+-1.6014338	around
+-1.6014338	get
+-1.6014338	polio
+-1.6014338	they're
+-1.6014338	billions
+-1.6014338	genetically
+-1.6014338	live
+-1.6014338	paul
+-1.6014338	vaccine
+-1.6014338	vaccines
+-1.6014338	dark
+-1.6014338	echinacea
+-1.6014338	fear
+-1.6014338	forward
+-1.6014338	guy
+-1.6014338	i've
+-1.6014338	mean
+-1.6014338	stop
+-1.6014338	thank
+-1.6014338	today
+-1.6014338	urine
+-1.6014338	would
+-1.6014338	anyone
+
+\end\

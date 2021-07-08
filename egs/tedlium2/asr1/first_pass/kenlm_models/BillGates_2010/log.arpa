@@ -1,0 +1,97 @@
+# Input file: /exp/drumil/espnet/egs/tedlium2/asr1/first_pass/corrects/BillGates_2010
+# Token count: 425
+# Smoothing: Modified Kneser-Ney
+\data\
+ngram 1=88
+
+\1-grams:
+-2.5364997	<unk>
+0	<s>
+-0.77823937	</s>
+-2.0101004	that's
+-2.0101004	two
+-2.0101004	one
+-2.0101004	need
+-2.0101004	people
+-2.0101004	co
+-2.0101004	going
+-2.0101004	know
+-2.0101004	actually
+-2.0101004	could
+-2.0101004	even
+-2.0101004	say
+-2.0101004	something
+-2.0101004	there's
+-2.0101004	thing
+-2.0101004	well
+-2.0101004	percent
+-2.0101004	billion
+-2.0101004	let's
+-2.0101004	waste
+-2.0101004	would
+-2.0101004	look
+-2.0101004	nuclear
+-2.0101004	work
+-2.0101004	much
+-2.0101004	kind
+-2.0101004	time
+-2.0101004	first
+-2.0101004	five
+-2.0101004	miracle
+-2.0101004	reactor
+-2.0101004	uh
+-2.0101004	us
+-2.0101004	we're
+-2.0101004	world
+-2.0101004	burn
+-2.0101004	i'm
+-2.0101004	problem
+-2.0101004	three
+-2.0101004	cost
+-2.0101004	done
+-2.0101004	effects
+-2.0101004	lots
+-2.0101004	natural
+-2.0101004	pilot
+-2.0101004	scale
+-2.0101004	see
+-2.0101004	today
+-2.0101004	trying
+-2.0101004	u
+-2.0101004	uranium
+-2.0101004	use
+-2.0101004	what's
+-2.0101004	year
+-2.0101004	almost
+-2.0101004	can't
+-2.0101004	coal
+-2.0101004	constraint
+-2.0101004	electricity
+-2.0101004	every
+-2.0101004	full
+-2.0101004	i've
+-2.0101004	mean
+-2.0101004	meet
+-2.0101004	process
+-2.0101004	r
+-2.0101004	term
+-2.0101004	who's
+-2.0101004	backing
+-2.0101004	create
+-2.0101004	environment
+-2.0101004	environmental
+-2.0101004	forward
+-2.0101004	funding
+-2.0101004	heart
+-2.0101004	including
+-2.0101004	live
+-2.0101004	maybe
+-2.0101004	per
+-2.0101004	plant
+-2.0101004	power
+-2.0101004	sixty
+-2.0101004	skeptics
+-2.0101004	sort
+-2.0101004	super
+
+\end\

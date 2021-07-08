@@ -1,0 +1,51 @@
+# Input file: /exp/drumil/espnet/egs/tedlium2/asr1/first_pass/corrects/DanielKahneman_2010
+# Token count: 195
+# Smoothing: Modified Kneser-Ney
+\data\
+ngram 1=42
+
+\1-grams:
+-2.2038484	<unk>
+0	<s>
+-0.77855885	</s>
+-1.6734353	self
+-1.6734353	think
+-1.6734353	know
+-1.6734353	one
+-1.6734353	two
+-1.6734353	get
+-1.6734353	vacation
+-1.6734353	experience
+-1.6734353	really
+-1.6734353	well
+-1.6734353	thousand
+-1.6734353	years
+-1.6734353	mean
+-1.6734353	selves
+-1.6734353	thank
+-1.6734353	week
+-1.6734353	worse
+-1.6734353	b
+-1.6734353	something
+-1.6734353	us
+-1.6734353	asked
+-1.6734353	colonoscopy
+-1.6734353	i've
+-1.6734353	large
+-1.6734353	present
+-1.6734353	say
+-1.6734353	they're
+-1.6734353	vacations
+-1.6734353	basically
+-1.6734353	cognitive
+-1.6734353	completely
+-1.6734353	gallup
+-1.6734353	go
+-1.6734353	income
+-1.6734353	little
+-1.6734353	living
+-1.6734353	patients
+-1.6734353	sort
+-1.6734353	that's
+
+\end\

@@ -1,0 +1,44 @@
+# Input file: /exp/drumil/espnet/egs/tedlium2/asr1/first_pass/corrects/JamesCameron_2010
+# Token count: 160
+# Smoothing: Modified Kneser-Ney
+\data\
+ngram 1=35
+
+\1-grams:
+-2.120175	<unk>
+0	<s>
+-0.7787504	</s>
+-1.5881803	know
+-1.5881803	actually
+-1.5881803	going
+-1.5881803	film
+-1.5881803	fiction
+-1.5881803	movie
+-1.5881803	i'm
+-1.5881803	would
+-1.5881803	cg
+-1.5881803	could
+-1.5881803	real
+-1.5881803	two
+-1.5881803	deep
+-1.5881803	say
+-1.5881803	way
+-1.5881803	curiosity
+-1.5881803	i've
+-1.5881803	learned
+-1.5881803	right
+-1.5881803	thing
+-1.5881803	avatar
+-1.5881803	create
+-1.5881803	team
+-1.5881803	day
+-1.5881803	form
+-1.5881803	nasa
+-1.5881803	one
+-1.5881803	robotic
+-1.5881803	said
+-1.5881803	sort
+-1.5881803	vents
+-1.5881803	wound
+
+\end\

@@ -1,0 +1,23 @@
+# Input file: /exp/drumil/espnet/egs/tedlium2/asr1/first_pass/corrects/TomWujec_2010U
+# Token count: 55
+# Smoothing: Modified Kneser-Ney
+\data\
+ngram 1=14
+
+\1-grams:
+-1.6782148	<unk>
+0	<s>
+-0.7827309	</s>
+-1.1307136	marshmallow
+-1.1307136	design
+-1.1307136	one
+-1.1307136	structure
+-1.1307136	students
+-1.1307136	teams
+-1.1307136	there's
+-1.1307136	da
+-1.1307136	oh
+-1.1307136	ta
+-1.1307136	top
+
+\end\

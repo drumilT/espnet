@@ -1,0 +1,38 @@
+# Input file: /exp/drumil/espnet/egs/tedlium2/asr1/first_pass/corrects/AimeeMullins_2009P
+# Token count: 130
+# Smoothing: Modified Kneser-Ney
+\data\
+ngram 1=29
+
+\1-grams:
+-2.0328276	<unk>
+0	<s>
+-0.779047	</s>
+-1.4988328	see
+-1.4988328	i'm
+-1.4988328	people
+-1.4988328	there's
+-1.4988328	know
+-1.4988328	one
+-1.4988328	students
+-1.4988328	going
+-1.4988328	uh
+-1.4988328	fact
+-1.4988328	well
+-1.4988328	hum
+-1.4988328	change
+-1.4988328	i'd
+-1.4988328	little
+-1.4988328	maybe
+-1.4988328	part
+-1.4988328	prognosis
+-1.4988328	someone
+-1.4988328	that's
+-1.4988328	thesaurus
+-1.4988328	kean
+-1.4988328	kids
+-1.4988328	month
+-1.4988328	normalcy
+-1.4988328	study
+
+\end\

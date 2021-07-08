@@ -1,0 +1,68 @@
+# Input file: /exp/drumil/espnet/egs/tedlium2/asr1/first_pass/corrects/JaneMcGonigal_2010
+# Token count: 280
+# Smoothing: Modified Kneser-Ney
+\data\
+ngram 1=59
+
+\1-grams:
+-2.3578012	<unk>
+0	<s>
+-0.77835184	</s>
+-1.8296214	games
+-1.8296214	world
+-1.8296214	game
+-1.8296214	real
+-1.8296214	gamers
+-1.8296214	epic
+-1.8296214	one
+-1.8296214	online
+-1.8296214	we're
+-1.8296214	actually
+-1.8296214	warcraft
+-1.8296214	i'm
+-1.8296214	work
+-1.8296214	know
+-1.8296214	spend
+-1.8296214	us
+-1.8296214	we've
+-1.8296214	billion
+-1.8296214	five
+-1.8296214	win
+-1.8296214	dice
+-1.8296214	gamer
+-1.8296214	going
+-1.8296214	solve
+-1.8296214	herodotus
+-1.8296214	okay
+-1.8296214	plus
+-1.8296214	sense
+-1.8296214	changing
+-1.8296214	feedback
+-1.8296214	hundred
+-1.8296214	i've
+-1.8296214	mission
+-1.8296214	trust
+-1.8296214	way
+-1.8296214	wiki
+-1.8296214	civilization
+-1.8296214	collaborative
+-1.8296214	extraordinarily
+-1.8296214	global
+-1.8296214	hour
+-1.8296214	using
+-1.8296214	virtuosos
+-1.8296214	wins
+-1.8296214	affected
+-1.8296214	bruckheimer
+-1.8296214	can't
+-1.8296214	collaborators
+-1.8296214	dna
+-1.8296214	economist
+-1.8296214	environments
+-1.8296214	i'll
+-1.8296214	immerse
+-1.8296214	internet
+-1.8296214	jerry
+-1.8296214	knuckles
+
+\end\

@@ -1,0 +1,54 @@
+# Input file: /exp/drumil/espnet/egs/tedlium2/asr1/first_pass/corrects/DanBarber_2010
+# Token count: 210
+# Smoothing: Modified Kneser-Ney
+\data\
+ngram 1=45
+
+\1-grams:
+-2.2352934	<unk>
+0	<s>
+-0.7785039	</s>
+-1.7054018	fish
+-1.7054018	said
+-1.7054018	feed
+-1.7054018	one
+-1.7054018	know
+-1.7054018	miguel
+-1.7054018	good
+-1.7054018	going
+-1.7054018	well
+-1.7054018	world
+-1.7054018	he's
+-1.7054018	let's
+-1.7054018	sustainable
+-1.7054018	we're
+-1.7054018	got
+-1.7054018	i'm
+-1.7054018	percent
+-1.7054018	skin
+-1.7054018	they're
+-1.7054018	could
+-1.7054018	eat
+-1.7054018	ecological
+-1.7054018	flamingos
+-1.7054018	fly
+-1.7054018	health
+-1.7054018	instead
+-1.7054018	okay
+-1.7054018	phytoplankton
+-1.7054018	pink
+-1.7054018	animals
+-1.7054018	bird
+-1.7054018	chef
+-1.7054018	eating
+-1.7054018	every
+-1.7054018	feeding
+-1.7054018	five
+-1.7054018	great
+-1.7054018	guy
+-1.7054018	measures
+-1.7054018	overcooked
+-1.7054018	phone
+-1.7054018	predators
+
+\end\
