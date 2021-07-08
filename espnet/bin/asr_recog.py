@@ -184,6 +184,34 @@ def get_parser():
                 if the ngram is set as full scorer, ngram scorer scores all hypthesis
                 the decoding speed of part scorer is musch faster than full one""",
     )
+    parser.add_argument(
+        "--cache-file", type=str, default=None, help="cache file file to read"
+    )
+    parser.add_argument("--cache-weight", type=float, default=0.1, help="cache weight")
+    parser.add_argument(
+        "--cache-scorer",
+        type=str,
+        default="part",
+        choices=("full", "part"),
+        help="""if the ngram is set as a part scorer, similar with CTC scorer,
+                ngram scorer only scores topK hypethesis.
+                if the ngram is set as full scorer, ngram scorer scores all hypthesis
+                the decoding speed of part scorer is musch faster than full one""",
+    )
+    parser.add_argument(
+        "--cache-trie-file", type=str, default=None, help="cache trie file file to read"
+    )
+    parser.add_argument("--cache-trie-weight", type=float, default=0.1, help="cache trie weight")
+    parser.add_argument(
+        "--cache-trie-scorer",
+        type=str,
+        default="full",
+        choices=("full", "part"),
+        help="""if the ngram is set as a part scorer, similar with CTC scorer,
+                ngram scorer only scores topK hypethesis.
+                if the ngram is set as full scorer, ngram scorer scores all hypthesis
+                the decoding speed of part scorer is musch faster than full one""",
+    )
     # streaming related
     parser.add_argument(
         "--streaming-mode",
