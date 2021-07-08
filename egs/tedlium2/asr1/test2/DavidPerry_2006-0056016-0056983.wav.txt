@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidPerry_2006-0056016-0056983/data decode/DavidPerry_2006-0056016-0056983/log decode/DavidPerry_2006-0056016-0056983/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidPerry_2006-0056016-0056983/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidPerry_2006-0056016-0056983/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidPerry_2006-0056016-0056983/log decode/DavidPerry_2006-0056016-0056983/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁NEEDY▁TO▁BE▁REALLY▁AN▁INCREDIBLE▁ARTIST▁AND▁ONCE▁WE▁GET▁ENOUGH▁OF▁THOSE▁GUISE▁WE'RE▁GOING▁TO▁WANT▁MORE▁FANTASY▁ARTISTS▁THAT▁CONCRETE▁PLACES▁WE'VE▁NEVER▁BEEN▁TOO▁BEFORE▁OR▁CHARACTERS▁THAT▁WE'VE▁JUST▁NEVER▁SEEN▁BEFORE
+
+Finished

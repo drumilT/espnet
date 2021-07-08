@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EricDishman_2009P-0011097-0012027/data decode/EricDishman_2009P-0011097-0012027/log decode/EricDishman_2009P-0011097-0012027/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EricDishman_2009P-0011097-0012027/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EricDishman_2009P-0011097-0012027/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EricDishman_2009P-0011097-0012027/log decode/EricDishman_2009P-0011097-0012027/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THAT▁RECOGNITION▁MAMMA▁OF▁WHETHER▁THEY▁CAN▁FIGURE▁OUT▁THAT▁PERSON▁ON▁THE▁OTHER▁FRIEND▁IS▁A▁FRIEND▁AND▁WE▁START▁TALKING▁THEM▁TO▁IT▁IMMEDIATELY▁OR▁THEY▁DO▁A▁LOT▁OF▁WHAT'S▁CALLED▁TROUBLE▁TALK▁OR▁THE▁RIGHT▁WEIGHT▁WHO▁IS▁THIS
+
+Finished

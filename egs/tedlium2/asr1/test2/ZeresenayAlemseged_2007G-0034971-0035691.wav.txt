@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ZeresenayAlemseged_2007G-0034971-0035691/data decode/ZeresenayAlemseged_2007G-0034971-0035691/log decode/ZeresenayAlemseged_2007G-0034971-0035691/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ZeresenayAlemseged_2007G-0034971-0035691/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ZeresenayAlemseged_2007G-0034971-0035691/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ZeresenayAlemseged_2007G-0034971-0035691/log decode/ZeresenayAlemseged_2007G-0034971-0035691/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IT▁WAS▁THEN▁AFTER▁SUCH▁HARD▁WORK▁AND▁FRUSTER▁MANY▁FRUSTRATING▁YEARS▁THAT▁WE▁FOUND▁SALAM▁AND▁YOU▁SEE▁THE▁PHTHIAN▁COVER▁BY▁SANDSTONE
+
+Finished

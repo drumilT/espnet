@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2008-0048715-0049771/data decode/WadeDavis_2008-0048715-0049771/log decode/WadeDavis_2008-0048715-0049771/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2008-0048715-0049771/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2008-0048715-0049771/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2008-0048715-0049771/log decode/WadeDavis_2008-0048715-0049771/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁AT▁FORTY▁EIGHT▁I▁WAS▁THE▁ONLY▁OUTSIDER▁EVER▁TO▁GO▁THROUGH▁THIS▁ONLY▁ONE▁TO▁FINISH▁IT▁I▁ONLY▁MANAGED▁TO▁DO▁IT▁BY▁CHEWING▁MORE▁COCA▁LEAVES▁IN▁ONE▁DAY▁THAN▁ANY▁ONE▁IN▁THE▁FOUR▁THOUSAND▁NEAR▁HISTORY▁OF▁THE▁PLAN
+
+Finished

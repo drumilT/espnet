@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AlexTabarrok_2009-0043066-0044180/data decode/AlexTabarrok_2009-0043066-0044180/log decode/AlexTabarrok_2009-0043066-0044180/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AlexTabarrok_2009-0043066-0044180/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AlexTabarrok_2009-0043066-0044180/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AlexTabarrok_2009-0043066-0044180/log decode/AlexTabarrok_2009-0043066-0044180/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IDEA▁CREATORS▁THEY▁COME▁FROM▁ALL▁ALL▁WANTS▁OF▁LIFE▁ARE▁ARTISTS▁AND▁INNOVATORS▁MANY▁OF▁THE▁PEOPLE▁YOU'VE▁SEEN▁ON▁THE▁STAGE▁I'M▁GOING▁TO▁FOCUS▁ON▁SCIENTISTS▁AND▁ENGINEERS▁AH▁AS▁I▁HAVE▁SOME▁DATE▁ON▁THAT▁AND▁I'M▁A▁DAY▁TO▁PERSON
+
+Finished

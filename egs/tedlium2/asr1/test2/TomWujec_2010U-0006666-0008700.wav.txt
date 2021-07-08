@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/TomWujec_2010U-0006666-0008700/data decode/TomWujec_2010U-0006666-0008700/log decode/TomWujec_2010U-0006666-0008700/fbank
+steps/make_fbank_pitch.sh: moving decode/TomWujec_2010U-0006666-0008700/data/feats.scp to decode/TomWujec_2010U-0006666-0008700/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/TomWujec_2010U-0006666-0008700/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/TomWujec_2010U-0006666-0008700/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/TomWujec_2010U-0006666-0008700/log decode/TomWujec_2010U-0006666-0008700/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁NORMALLY▁MOST▁PEOPLE▁BEGIN▁BY▁ORIENTING▁THEMSELVES▁TO▁THE▁TASK▁THEY▁TALK▁ABOUT▁IT▁THEY▁FIGURE▁AT▁WHAT▁IS▁GOING▁A▁LOOK▁LIKE▁THEY▁JOCKEY▁FOR▁POWER▁THEN▁THEY▁SPEND▁SOME▁TIME▁PLANNING▁ORGANIZING▁THEY▁SKETCH▁IN▁THEY▁LAY▁OUTS▁FORGETTY▁AH▁THEY'D▁SPEND▁THE▁MAJORITY▁OF▁THEIR▁TIME▁ASSEMBLING▁THE▁STICKS▁INTO▁EVER▁GROWING▁STRUCTURES▁AND▁THEN
+
+Finished

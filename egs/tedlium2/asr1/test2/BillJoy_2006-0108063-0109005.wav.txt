@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BillJoy_2006-0108063-0109005/data decode/BillJoy_2006-0108063-0109005/log decode/BillJoy_2006-0108063-0109005/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BillJoy_2006-0108063-0109005/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BillJoy_2006-0108063-0109005/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BillJoy_2006-0108063-0109005/log decode/BillJoy_2006-0108063-0109005/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁HOW▁WE▁COULD▁STEER▁THE▁CLIMATE▁TRAJECTORY▁INTO▁A▁LOWER▁PROBABILITY▁OF▁CATASTROPHIC▁RISK▁BUT▁ABOVE▁ALL▁WE▁HAVE▁TO▁DO▁AS▁WE▁HAVE▁TO▁HELP▁THE▁GOOD▁GUISE▁THE▁PEOPLE▁ON▁THE▁DEFENSIVE▁SIDE
+
+Finished

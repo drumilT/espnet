@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JessicaJackley_2010G-0048687-0049653/data decode/JessicaJackley_2010G-0048687-0049653/log decode/JessicaJackley_2010G-0048687-0049653/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JessicaJackley_2010G-0048687-0049653/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JessicaJackley_2010G-0048687-0049653/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JessicaJackley_2010G-0048687-0049653/log decode/JessicaJackley_2010G-0048687-0049653/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁THIS▁IDEA▁THAT▁THESE▁NEW▁STORIES▁OF▁BUSINESS▁AND▁OF▁HOPE▁MIGHT▁BE▁SHARED▁WITH▁MY▁FRIENDS▁AND▁FAMILY▁AND▁THROUGH▁THAT▁MAYBE▁WE▁COULD▁GET▁SOME▁OF▁THE▁MONEY▁THAT▁THEY▁NEEDED
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ShekharKapur_2009I-0013925-0015096/data decode/ShekharKapur_2009I-0013925-0015096/log decode/ShekharKapur_2009I-0013925-0015096/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ShekharKapur_2009I-0013925-0015096/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ShekharKapur_2009I-0013925-0015096/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ShekharKapur_2009I-0013925-0015096/log decode/ShekharKapur_2009I-0013925-0015096/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IF▁YOU▁DID▁NOT▁GET▁THAT▁THAT'S▁A▁PART▁OF▁VISUAL▁STORY▁TELLING▁THAT'S▁A▁POWER▁OF▁DUNCE▁THAT'S▁A▁PART▁OF▁MUSIC▁THE▁POWER▁ARE▁NOT▁KNOWING▁WHEN▁I▁GO▁OUT▁TO▁DIRECT▁A▁FILM
+
+Finished

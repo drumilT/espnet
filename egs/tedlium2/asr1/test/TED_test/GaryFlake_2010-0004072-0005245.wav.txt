@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/GaryFlake_2010-0004072-0005245/data decode/GaryFlake_2010-0004072-0005245/log decode/GaryFlake_2010-0004072-0005245/fbank
+steps/make_fbank_pitch.sh: moving decode/GaryFlake_2010-0004072-0005245/data/feats.scp to decode/GaryFlake_2010-0004072-0005245/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/GaryFlake_2010-0004072-0005245/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/GaryFlake_2010-0004072-0005245/data/feats.scp decode/download/tedlium2.transformer.v1/data/train_trim_sp/cmvn.ark decode/GaryFlake_2010-0004072-0005245/log decode/GaryFlake_2010-0004072-0005245/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁tool▁that▁i'm▁using▁here▁is▁a▁little▁experiment▁that's▁called▁pivot▁and▁with▁pivot▁what▁i▁can▁do▁is▁i▁can▁choose▁to▁filter▁on▁one▁particular▁cause▁of▁death▁say▁accidents▁and▁right▁away▁i▁see▁there's▁a▁different▁pattern▁that▁emerges
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BonnieBassler_2009-0041133-0042414/data decode/BonnieBassler_2009-0041133-0042414/log decode/BonnieBassler_2009-0041133-0042414/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BonnieBassler_2009-0041133-0042414/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BonnieBassler_2009-0041133-0042414/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BonnieBassler_2009-0041133-0042414/log decode/BonnieBassler_2009-0041133-0042414/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THAT▁LITTLE▁HORNON▁MOLECULE▁IS▁GONE▁SO▁THEY'RE▁NOT▁MAKING▁LIGHT▁BUT▁A▁COURSE▁TO▁SQUID▁DOESN'T▁CARE▁IT'S▁ASLEEP▁IN▁THE▁SAND▁AND▁AS▁THE▁DAY▁GOES▁BY▁THE▁BACTERIA▁DOUBLE▁THEY▁RELEASE▁THE▁MOLECULE▁AND▁THE▁LIGHT▁COMES▁ON▁AT▁NIGHT▁EXACTLY▁WHEN▁THE▁SQUID▁WANTS▁IT
+
+Finished

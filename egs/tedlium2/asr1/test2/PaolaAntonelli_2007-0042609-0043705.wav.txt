@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/PaolaAntonelli_2007-0042609-0043705/data decode/PaolaAntonelli_2007-0042609-0043705/log decode/PaolaAntonelli_2007-0042609-0043705/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/PaolaAntonelli_2007-0042609-0043705/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/PaolaAntonelli_2007-0042609-0043705/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/PaolaAntonelli_2007-0042609-0043705/log decode/PaolaAntonelli_2007-0042609-0043705/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁PUT▁ME▁IN▁TOUCH▁WITH▁THE▁SUCH▁DIFFERS▁AND▁DESIGN▁EXAMPLES▁AS▁THE▁AVERAGE▁HELLS▁FROM▁THE▁LAWRENCE▁LIVERMORE▁LAB▁IN▁CALIFORNIA▁AT▁THAT▁TIME▁THEY▁WERE▁BEGINNING▁TO▁BE
+
+Finished

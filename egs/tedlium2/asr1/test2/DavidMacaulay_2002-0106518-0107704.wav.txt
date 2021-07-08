@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidMacaulay_2002-0106518-0107704/data decode/DavidMacaulay_2002-0106518-0107704/log decode/DavidMacaulay_2002-0106518-0107704/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidMacaulay_2002-0106518-0107704/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidMacaulay_2002-0106518-0107704/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidMacaulay_2002-0106518-0107704/log decode/DavidMacaulay_2002-0106518-0107704/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WILL▁SO▁KICK▁ME▁OFF▁IN▁THE▁RIGHT▁DIRECTION▁AND▁SOMETIMES▁IT▁DOES▁FOCUS▁ME▁ENOUGH▁IT▁AND▁THEN▁THOU▁EVEN▁DO▁A▁TITLE▁PAGE▁SO▁THESE▁ARE▁ALSO▁OF▁TITLE▁PAGES▁THAT▁EVENTUALLY▁LED▁ME▁TO▁THE▁SOLUTION▁I▁SETTLED▁ON▁WHICH▁IS▁THE▁STORY▁OF▁OF
+
+Finished

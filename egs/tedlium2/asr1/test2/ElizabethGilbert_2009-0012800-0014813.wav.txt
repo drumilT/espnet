@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ElizabethGilbert_2009-0012800-0014813/data decode/ElizabethGilbert_2009-0012800-0014813/log decode/ElizabethGilbert_2009-0012800-0014813/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ElizabethGilbert_2009-0012800-0014813/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ElizabethGilbert_2009-0012800-0014813/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ElizabethGilbert_2009-0012800-0014813/log decode/ElizabethGilbert_2009-0012800-0014813/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁I'M▁SEAWEED▁AND▁OTHER▁THINGS▁THAT▁ARE▁SCARY▁BUT▁WHEN▁IT▁COMES▁TO▁WRITING▁I'M▁THE▁THING▁THAT▁I'VE▁BEEN▁SORT▁OF▁THINKING▁ABOUT▁LATELY▁AND▁WONDERING▁ABOUT▁LATELY▁IS▁WHY▁YOU▁KNOW▁IS▁IT▁RATIONAL▁IS▁IT▁LOGICAL▁THAT▁AM▁ANYBODY▁SHOULD▁BE▁EXPECTED▁TO▁BE▁AFRAID▁OF▁THE▁WORK▁THAT▁THEY▁FEEL▁THEY▁WERE▁PUT▁ON▁THIS▁EARTH▁TO▁DO▁YOU▁KNOW▁AM▁AND▁WHAT▁IS▁IT
+
+Finished

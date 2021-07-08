@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/KwabenaBoahen_2007G-0067563-0068850/data decode/KwabenaBoahen_2007G-0067563-0068850/log decode/KwabenaBoahen_2007G-0067563-0068850/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/KwabenaBoahen_2007G-0067563-0068850/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/KwabenaBoahen_2007G-0067563-0068850/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/KwabenaBoahen_2007G-0067563-0068850/log decode/KwabenaBoahen_2007G-0067563-0068850/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁GAVE▁ONE▁TO▁COMPRESS▁THE▁INFORMATION▁THEY▁JUST▁WON▁TO▁SEND▁THE▁CHANGES▁WHAT'S▁KNEW▁IN▁THE▁IMAGE▁AND▁SO▁ON▁AND▁THEN▁THAT▁IS▁HOW▁YOUR▁I▁BALL▁IS▁ABLE▁TO▁SQUEEZE▁ALL▁THAT▁INFORMATION▁DOWN▁YOUR▁ARCTIC▁NERVE▁TO▁SEND▁TO▁THE▁REST▁OF▁THE▁BRAIN
+
+Finished

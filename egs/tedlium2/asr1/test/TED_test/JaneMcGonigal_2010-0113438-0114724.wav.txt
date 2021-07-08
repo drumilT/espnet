@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JaneMcGonigal_2010-0113438-0114724/data decode/JaneMcGonigal_2010-0113438-0114724/log decode/JaneMcGonigal_2010-0113438-0114724/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JaneMcGonigal_2010-0113438-0114724/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JaneMcGonigal_2010-0113438-0114724/data/feats.scp decode/download/tedlium2.transformer.v1/data/train_trim_sp/cmvn.ark decode/JaneMcGonigal_2010-0113438-0114724/log decode/JaneMcGonigal_2010-0113438-0114724/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁so▁i'm▁going▁to▁wrap▁up▁now▁i▁want▁to▁ask▁a▁question▁what▁do▁you▁think▁happens▁next▁we've▁got▁all▁these▁amazing▁gamers▁we've▁got▁these▁games▁that▁are▁kind▁of▁pilots▁of▁what▁we▁might▁do▁but▁none▁of▁them▁have▁saved▁the▁real▁world▁yet
+
+Finished

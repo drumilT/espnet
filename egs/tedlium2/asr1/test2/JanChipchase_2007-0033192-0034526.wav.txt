@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JanChipchase_2007-0033192-0034526/data decode/JanChipchase_2007-0033192-0034526/log decode/JanChipchase_2007-0033192-0034526/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JanChipchase_2007-0033192-0034526/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JanChipchase_2007-0033192-0034526/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JanChipchase_2007-0033192-0034526/log decode/JanChipchase_2007-0033192-0034526/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁YOU▁KEEP▁THESE▁OBJECTS▁AND▁THESE▁THINGS▁DON'T▁STAY▁IN▁THE▁CENTRAL▁GRAVITY▁BUT▁OVERTIME▁THEY▁GRAVITATE▁THERE▁IT'S▁WHERE▁YOU▁EXPECT▁TO▁FIND▁STUFF▁AND▁IN▁FACT▁WHEN▁YOU'RE▁TURNING▁AROUND▁AND▁YOU'RE▁LOOKING▁INSIDE▁THE▁HOUSE▁AND▁YOU'RE▁LOOKING▁FOR▁THE▁STUFF▁THIS▁IS▁WHERE▁YOU▁LOOK▁FUR
+
+Finished

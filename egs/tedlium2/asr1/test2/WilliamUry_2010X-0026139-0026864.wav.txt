@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WilliamUry_2010X-0026139-0026864/data decode/WilliamUry_2010X-0026139-0026864/log decode/WilliamUry_2010X-0026139-0026864/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WilliamUry_2010X-0026139-0026864/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WilliamUry_2010X-0026139-0026864/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WilliamUry_2010X-0026139-0026864/log decode/WilliamUry_2010X-0026139-0026864/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THERE'S▁ALWAYS▁TWO▁SIDES▁YOU▁KNOW▁ITS▁ARABS▁ARE▁SINCE▁RAYLEY'S▁LABOUR▁FOR▁THIS▁MANAGEMENT▁HUSBAND▁VERSES▁WIFE▁REPUBLICANS▁ARE▁AS▁HIS▁DEMOCRATS
+
+Finished

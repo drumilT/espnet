@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/CraigVenter_2008-0064890-0066325/data decode/CraigVenter_2008-0064890-0066325/log decode/CraigVenter_2008-0064890-0066325/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/CraigVenter_2008-0064890-0066325/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/CraigVenter_2008-0064890-0066325/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/CraigVenter_2008-0064890-0066325/log decode/CraigVenter_2008-0064890-0066325/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WERE▁ABOUT▁TO▁GO▁FROM▁SIX▁AND▁A▁HALF▁TO▁NINE▁BILLION▁PEOPLE▁OVER▁THE▁NEXT▁FORTY▁YEARS▁AH▁TO▁PUT▁IT▁IN▁CONTACT▁FOR▁MYSELF▁I▁WAS▁BORN▁IN▁NINETEEN▁FORTY▁SIX▁THERE'S▁NOW▁THREE▁PEOPLE▁ON▁THE▁PLANET▁FOR▁EVERY▁ONE▁OF▁US▁THAT▁EXISTED▁IN▁NINETEEN▁FORTY▁SIX
+
+Finished

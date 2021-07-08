@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidMerrill_2009-0040650-0042082/data decode/DavidMerrill_2009-0040650-0042082/log decode/DavidMerrill_2009-0040650-0042082/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidMerrill_2009-0040650-0042082/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidMerrill_2009-0040650-0042082/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidMerrill_2009-0040650-0042082/log decode/DavidMerrill_2009-0040650-0042082/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁THE▁THOUGHT▁I▁WANT▁TO▁LEAVE▁YOU▁WITH▁IS▁IT▁WERE▁ON▁THE▁CUSS▁OF▁THIS▁NEW▁GENERATION▁OF▁TOOLS▁FOR▁INTERACTING▁WITH▁VISUAL▁MEDIA▁THAT▁I▁CAN▁BRING▁INFORMATION▁INTO▁OUR▁WORLD▁ON▁OUR▁TERMS▁THANK▁YOU▁VERY▁MUCH▁I▁LOOK▁FORWARD▁TO▁TALKING▁IT▁ALL▁OF▁YOU
+
+Finished

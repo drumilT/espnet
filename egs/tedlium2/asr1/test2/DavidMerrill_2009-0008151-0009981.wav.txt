@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidMerrill_2009-0008151-0009981/data decode/DavidMerrill_2009-0008151-0009981/log decode/DavidMerrill_2009-0008151-0009981/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidMerrill_2009-0008151-0009981/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidMerrill_2009-0008151-0009981/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidMerrill_2009-0008151-0009981/log decode/DavidMerrill_2009-0008151-0009981/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁AS▁HE▁SOULS▁BECOME▁MORE▁PHYSICAL▁MORE▁WHEREVER▁THEIR▁MOTION▁TO▁WEAR▁OF▁EACH▁OTHER▁AND▁AWARE▁OF▁THE▁NEW▁WANTS▁OF▁HOW▁WE▁MOVE▁THEM▁WE▁CAN▁START▁TO▁EXPLORE▁SOME▁NEW▁AND▁FUN▁INTERACTION▁STYLES▁SOME▁NO▁START▁WITH▁SOME▁SIMPLE▁EXAMPLES▁THIS▁SPECTACLES▁CAN▁FIGURE▁TO▁SHOW▁VIDIO▁AND▁IF▁I▁TILT▁IN▁ONE▁DIRECTION▁HE'LL▁ROLL▁THE▁VIITY▁OF▁THIS▁WAY▁FATILED▁THE▁OTHER▁WAY
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MichaelMerzenich_2004-0115077-0116265/data decode/MichaelMerzenich_2004-0115077-0116265/log decode/MichaelMerzenich_2004-0115077-0116265/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MichaelMerzenich_2004-0115077-0116265/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MichaelMerzenich_2004-0115077-0116265/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MichaelMerzenich_2004-0115077-0116265/log decode/MichaelMerzenich_2004-0115077-0116265/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THIS▁IS▁IN▁A▁BROAD▁ASSESSMENT▁OF▁THEIR▁LANGUAGE▁ABILITIES▁THIS▁IS▁LIKE▁AN▁ICUTE▁TEST▁FOR▁LANGUAGE▁THE▁UNPACK▁IN▁THE▁DISTRIBUTION▁IF▁YOU▁TRAINED▁EVERY▁CHILD▁IN▁THE▁UNITED▁STATES▁WOULD▁BE▁TO▁SHIFT▁THE▁WHOLE▁DISTRIBUTION▁TO▁THE▁RIGHT▁AND▁NARROW▁DISTRIBUTION
+
+Finished

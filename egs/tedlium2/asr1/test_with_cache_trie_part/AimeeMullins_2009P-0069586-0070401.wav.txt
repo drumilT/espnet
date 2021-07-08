@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁EM▁TIMEBRACING▁IT▁GRAPPLING▁WITH▁IT▁YOU'S▁A▁RUSTLING▁TERM▁MAY▁BE▁EVEN▁DANCING▁WITH▁IT
+
+Finished

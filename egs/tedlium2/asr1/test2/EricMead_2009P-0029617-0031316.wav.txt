@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EricMead_2009P-0029617-0031316/data decode/EricMead_2009P-0029617-0031316/log decode/EricMead_2009P-0029617-0031316/fbank
+steps/make_fbank_pitch.sh: moving decode/EricMead_2009P-0029617-0031316/data/feats.scp to decode/EricMead_2009P-0029617-0031316/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EricMead_2009P-0029617-0031316/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EricMead_2009P-0029617-0031316/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EricMead_2009P-0029617-0031316/log decode/EricMead_2009P-0029617-0031316/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WRITE▁A▁SYRINGE▁WITH▁SOME▁INERT▁COUPLE▁C▁SEES▁OF▁SOME▁INERT▁SOMETHING▁IN▁YOU▁INJECT▁THIS▁INTO▁A▁PATIENT▁WHILE▁THIS▁IS▁SUCH▁A▁POWERFUL▁IMAGE▁IN▁THEIR▁MIND▁THAT▁IT▁IS▁SO▁MUCH▁STRONGER▁THAN▁THE▁WHITE▁PILL▁THAT▁IT▁REALLY▁THIS▁GRAF▁ON▁A▁WELL▁I'LL▁SHOW▁IT▁TO▁YOU▁SOME▁OTHER▁TIME▁WHEN▁WE▁HAVE▁SLIDES▁THE▁POINT▁IS
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BeauLotto_2009G-0046071-0047323/data decode/BeauLotto_2009G-0046071-0047323/log decode/BeauLotto_2009G-0046071-0047323/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BeauLotto_2009G-0046071-0047323/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BeauLotto_2009G-0046071-0047323/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BeauLotto_2009G-0046071-0047323/log decode/BeauLotto_2009G-0046071-0047323/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IT▁WOULD▁HAVE▁TO▁BE▁MORE▁REFLECTIVE▁JUST▁THE▁LAWS▁OF▁PHYSICS▁SO▁YOU▁SEE▁IT▁THAT▁WAY▁WHEREAS▁ON▁THE▁RIGHT▁THE▁INFORMATION▁IS▁CONSISTENT▁WITH▁THOSE▁TWO▁TILES▁BEING▁UNDER▁THE▁SAME▁NIGHT▁IF▁THEY▁ARE▁UNDER▁THE▁SAME▁LIGHT▁REFLECTING▁THE▁SAME▁AMOUNT▁OF▁LIGHT
+
+Finished

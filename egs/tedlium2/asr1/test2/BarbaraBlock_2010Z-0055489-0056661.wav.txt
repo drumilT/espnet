@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BarbaraBlock_2010Z-0055489-0056661/data decode/BarbaraBlock_2010Z-0055489-0056661/log decode/BarbaraBlock_2010Z-0055489-0056661/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BarbaraBlock_2010Z-0055489-0056661/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BarbaraBlock_2010Z-0055489-0056661/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BarbaraBlock_2010Z-0055489-0056661/log decode/BarbaraBlock_2010Z-0055489-0056661/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁SIZE▁OF▁THE▁BIGGEST▁TUNA▁WE'VE▁EVER▁TAGGED▁IT▁TAKES▁A▁HUMAN▁EFFORT▁A▁TEAM▁EFFORT▁TO▁BRING▁THE▁FISH▁IN▁IN▁THIS▁CASE▁WHAT▁WE'RE▁GOING▁TO▁DO▁IS▁PUT▁A▁POP▁UP▁SATELLITE▁OR▁CAVAL▁TAG▁ON▁THE▁TUNA
+
+Finished

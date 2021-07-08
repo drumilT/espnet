@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MichaelSpecter_2010-0055892-0056985/data decode/MichaelSpecter_2010-0055892-0056985/log decode/MichaelSpecter_2010-0055892-0056985/fbank
+steps/make_fbank_pitch.sh: moving decode/MichaelSpecter_2010-0055892-0056985/data/feats.scp to decode/MichaelSpecter_2010-0055892-0056985/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MichaelSpecter_2010-0055892-0056985/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MichaelSpecter_2010-0055892-0056985/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MichaelSpecter_2010-0055892-0056985/log decode/MichaelSpecter_2010-0055892-0056985/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WHY▁BECAUSE▁WE▁DON'T▁HAVE▁PULLIO▁WHEN▁YOU▁KNOW▁IT▁WE▁DIDN'T▁HELP▁PULLIO▁IN▁THIS▁COUNTRY▁YESTERDAY▁TO▁DAY▁A▁DON'T▁KNOW▁MAYBE▁I▁GOT▁ON▁A▁PLANE▁AND▁LOGOS▁THIS▁MORNING▁AND▁HE'S▁FLYING▁TO▁ELLE▁AXE▁RIGHT▁NOSE▁OVER▁OHIO
+
+Finished

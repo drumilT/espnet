@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JamesCameron_2010-0031025-0032997/data decode/JamesCameron_2010-0031025-0032997/log decode/JamesCameron_2010-0031025-0032997/fbank
+steps/make_fbank_pitch.sh: moving decode/JamesCameron_2010-0031025-0032997/data/feats.scp to decode/JamesCameron_2010-0031025-0032997/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JamesCameron_2010-0031025-0032997/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JamesCameron_2010-0031025-0032997/data/feats.scp decode/download/tedlium2.transformer.v1/data/train_trim_sp/cmvn.ark decode/JamesCameron_2010-0031025-0032997/log decode/JamesCameron_2010-0031025-0032997/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁and▁even▁though▁film▁did▁make▁any▁money▁barren▁broke▁even▁i▁should▁say▁i▁witnessed▁something▁amazing▁which▁is▁that▁the▁audience▁the▁global▁audience▁was▁mesmerized▁by▁this▁apparent▁magic▁you▁know▁it's▁arthur▁clarke's▁law▁that▁any▁sufficiently▁advanced▁technology▁is▁indistinguishable▁from▁magic▁they▁were▁seeing▁something▁magical
+
+Finished

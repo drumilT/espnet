@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MattRidley_2010G-0032473-0033195/data decode/MattRidley_2010G-0032473-0033195/log decode/MattRidley_2010G-0032473-0033195/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MattRidley_2010G-0032473-0033195/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MattRidley_2010G-0032473-0033195/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MattRidley_2010G-0032473-0033195/log decode/MattRidley_2010G-0032473-0033195/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁HE▁CAN▁MAKE▁HIS▁OWN▁SPEARS▁AND▁AXES▁WELL▁KNOW▁BECAUSE▁IF▁YOU▁THINK▁ABOUT▁IT▁IF▁OS▁MAKES▁TWO▁SPEARS▁AND▁HAD▁A▁MAKES▁TWO▁AXES▁AND▁THEN▁THEY▁TRADE
+
+Finished

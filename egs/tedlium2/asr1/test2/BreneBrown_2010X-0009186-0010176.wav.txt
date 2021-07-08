@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BreneBrown_2010X-0009186-0010176/data decode/BreneBrown_2010X-0009186-0010176/log decode/BreneBrown_2010X-0009186-0010176/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BreneBrown_2010X-0009186-0010176/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BreneBrown_2010X-0009186-0010176/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BreneBrown_2010X-0009186-0010176/log decode/BreneBrown_2010X-0009186-0010176/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁I'M▁A▁RESEARCH▁YOUR▁STORY▁TELLER▁AH▁AND▁I'M▁IN▁A▁TAUGHT▁YOU▁TO▁DAY▁WE'RE▁TALKING▁ABOUT▁EXPANDING▁PERCEPTION▁AND▁SO▁I▁WANT▁TO▁TALK▁TO▁YOU▁AND▁TELL▁SOME▁STORIES▁ABOUT▁A▁PIECE▁OF▁MY▁RESEARCH
+
+Finished

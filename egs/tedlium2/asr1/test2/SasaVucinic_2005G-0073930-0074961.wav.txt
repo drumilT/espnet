@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/SasaVucinic_2005G-0073930-0074961/data decode/SasaVucinic_2005G-0073930-0074961/log decode/SasaVucinic_2005G-0073930-0074961/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/SasaVucinic_2005G-0073930-0074961/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/SasaVucinic_2005G-0073930-0074961/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/SasaVucinic_2005G-0073930-0074961/log decode/SasaVucinic_2005G-0073930-0074961/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁CAN▁YOU▁PLEASE▁GIVE▁ME▁YOUR▁NEWSPAPER▁FOR▁NEXT▁TIME▁ONCE▁BECAUSE▁I▁HAVE▁ELECTIONS▁THE▁ELECTIONS▁COMING▁UP▁IN▁THAT▁NINE▁MONTHS▁I▁WILL▁NOT▁RUN▁BUT▁IT'S▁VERY▁IMPORTANT▁FOR▁ME
+
+Finished

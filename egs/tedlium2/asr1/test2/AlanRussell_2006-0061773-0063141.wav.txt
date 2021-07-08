@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AlanRussell_2006-0061773-0063141/data decode/AlanRussell_2006-0061773-0063141/log decode/AlanRussell_2006-0061773-0063141/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AlanRussell_2006-0061773-0063141/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AlanRussell_2006-0061773-0063141/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AlanRussell_2006-0061773-0063141/log decode/AlanRussell_2006-0061773-0063141/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WOULD▁IT▁GIVE▁A▁TISSUE▁SPECIFIC▁RESPONSE▁OR▁WOULD▁IT▁MAKE▁SMALL▁INTESTINE▁IF▁I'D▁TRIED▁TO▁MAKE▁A▁NEW▁EAR▁I▁WOULDN'T▁BE▁TELLING▁YOU▁THE▁STORY▁IF▁IT▁TO▁IF▁IT▁WASN'T▁COMPELLING▁THE▁PICTURE▁I'M▁ABOUT▁TO▁SHOW▁YOU
+
+Finished

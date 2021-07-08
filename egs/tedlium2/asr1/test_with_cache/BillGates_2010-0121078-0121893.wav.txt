@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BillGates_2010-0121078-0121893/data decode/BillGates_2010-0121078-0121893/log decode/BillGates_2010-0121078-0121893/fbank
+steps/make_fbank_pitch.sh: moving decode/BillGates_2010-0121078-0121893/data/feats.scp to decode/BillGates_2010-0121078-0121893/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BillGates_2010-0121078-0121893/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BillGates_2010-0121078-0121893/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BillGates_2010-0121078-0121893/log decode/BillGates_2010-0121078-0121893/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THAT'S▁NOT▁GOOD▁SO▁IF▁YOU▁HADN'T▁VERY▁VERY▁CHEAP▁FUEL▁THEN▁YOU▁CAN▁PUT▁SIXTY▁YEARS▁IN▁JUST▁THINK▁OF▁IT▁AS▁A▁LOG
+
+Finished

@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AndersYnnerman_2010X-0051040-0051909/data decode/AndersYnnerman_2010X-0051040-0051909/log decode/AndersYnnerman_2010X-0051040-0051909/fbank
+steps/make_fbank_pitch.sh: moving decode/AndersYnnerman_2010X-0051040-0051909/data/feats.scp to decode/AndersYnnerman_2010X-0051040-0051909/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AndersYnnerman_2010X-0051040-0051909/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AndersYnnerman_2010X-0051040-0051909/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AndersYnnerman_2010X-0051040-0051909/log decode/AndersYnnerman_2010X-0051040-0051909/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁HERE'S▁ANOTHER▁CASE▁ER▁A▁KNIFEING▁AND▁THIS▁IS▁ALSO▁AGAIN▁SHOWING▁US▁WHERE▁WE▁CAN▁DO▁IT'S▁VERY▁EASY▁TO▁LOOK▁AT▁METAL▁ARTIFICS▁THAT▁WE▁CAN▁SHOW▁INSIDE▁OF▁THE▁BODY
+
+Finished

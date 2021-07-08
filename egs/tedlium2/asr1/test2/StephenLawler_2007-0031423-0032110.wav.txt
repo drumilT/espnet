@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/StephenLawler_2007-0031423-0032110/data decode/StephenLawler_2007-0031423-0032110/log decode/StephenLawler_2007-0031423-0032110/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/StephenLawler_2007-0031423-0032110/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/StephenLawler_2007-0031423-0032110/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/StephenLawler_2007-0031423-0032110/log decode/StephenLawler_2007-0031423-0032110/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁ALLAH▁HIS▁BIRDS▁I▁IMAGERY▁WE▁WORK▁IF▁IS▁THIS▁HIGH▁RESOLUTION▁DATA▁BUT▁WHAT▁WE▁FOUND▁IS▁THEY▁LIKE▁THE▁FLUIDTI▁OF▁THE▁THREE▁MODEL
+
+Finished

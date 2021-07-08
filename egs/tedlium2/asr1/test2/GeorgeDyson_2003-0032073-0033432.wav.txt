@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/GeorgeDyson_2003-0032073-0033432/data decode/GeorgeDyson_2003-0032073-0033432/log decode/GeorgeDyson_2003-0032073-0033432/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/GeorgeDyson_2003-0032073-0033432/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/GeorgeDyson_2003-0032073-0033432/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/GeorgeDyson_2003-0032073-0033432/log decode/GeorgeDyson_2003-0032073-0033432/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ENHEIMER▁WHO▁HAD▁BUILT▁THE▁BOMB▁THE▁MACHINE▁WAS▁ACTUALLY▁USED▁MANLY▁FOR▁CUING▁BOMB▁CALCULATIONS▁AND▁JULIAN▁BIGGIELOW▁WHO▁TOOK▁Z▁WORK▁HIS▁PLACE▁AS▁THE▁ENGINEERED▁ACTUALLY▁FIGURE▁OUT▁USING▁ALL▁THE▁TRACTS▁HOW▁YOU▁WOULD▁BUILD▁THIS▁THING▁THE▁WHOLE▁GANG▁OF▁PEOPLE
+
+Finished

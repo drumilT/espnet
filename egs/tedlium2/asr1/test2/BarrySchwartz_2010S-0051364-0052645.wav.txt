@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BarrySchwartz_2010S-0051364-0052645/data decode/BarrySchwartz_2010S-0051364-0052645/log decode/BarrySchwartz_2010S-0051364-0052645/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BarrySchwartz_2010S-0051364-0052645/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BarrySchwartz_2010S-0051364-0052645/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BarrySchwartz_2010S-0051364-0052645/log decode/BarrySchwartz_2010S-0051364-0052645/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁IT▁MATTERS▁THAT▁YOU▁DO▁THIS▁WISE▁PRACTICE▁IN▁THE▁SERVICE▁OF▁OTHERS▁AND▁NOT▁IN▁THE▁SERVICE▁OF▁YOURSELF▁AND▁SO▁THE▁WILL▁TO▁DO▁THE▁RIGHT▁THING▁IS▁JUST▁AS▁IMPORTANT▁AS▁THE▁MORAL▁SKILL▁OF▁IMPROVISATION
+
+Finished

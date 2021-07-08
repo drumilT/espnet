@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ZeresenayAlemseged_2007G-0029902-0031120/data decode/ZeresenayAlemseged_2007G-0029902-0031120/log decode/ZeresenayAlemseged_2007G-0029902-0031120/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ZeresenayAlemseged_2007G-0029902-0031120/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ZeresenayAlemseged_2007G-0029902-0031120/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ZeresenayAlemseged_2007G-0029902-0031120/log decode/ZeresenayAlemseged_2007G-0029902-0031120/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁ANYWAY▁ONCE▁HE▁MET▁IT▁THERE▁THEN▁IT'S▁A▁GAME▁PARK▁AS▁I▁SAID▁AN▁EXTINCT▁GAME▁PARK▁AND▁OUR▁ANCESTORS▁LIVED▁IN▁THAT▁GAME▁PARK▁BUT▁WERE▁JUST▁THE▁MINORITIES▁THEY▁WERE▁NOT▁AS▁SUCCESSFUL▁AND▁AS▁WIDE▁AS▁SPREAD
+
+Finished

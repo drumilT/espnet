@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MosheSafdie_2002-0081649-0082884/data decode/MosheSafdie_2002-0081649-0082884/log decode/MosheSafdie_2002-0081649-0082884/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MosheSafdie_2002-0081649-0082884/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MosheSafdie_2002-0081649-0082884/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MosheSafdie_2002-0081649-0082884/log decode/MosheSafdie_2002-0081649-0082884/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BUT▁ONE▁RECOGNIZED▁THE▁COUNT▁OF▁UNIQUENESS▁OF▁DECIDE▁IF▁THERE▁WERE▁TO▁BE▁ANYWHERE▁IN▁WASHINGTON▁THEY▁WOULD▁BE▁AN▁OFFICE▁BUILDING▁A▁CONFERENCE▁CENTRE▁A▁PLACE▁FOR▁NEGOTIATING▁PEACE▁AND▁SOUL▁ALL▁OF▁WHICH▁THE▁BUILDING▁IS
+
+Finished

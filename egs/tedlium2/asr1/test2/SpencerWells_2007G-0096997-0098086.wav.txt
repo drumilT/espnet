@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/SpencerWells_2007G-0096997-0098086/data decode/SpencerWells_2007G-0096997-0098086/log decode/SpencerWells_2007G-0096997-0098086/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/SpencerWells_2007G-0096997-0098086/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/SpencerWells_2007G-0096997-0098086/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/SpencerWells_2007G-0096997-0098086/log decode/SpencerWells_2007G-0096997-0098086/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IN▁KILLING▁THE▁ANIMALS▁HUNTING▁THE▁ANIMALS▁ON▁THOSE▁MEAT▁LOCKERS▁SAVANNAS▁MOVING▁UP▁FOLLOWING▁THE▁GRASS▁LANDS▁INTO▁THE▁MIDDLE▁EAST▁TO▁RUN▁FORTY▁FIVE▁THOUSAND▁YEARS▁AGO▁DURING▁ONE▁OF▁THE▁RARE▁WET▁PHASES▁IN▁THE▁SAHARA
+
+Finished

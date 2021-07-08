@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MarcusduSautoy_2009G-0072497-0073469/data decode/MarcusduSautoy_2009G-0072497-0073469/log decode/MarcusduSautoy_2009G-0072497-0073469/fbank
+steps/make_fbank_pitch.sh: moving decode/MarcusduSautoy_2009G-0072497-0073469/data/feats.scp to decode/MarcusduSautoy_2009G-0072497-0073469/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MarcusduSautoy_2009G-0072497-0073469/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MarcusduSautoy_2009G-0072497-0073469/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MarcusduSautoy_2009G-0072497-0073469/log decode/MarcusduSautoy_2009G-0072497-0073469/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁HERE▁I▁GOT▁ONE▁TWO▁THREE▁PEOPLE▁SITTING▁ON▁ONE▁TWO▁THREE▁CHAIRS▁THE▁PEOPLE▁AND▁THE▁CHAIRS▁ARE▁VERY▁DIFFERENT▁BUT▁THE▁NUMBER▁THE▁ABSTRACT▁IDEA▁OF▁THE▁NUMBER▁IS▁THE▁SAME
+
+Finished

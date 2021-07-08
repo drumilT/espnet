@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JohnnyLee_2008-0022807-0023410/data decode/JohnnyLee_2008-0022807-0023410/log decode/JohnnyLee_2008-0022807-0023410/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JohnnyLee_2008-0022807-0023410/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JohnnyLee_2008-0022807-0023410/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JohnnyLee_2008-0022807-0023410/log decode/JohnnyLee_2008-0022807-0023410/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁COMPUTER▁CAN▁CHANGE▁THE▁IMAGE▁THAT'S▁ON▁THE▁SCREEN▁AND▁MAKE▁IT▁RESPOND▁TO▁THE▁HEAD▁MOVEMENTS▁OF▁US▁WHO▁WHICH▁BACK▁TO▁THAT
+
+Finished

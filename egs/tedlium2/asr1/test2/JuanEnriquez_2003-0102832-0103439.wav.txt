@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JuanEnriquez_2003-0102832-0103439/data decode/JuanEnriquez_2003-0102832-0103439/log decode/JuanEnriquez_2003-0102832-0103439/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JuanEnriquez_2003-0102832-0103439/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JuanEnriquez_2003-0102832-0103439/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JuanEnriquez_2003-0102832-0103439/log decode/JuanEnriquez_2003-0102832-0103439/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IT'S▁FREE▁NO▁ONE'S▁READING▁IT▁THEIR▁FOLKS▁SING▁ON▁WAR▁THEIR▁FOLK▁SAM▁BUSH▁THERE▁ARE▁NOT▁INCH▁STOOD▁IN▁LIFE
+
+Finished

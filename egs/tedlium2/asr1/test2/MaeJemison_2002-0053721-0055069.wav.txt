@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MaeJemison_2002-0053721-0055069/data decode/MaeJemison_2002-0053721-0055069/log decode/MaeJemison_2002-0053721-0055069/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MaeJemison_2002-0053721-0055069/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MaeJemison_2002-0053721-0055069/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MaeJemison_2002-0053721-0055069/log decode/MaeJemison_2002-0053721-0055069/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IS▁DECONSTRUCTIVE▁BECAUSE▁YOU▁SEE▁A▁PEACE▁IN▁REMOVE▁WHAT▁DOESN'T▁NEED▁TO▁BE▁THERE▁BIO▁TECHNOLOGY▁IS▁CONSTRUCTIVE▁ORCHESTRAL▁ARRANGING▁IS▁CONSTRUCTIVE▁SO▁IN▁FACT▁WE▁USE▁CONSTRUCTIVE▁AND▁DEKE▁CONSTRUCTIVE▁TECHNIQUES▁IN▁EVERYTHING
+
+Finished

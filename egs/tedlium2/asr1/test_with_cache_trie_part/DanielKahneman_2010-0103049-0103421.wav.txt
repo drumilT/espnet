@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁IS▁THAT▁SORT▁SUDDENLY▁THAT▁YOU▁CAN▁SHARE▁SINCE▁YOU▁GO▁HAVE▁A▁FEW▁MOMENTS▁LEFT▁NOW
+
+Finished

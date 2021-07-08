@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AnnaDeavereSmith_2005-0122013-0123309/data decode/AnnaDeavereSmith_2005-0122013-0123309/log decode/AnnaDeavereSmith_2005-0122013-0123309/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AnnaDeavereSmith_2005-0122013-0123309/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AnnaDeavereSmith_2005-0122013-0123309/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AnnaDeavereSmith_2005-0122013-0123309/log decode/AnnaDeavereSmith_2005-0122013-0123309/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁SHE▁WAS▁SAYING▁YOU▁GO▁MAKE▁ME▁LOOK▁LIKE▁AN▁IDIOT▁CAUSE▁I'VE▁NEVER▁BEEN▁TO▁COLLEGE▁AND▁I▁WOULDN'T▁BE▁TALKING▁REFRESHING▁ANYTHING▁I▁SAID▁A▁LITTLE▁WOMAN▁TALK▁TO▁ME▁FOUR▁HOURS▁YOU▁KNOW▁IF▁I▁WASN'T▁TALKING▁IN▁A▁LOT▁YOU▁NEVER▁WANTED▁ME▁TO▁TALK▁I▁DON'T▁THINK▁SHE▁WOULD▁EVEN▁COME▁OUT▁HERE
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0012331-0016322/data decode/WadeDavis_2003-0012331-0016322/log decode/WadeDavis_2003-0012331-0016322/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0012331-0016322/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0012331-0016322/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0012331-0016322/log decode/WadeDavis_2003-0012331-0016322/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁NOW▁TOGETHER▁THE▁MYRIAD▁CULTURES▁OF▁THE▁WORLD▁MAKE▁UP▁A▁WEB▁OF▁SPIRITUAL▁LIFE▁AND▁CULTURAL▁LIFE▁THAT▁ENVELOPES▁A▁PLANET▁AND▁IT▁IS▁IMPORTANT▁TO▁THE▁WELL▁BEING▁OF▁THE▁PLANET▁AS▁INDEED▁IS▁THE▁BIOLOGICAL▁WEB▁OF▁LIFE▁THAT▁YOU▁KNOWS▁A▁BIOSPHERE▁AND▁YOU▁MIGHT▁THINK▁OF▁THIS▁CULTURAL▁WEB▁OF▁LIFE▁AS▁BEING▁AND▁ETHNAL▁SPHERE▁AND▁YOU▁MIGHT▁DEFINE▁THE▁ETHNO▁SPHERE▁AS▁BEING▁THESE▁SOME▁TOTAL▁OF▁ALL▁THOUGHTS▁AND▁DREAMS▁NITHNES▁IDEAS▁INSPIRATION▁THE▁INTUITIONS▁BROUGHT▁IN▁TO▁BEING▁BY▁THE▁HUMAN▁IMAGINITIES▁SINCE▁ADON▁OF▁CONSCIOUSNESS▁THE▁ETHNOSP▁NO▁SPHERE▁IS▁HUMAN▁HUMANITY'S▁INITIES▁GREAT▁LEGACYS▁THE▁SYMBOL▁OF▁ALL▁WHAT▁WE▁ARE▁AND▁ALL▁THAT▁WE▁CAN▁BE▁IS▁AND▁ASTONISHINGLY▁INQUISPITIVE▁SPECIES▁AND▁ASTONISH
+
+Finished

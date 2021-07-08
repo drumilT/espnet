@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/CameronHerold_2009X-0082442-0083441/data decode/CameronHerold_2009X-0082442-0083441/log decode/CameronHerold_2009X-0082442-0083441/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/CameronHerold_2009X-0082442-0083441/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/CameronHerold_2009X-0082442-0083441/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/CameronHerold_2009X-0082442-0083441/log decode/CameronHerold_2009X-0082442-0083441/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁READING▁KIDS▁AT▁A▁YOUNG▁AGE▁TO▁EXPECT▁A▁REGULAR▁PAY▁CHECK▁THAT'S▁WRONG▁FOR▁ME▁IF▁YOU▁WANT▁TO▁RAISE▁ONCH▁PINNERS▁WHAT▁I▁DO▁WITH▁MY▁KIDS▁NOW▁I▁GOT▁TWO▁NINE▁AND▁SEVEN▁AS▁I▁TEACH▁THEM▁TO▁WALK▁AROUND▁THE▁HOUSE▁IN▁THE▁YARD▁LOOKING▁FOR▁STOP
+
+Finished

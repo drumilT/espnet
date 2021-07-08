@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/RufusGriscomandAlisaVolkman_2010W-0083445-0084382/data decode/RufusGriscomandAlisaVolkman_2010W-0083445-0084382/log decode/RufusGriscomandAlisaVolkman_2010W-0083445-0084382/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/RufusGriscomandAlisaVolkman_2010W-0083445-0084382/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/RufusGriscomandAlisaVolkman_2010W-0083445-0084382/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/RufusGriscomandAlisaVolkman_2010W-0083445-0084382/log decode/RufusGriscomandAlisaVolkman_2010W-0083445-0084382/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁I▁COULD▁GO▁TO▁THIS▁LIVE▁MUSIC▁IN▁THAT▁AND▁HAVE▁UTTERLY▁TRANSFORMING▁EXPERIENCE▁THAT▁WILL▁COVER▁MY▁ENTIRE▁BODY▁WITH▁GOOSE▁BUBS▁BUT▁IT'S▁MORE▁LIKELY▁THAT▁I'LL▁FEEL▁COST▁YOUR▁FOBIC▁AND▁I▁WON'T▁BE▁ABLE▁TO▁GET▁A▁BEER
+
+Finished

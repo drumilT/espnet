@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AlanSiegel_2010-0016480-0017303/data decode/AlanSiegel_2010-0016480-0017303/log decode/AlanSiegel_2010-0016480-0017303/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AlanSiegel_2010-0016480-0017303/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AlanSiegel_2010-0016480-0017303/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AlanSiegel_2010-0016480-0017303/log decode/AlanSiegel_2010-0016480-0017303/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AT▁SUCH▁AND▁SUCH▁A▁DATE▁I▁BE▁M▁AS▁RESPONSIBILITIES▁YOU▁HAVE▁RESPONSIBILITIES▁IT▁RECEIVED▁VERY▁FAVOURABLY▁BY▁BY▁BUSINESS
+
+Finished

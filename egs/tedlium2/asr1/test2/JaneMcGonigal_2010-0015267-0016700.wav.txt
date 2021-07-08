@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JaneMcGonigal_2010-0015267-0016700/data decode/JaneMcGonigal_2010-0015267-0016700/log decode/JaneMcGonigal_2010-0015267-0016700/fbank
+steps/make_fbank_pitch.sh: moving decode/JaneMcGonigal_2010-0015267-0016700/data/feats.scp to decode/JaneMcGonigal_2010-0015267-0016700/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JaneMcGonigal_2010-0015267-0016700/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JaneMcGonigal_2010-0015267-0016700/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JaneMcGonigal_2010-0015267-0016700/log decode/JaneMcGonigal_2010-0015267-0016700/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁OH▁YOU▁HEARD▁OF▁THAT▁O▁K▁GOOD▁SO▁WE▁HAVE▁SOME▁NEIGHBORS▁AMONG▁US▁SO▁AN▁EPICQUIN▁IS▁AN▁OUTCOME▁THAT▁IS▁SO▁EXTRAORDINARILY▁POSITIVE▁YOU▁HAD▁NO▁IDEA▁IT▁WAS▁EVEN▁POSSIBLE▁UNTIL▁YOU▁ACHIEVED▁IT▁AH▁IT▁WAS▁ALMOST▁BEYOND▁THE▁THRESHOLD▁OF▁IMAGINATION
+
+Finished

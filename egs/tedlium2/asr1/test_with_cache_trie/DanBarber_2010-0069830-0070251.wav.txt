@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁EVERY▁MORNING▁EATING▁THEY▁FLY▁ONE▁HUNDRED▁FIFTY▁MILES▁INTO▁THE▁FARM
+
+Finished

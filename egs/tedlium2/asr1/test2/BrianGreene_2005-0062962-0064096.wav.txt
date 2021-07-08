@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BrianGreene_2005-0062962-0064096/data decode/BrianGreene_2005-0062962-0064096/log decode/BrianGreene_2005-0062962-0064096/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BrianGreene_2005-0062962-0064096/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BrianGreene_2005-0062962-0064096/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BrianGreene_2005-0062962-0064096/log decode/BrianGreene_2005-0062962-0064096/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁DEEP▁INSIDE▁ANY▁OF▁THESE▁PARTICLES▁THERE▁IS▁SOMETHING▁ELSE▁THE▁SOMETHING▁ELSE▁IS▁THIS▁DANCING▁FILAMENT▁OF▁ENERGY▁IT▁LOOKS▁LIKE▁A▁VIBRATING▁STRING▁THAT'S▁WHERE▁THE▁IDEA▁STRING▁THEORY▁COMES▁FROM
+
+Finished

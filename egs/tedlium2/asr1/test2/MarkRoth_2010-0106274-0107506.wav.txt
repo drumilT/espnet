@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MarkRoth_2010-0106274-0107506/data decode/MarkRoth_2010-0106274-0107506/log decode/MarkRoth_2010-0106274-0107506/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MarkRoth_2010-0106274-0107506/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MarkRoth_2010-0106274-0107506/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MarkRoth_2010-0106274-0107506/log decode/MarkRoth_2010-0106274-0107506/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁GET▁THAT▁CARE▁LIKE▁THE▁MOUSE▁LIKE▁THE▁SKEER▁LIKE▁THE▁SIXTY▁FIVE▁YEAR▁OLD▁WOMAN▁THEY'LL▁WAKE▁UP▁A▁MIRACLE▁WE▁HOPE▁NOT▁OR▁MAYBE▁WE▁JUST▁HOPE▁TO▁MAKE▁MIRACLES▁A▁LITTLE▁MORE▁COMMON▁THANK
+
+Finished

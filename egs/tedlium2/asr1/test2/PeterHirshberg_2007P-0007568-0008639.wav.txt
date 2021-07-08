@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/PeterHirshberg_2007P-0007568-0008639/data decode/PeterHirshberg_2007P-0007568-0008639/log decode/PeterHirshberg_2007P-0007568-0008639/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/PeterHirshberg_2007P-0007568-0008639/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/PeterHirshberg_2007P-0007568-0008639/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/PeterHirshberg_2007P-0007568-0008639/log decode/PeterHirshberg_2007P-0007568-0008639/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BUT▁LIKE▁NOT▁NECESSARY▁BECAUSE▁YOU▁CAN▁DO▁A▁LOT▁OF▁OTHER▁STUFF▁WITH▁YOUR▁FREE▁TIMES▁AND▁LUNCH▁PROGRAMMES▁BECAUSE▁WAR▁FOGG▁INTERNITY▁BE▁AND▁AIN'T
+
+Finished

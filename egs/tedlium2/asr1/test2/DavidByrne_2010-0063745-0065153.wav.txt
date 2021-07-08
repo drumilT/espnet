@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidByrne_2010-0063745-0065153/data decode/DavidByrne_2010-0063745-0065153/log decode/DavidByrne_2010-0063745-0065153/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidByrne_2010-0063745-0065153/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidByrne_2010-0063745-0065153/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidByrne_2010-0063745-0065153/log decode/DavidByrne_2010-0063745-0065153/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁PLACE▁WORKS▁PERFECTLY▁SO▁THERE'S▁MORE▁NEW▁VENUES▁ONE▁OF▁THEM▁YOU▁ONCE▁IS▁THE▁AUTOMOBILE▁I▁GREW▁UP▁WITH▁A▁RADIO▁IN▁A▁CAR▁BUT▁NOW▁THAT'S▁EVOLVED▁INTO▁SOMETHING▁ELSE▁THE▁CAR▁IS▁A▁WHOLE▁VALUE
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0129633-0131309/data decode/WadeDavis_2003-0129633-0131309/log decode/WadeDavis_2003-0129633-0131309/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0129633-0131309/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0129633-0131309/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0129633-0131309/log decode/WadeDavis_2003-0129633-0131309/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁ONE▁BY▁ONE▁THE▁CENTRAL▁REVELATION▁OF▁ANTIPOLOGY▁THAT▁THIS▁WORLD▁DESERVES▁TO▁EXIST▁IN▁A▁DIVERSE▁WAY▁THAT▁WE▁CAN▁FIND▁A▁WAY▁TO▁LIVE▁IN▁A▁TRULY▁MULTICULTURAL▁PLURALISTIC▁WORLD▁WHERE▁ALL▁OF▁THE▁WISDOM▁OF▁ALL▁PEOPLES▁CAN▁CONTRIBUTE▁TO▁OUR▁COLLECTIVE▁WELL▁BEING▁THANK▁YOU▁VERY▁MUCH
+
+Finished

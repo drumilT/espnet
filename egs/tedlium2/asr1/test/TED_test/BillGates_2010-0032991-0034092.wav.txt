@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BillGates_2010-0032991-0034092/data decode/BillGates_2010-0032991-0034092/log decode/BillGates_2010-0032991-0034092/fbank
+steps/make_fbank_pitch.sh: moving decode/BillGates_2010-0032991-0034092/data/feats.scp to decode/BillGates_2010-0032991-0034092/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BillGates_2010-0032991-0034092/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BillGates_2010-0032991-0034092/data/feats.scp decode/download/tedlium2.transformer.v1/data/train_trim_sp/cmvn.ark decode/BillGates_2010-0032991-0034092/log decode/BillGates_2010-0032991-0034092/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁can▁we▁have▁a▁very▁basic▁service▁do▁you▁have▁lighting▁in▁your▁house▁to▁be▁able▁to▁read▁your▁homework▁and▁in▁fact▁these▁kids▁don't▁so▁they're▁going▁out▁and▁reading▁their▁schoolwork▁under▁the▁street▁labs
+
+Finished

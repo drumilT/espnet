@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BrianCox_2009U-0002336-0003911/data decode/BrianCox_2009U-0002336-0003911/log decode/BrianCox_2009U-0002336-0003911/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BrianCox_2009U-0002336-0003911/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BrianCox_2009U-0002336-0003911/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BrianCox_2009U-0002336-0003911/log decode/BrianCox_2009U-0002336-0003911/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁LARGEST▁SCIENTIFIC▁EXPERIMENT▁EVER▁ATTEMPTED▁TWENTY▁SEVEN▁KILOMETERS▁INTOCUMBRANCE▁HIS▁JOB▁IS▁TO▁RECREATE▁THE▁CONDITIONS▁THAT▁WERE▁PRESENT▁LESS▁THAN▁A▁BILLION▁TO▁A▁SECOND▁AFTER▁THE▁UNIVERSE▁BEGAN▁UP▁TO▁SIX▁HUNDRED▁MILLION▁TIMES▁THE▁SECONDS▁AND▁NOTHING▁IF▁NOT▁AMBITIOUS▁THIS▁IS▁THE▁MACHINE▁BILLOW▁GENEVA
+
+Finished

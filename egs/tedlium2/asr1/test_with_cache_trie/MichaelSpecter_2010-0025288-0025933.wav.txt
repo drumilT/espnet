@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁I▁WOULD▁KNOW▁WHAT▁TO▁DO▁SO▁I▁JUST▁DID▁WHAT▁I▁DO▁I▁WROTE▁A▁STORY▁AND▁I▁MOVED▁ON▁AND▁I'M▁SOON▁AFTER▁THAT
+
+Finished

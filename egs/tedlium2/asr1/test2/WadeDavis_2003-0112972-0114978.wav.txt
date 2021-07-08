@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0112972-0114978/data decode/WadeDavis_2003-0112972-0114978/log decode/WadeDavis_2003-0112972-0114978/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0112972-0114978/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0112972-0114978/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0112972-0114978/log decode/WadeDavis_2003-0112972-0114978/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AH▁THIS▁IS▁A▁PHOTOGRAPH▁I▁TOOK▁AT▁THE▁NORTHERN▁TIP▁OF▁BATH▁IN▁ISLAND▁WHEN▁I▁WENT▁NARWELL▁HUNTING▁WITH▁SOME▁INNUATE▁PEOPLE▁AND▁THIS▁MAN▁OLIAH▁TOLD▁ME▁A▁MARVELLOUS▁STORY▁OF▁HIS▁GRANDFATHER▁THE▁CANADIAN▁GOVERNMENT▁HAS▁NOT▁ALWAYS▁BEEN▁KIND▁TO▁THE▁INNUATE▁PEOPLE▁AND▁DURING▁THE▁NINETEEN▁FIFTIES▁TO▁ESTABLISH▁YOUR▁SOVEREIGNTY▁WE▁FORCE▁THEM▁INTO▁SETTLEMENTS▁THIS▁OLD▁MANS▁AH
+
+Finished

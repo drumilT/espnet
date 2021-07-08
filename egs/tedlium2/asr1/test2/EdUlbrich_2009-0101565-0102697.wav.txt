@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EdUlbrich_2009-0101565-0102697/data decode/EdUlbrich_2009-0101565-0102697/log decode/EdUlbrich_2009-0101565-0102697/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EdUlbrich_2009-0101565-0102697/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EdUlbrich_2009-0101565-0102697/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EdUlbrich_2009-0101565-0102697/log decode/EdUlbrich_2009-0101565-0102697/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁HAPPY▁SMILE▁OR▁FRESH▁RATE▁AND▁SMILE▁SO▁DID▁TAKE▁HUMANS▁TO▁COME▁PUSH▁IT▁AT▁ONE▁WAY▁THE▁OTHER▁UM▁BUT▁THAT▁WE▁ENDED▁AT▁CALLING▁THE▁ENTIRE▁PROCESS▁IN▁ALL▁THE▁TECHNOLOGY▁EMOTION▁CAPTURE▁AS▁A▁PUS▁DO▁JUST▁MOTION▁CAPTURE▁SO▁TAKE▁TAKEN▁OF▁THE▁LOOK
+
+Finished

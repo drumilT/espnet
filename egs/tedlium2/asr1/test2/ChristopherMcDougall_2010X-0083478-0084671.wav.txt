@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ChristopherMcDougall_2010X-0083478-0084671/data decode/ChristopherMcDougall_2010X-0083478-0084671/log decode/ChristopherMcDougall_2010X-0083478-0084671/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ChristopherMcDougall_2010X-0083478-0084671/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ChristopherMcDougall_2010X-0083478-0084671/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ChristopherMcDougall_2010X-0083478-0084671/log decode/ChristopherMcDougall_2010X-0083478-0084671/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁FOUR▁HOURS▁YOU▁SOCKED▁IF▁YOU▁THREE▁FEET▁AND▁I▁POINT▁FIVE▁NINE▁YOUR▁AWESOME▁COULD▁YOU▁QUALIFY▁FOR▁ANOTHER▁RACE▁WE▁NEED▁TO▁GET▁BACK▁TO▁THAT▁SENSE▁OF▁PLAYFULNESS▁AND▁JOYFULNESS▁AND▁OF▁I▁WOULD▁SAY▁NAKEDNESS▁THAT▁HAS▁MADE▁THE▁TIME
+
+Finished

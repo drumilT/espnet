@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JoshuaKlein_2008-0041460-0042213/data decode/JoshuaKlein_2008-0041460-0042213/log decode/JoshuaKlein_2008-0041460-0042213/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JoshuaKlein_2008-0041460-0042213/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JoshuaKlein_2008-0041460-0042213/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JoshuaKlein_2008-0041460-0042213/log decode/JoshuaKlein_2008-0041460-0042213/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THEY▁ARE▁ABLE▁TO▁FAT▁TO▁VERY▁QUICKLY▁AND▁VERY▁FLEXIBLY▁ADAPT▁TO▁NEW▁CHALLENGES▁AND▁NEW▁RESOURCES▁IN▁THE▁ENVIRONMENT▁AH▁WHICH▁IS▁REALLY▁USEFUL▁IF▁YOU▁LIVE▁IN▁A▁CITY
+
+Finished

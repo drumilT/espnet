@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BenDunlap_2007-0062895-0063888/data decode/BenDunlap_2007-0062895-0063888/log decode/BenDunlap_2007-0062895-0063888/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BenDunlap_2007-0062895-0063888/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BenDunlap_2007-0062895-0063888/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BenDunlap_2007-0062895-0063888/log decode/BenDunlap_2007-0062895-0063888/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁FACULTY▁DECIDED▁TO▁HONOR▁ITSELF▁BY▁NAMING▁MISTER▁TUSSLE▁A▁PROFESSOR▁OF▁THE▁COLLEGE▁PARTLY▁BECAUSE▁AT▁THAT▁POINT▁HE▁HAD▁ALREADY▁TAKEN▁ALL▁OTHER▁COURSES▁IN▁THE▁CATALOGUE▁BUT▁MAINLY
+
+Finished

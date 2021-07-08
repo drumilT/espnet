@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AlGore_2009-0023668-0025415/data decode/AlGore_2009-0023668-0025415/log decode/AlGore_2009-0023668-0025415/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AlGore_2009-0023668-0025415/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AlGore_2009-0023668-0025415/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AlGore_2009-0023668-0025415/log decode/AlGore_2009-0023668-0025415/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁COAL▁IS▁THE▁MOST▁SERIOUS▁PROBLEM▁THE▁UNITED▁STATES▁IS▁ONE▁OF▁THE▁TWO▁LARGEST▁EMITTERS▁ALONG▁WITH▁CHINA▁AND▁THE▁PROPOSAL▁HAS▁BEEN▁TO▁BUILD▁A▁LOT▁MORE▁COAL▁PLANTS▁BUT▁WE'RE▁BEGINNING▁TO▁SEE▁A▁SEA▁CHANGE▁HERE▁THE▁ONES▁THAT▁HAVE▁BEEN▁CANCELLED▁IN▁THE▁LAST▁FEW▁YEARS▁WITH▁SOME▁GREEN▁ALTERNATIVES▁OF▁PROPOSE
+
+Finished

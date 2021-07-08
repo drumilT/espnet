@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁EATING▁BUT▁I▁WAS▁A▁LOVE▁AND▁MY▁HEAD
+
+Finished

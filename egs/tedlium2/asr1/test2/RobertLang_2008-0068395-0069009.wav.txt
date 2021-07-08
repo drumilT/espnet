@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/RobertLang_2008-0068395-0069009/data decode/RobertLang_2008-0068395-0069009/log decode/RobertLang_2008-0068395-0069009/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/RobertLang_2008-0068395-0069009/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/RobertLang_2008-0068395-0069009/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/RobertLang_2008-0068395-0069009/log decode/RobertLang_2008-0068395-0069009/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁A▁FOLDING▁PATTERN▁REALISED▁THIS▁COULD▁FALL▁DOWN▁INTO▁AN▁EXTREMELY▁COMPACT▁PACKAGE▁THAT▁HAD▁A▁VERY▁SIMPLE
+
+Finished

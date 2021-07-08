@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/TomWujec_2010U-0029055-0031142/data decode/TomWujec_2010U-0029055-0031142/log decode/TomWujec_2010U-0029055-0031142/fbank
+steps/make_fbank_pitch.sh: moving decode/TomWujec_2010U-0029055-0031142/data/feats.scp to decode/TomWujec_2010U-0029055-0031142/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/TomWujec_2010U-0029055-0031142/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/TomWujec_2010U-0029055-0031142/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/TomWujec_2010U-0029055-0031142/log decode/TomWujec_2010U-0029055-0031142/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁NOT▁ONE▁TEAM▁HAD▁A▁STANDING▁STRUCTURE▁NOT▁ONE▁HAD▁A▁IF▁ANYONE▁HAD▁BUILT▁SAY▁A▁A▁ONE▁INSTRUCTOR▁LATER▁WOULD▁FORSAKEN▁HIM▁THAT▁THE▁PRIZE▁SO▁ISN'T▁IT▁INTERESTING▁THAT▁HIGH▁STAKES▁I▁HAVE▁A▁STRONG▁IMPET▁WE▁DID▁THE▁EXERCISE▁AGAIN▁WITH▁THE▁SAME▁STUDENTS▁WHAT▁YOU▁THINK▁HAPPENED▁THEN▁SO▁NOW▁THE▁UNDERSTAND▁THE▁VALUE▁OF▁PROTOTYPING
+
+Finished

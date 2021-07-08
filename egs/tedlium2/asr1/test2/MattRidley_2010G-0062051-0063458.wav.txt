@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MattRidley_2010G-0062051-0063458/data decode/MattRidley_2010G-0062051-0063458/log decode/MattRidley_2010G-0062051-0063458/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MattRidley_2010G-0062051-0063458/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MattRidley_2010G-0062051-0063458/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MattRidley_2010G-0062051-0063458/log decode/MattRidley_2010G-0062051-0063458/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THEY▁WERE▁IMAGINATIVE▁THEY▁BURIED▁THEIR▁DARED▁THEY▁HAD▁LANGUAGE▁PROBABLY▁BECAUSE▁WE▁KNOW▁THEY▁HAD▁THE▁FOX▁PEATU▁JEAN▁OF▁THE▁SAME▁KIND▁AS▁US▁WHICH▁WAS▁DISCOVERED▁HERE▁IN▁OXFORD▁AND▁SO▁IT▁LOOKS▁LIKE▁THEY▁PROBABLY▁HAD▁LINGUISTIC▁SKILLS▁THEY▁WERE▁BRILLIANT▁PEOPLE▁ARE▁NOT▁DISINGLIN▁HE▁UNDERT▁OFF▁BUT▁THEY
+
+Finished

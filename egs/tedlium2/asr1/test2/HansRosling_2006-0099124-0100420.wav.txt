@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/HansRosling_2006-0099124-0100420/data decode/HansRosling_2006-0099124-0100420/log decode/HansRosling_2006-0099124-0100420/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/HansRosling_2006-0099124-0100420/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/HansRosling_2006-0099124-0100420/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/HansRosling_2006-0099124-0100420/log decode/HansRosling_2006-0099124-0100420/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁A▁SEARCH▁FUNCTION▁WHERE▁WE▁CAN▁COOK▁BE▁THE▁DATA▁UP▁TO▁A▁SEARCHABLE▁FORM▁IT▁AND▁GET▁IT▁OUT▁IN▁THE▁WORLD▁AND▁WHAT▁DO▁WE▁HEAR▁WHEN▁WE▁GO▁AROUND▁I'VE▁DONE▁ANTHROPOLOGY▁ON▁THE▁MAIN▁STATISTICAL▁UNITS▁EVERY▁ONE▁SAYS▁IS▁IMPOSSIBLE
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EthanZuckerman_2010G-0067392-0068838/data decode/EthanZuckerman_2010G-0067392-0068838/log decode/EthanZuckerman_2010G-0067392-0068838/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EthanZuckerman_2010G-0067392-0068838/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EthanZuckerman_2010G-0067392-0068838/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EthanZuckerman_2010G-0067392-0068838/log decode/EthanZuckerman_2010G-0067392-0068838/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁NOR▁DO▁I▁THINK▁WE▁ARE▁BY▁OURSELVES▁ACTUALLY▁GOING▁TO▁SOLVE▁THE▁PROBLEM▁BUT▁THE▁MORE▁THAN▁I▁THINK▁ABOUT▁IT▁THE▁MORE▁THAN▁I▁THINK▁THAT▁A▁FEW▁THINGS▁THAT▁WE▁HAVE▁LEARNED▁ALONG▁THE▁WAY▁OUR▁INTERESTING▁LESSONS▁FOR▁HOW▁WE▁WOULD▁REQUIRE▁IF▁WE▁WANTED▁TO▁USE▁THE▁WEB▁TO▁HAVE▁A▁WIDER▁WORLD
+
+Finished

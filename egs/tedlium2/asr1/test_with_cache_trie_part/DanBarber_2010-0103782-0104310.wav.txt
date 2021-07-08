@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁OR▁BETTER▁I▁GOING▁RE▁CREATE▁CONDITIONS▁THAT▁ENABLE▁EVERY▁COMMUNITY
+
+Finished

@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EricMead_2009P-0026914-0028352/data decode/EricMead_2009P-0026914-0028352/log decode/EricMead_2009P-0026914-0028352/fbank
+steps/make_fbank_pitch.sh: moving decode/EricMead_2009P-0026914-0028352/data/feats.scp to decode/EricMead_2009P-0026914-0028352/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EricMead_2009P-0026914-0028352/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EricMead_2009P-0026914-0028352/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EricMead_2009P-0026914-0028352/log decode/EricMead_2009P-0026914-0028352/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THEIR▁MORE▁EFFECTIVE▁THAN▁TABLETS▁IN▁ANY▁FORM▁A▁COLOURED▁CAPSULE▁THAT▁YELLOW▁ON▁ONE▁END▁AND▁RED▁ON▁THE▁OTHER▁IS▁BETTER▁THAN▁A▁WHITE▁CAPSLE▁DOSAGE▁HAS▁SOMETHING▁TO▁DO▁WITH▁THIS▁YOU▁KNOW▁ONE▁PILL▁TWICE▁A▁DAY▁IS▁NOT▁AS▁GOOD▁AS▁THREE▁PILLS
+
+Finished

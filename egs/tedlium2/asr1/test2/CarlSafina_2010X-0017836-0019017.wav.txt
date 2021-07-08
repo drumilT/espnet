@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/CarlSafina_2010X-0017836-0019017/data decode/CarlSafina_2010X-0017836-0019017/log decode/CarlSafina_2010X-0017836-0019017/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/CarlSafina_2010X-0017836-0019017/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/CarlSafina_2010X-0017836-0019017/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/CarlSafina_2010X-0017836-0019017/log decode/CarlSafina_2010X-0017836-0019017/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THINGS▁THAT▁REALLY▁IMPRESSES▁ME▁ABOUT▁THE▁PEOPLE▁IN▁THE▁GULF▁THEY▁ARE▁REALLY▁REALLY▁AQUATIC▁PEOPLE▁AND▁THEY▁CAN▁HANDLE▁WATER▁THEY▁CAN▁HANDLE▁A▁HURRICANE▁THAT▁COMES▁AND▁GOES▁WHEN▁THE▁WATER▁GOES▁DOWN▁THEY▁KNOW▁WHAT▁TO▁DO
+
+Finished

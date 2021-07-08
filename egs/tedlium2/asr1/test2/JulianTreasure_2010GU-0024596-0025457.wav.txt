@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JulianTreasure_2010GU-0024596-0025457/data decode/JulianTreasure_2010GU-0024596-0025457/log decode/JulianTreasure_2010GU-0024596-0025457/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JulianTreasure_2010GU-0024596-0025457/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JulianTreasure_2010GU-0024596-0025457/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JulianTreasure_2010GU-0024596-0025457/log decode/JulianTreasure_2010GU-0024596-0025457/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁NOW▁THAT'S▁ALREADY▁SERIOUS▁PROBLEM▁GIVE▁YOU▁THREE▁QUICK▁TIPS▁ER▁TO▁PROTECT▁YOUR▁EARS▁AND▁PASSES▁ON▁TO▁YOUR▁CHILDREN▁PLEASE▁PROFESSIONAL▁HEARING▁PROTECTORS▁A▁GREAT▁I▁USE▁SOME▁ALL▁THE▁TIME
+
+Finished

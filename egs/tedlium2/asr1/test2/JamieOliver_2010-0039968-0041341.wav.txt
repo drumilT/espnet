@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JamieOliver_2010-0039968-0041341/data decode/JamieOliver_2010-0039968-0041341/log decode/JamieOliver_2010-0039968-0041341/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JamieOliver_2010-0039968-0041341/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JamieOliver_2010-0039968-0041341/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JamieOliver_2010-0039968-0041341/log decode/JamieOliver_2010-0039968-0041341/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THIRTY▁YEARS▁AGO▁MOST▁OF▁THE▁FOOD▁WAS▁LARGELY▁LOCAL▁AND▁LARGELY▁FRESH▁NOW▁ITS▁LARGELY▁PROCESS▁AND▁FULL▁OF▁ALL▁SORTS▁OF▁ADDITIES▁EXTRA▁INGREDIENTS▁AND▁YOU▁KNOW▁THE▁REST▁OF▁THE▁STORY▁PORTION▁SIZE▁IS▁OBVIOUSLY▁A▁MASSIVE▁MASSIVE▁PROBLEM
+
+Finished

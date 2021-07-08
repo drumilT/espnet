@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/RossLovegrove_2005-0003108-0004069/data decode/RossLovegrove_2005-0003108-0004069/log decode/RossLovegrove_2005-0003108-0004069/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/RossLovegrove_2005-0003108-0004069/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/RossLovegrove_2005-0003108-0004069/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/RossLovegrove_2005-0003108-0004069/log decode/RossLovegrove_2005-0003108-0004069/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁GET▁THROUGH▁TO▁DAY▁I'VE▁KIND▁OF▁DISCIPLINED▁MYSELF▁WITHIN▁EIGHTEEN▁MINUTE▁TALK▁I▁WAS▁HANGING▁ON▁TO▁HAVE▁A▁PEA▁I▁THOUGHT▁PAPS▁IF▁I▁WAS▁HANGING▁ON▁LONG▁ENOUGH▁THAT▁WOULD▁THAT▁WOULD▁GUIDE▁ME▁THROUGH▁THE▁EIGHTEEN▁MINUTES
+
+Finished

@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁SHE▁WAS▁THINKING▁OF▁VAT'S▁MADE▁HER▁KIT▁AGAINST▁POLLIO▁NO▁WAY▁FINE
+
+Finished

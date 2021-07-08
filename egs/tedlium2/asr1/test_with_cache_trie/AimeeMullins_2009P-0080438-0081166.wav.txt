@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁WELL▁WHO'S▁NORMAL▁THERE'S▁NO▁NORMAL▁THERE'S▁COMMON▁THERE'S▁TYPICAL
+
+Finished

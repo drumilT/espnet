@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MurrayGellMann_2007-0013729-0015125/data decode/MurrayGellMann_2007-0013729-0015125/log decode/MurrayGellMann_2007-0013729-0015125/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MurrayGellMann_2007-0013729-0015125/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MurrayGellMann_2007-0013729-0015125/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MurrayGellMann_2007-0013729-0015125/log decode/MurrayGellMann_2007-0013729-0015125/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WHAT▁DO▁WE▁MEAN▁BY▁BEAUTIFUL▁THAT'S▁ONE▁THING▁I'LL▁TRY▁TO▁MAKE▁THAT▁CLEAR▁OF▁PARTIALLY▁CLEAR▁WHY▁SHOULD▁IT▁WORK▁AND▁IS▁THIS▁SOMETHING▁TO▁DO▁WITH▁HUMAN▁BEINGS▁I'LL▁LET▁YOU▁IN▁ON▁THE▁ANSWER▁TO▁THE▁LAST▁ONE▁THAT▁I▁OFFER▁AND▁THAT▁IS▁AS▁ON▁YOU▁DO▁WITH▁HUMAN▁BEING
+
+Finished

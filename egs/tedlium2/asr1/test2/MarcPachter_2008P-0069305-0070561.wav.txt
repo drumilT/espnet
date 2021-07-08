@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MarcPachter_2008P-0069305-0070561/data decode/MarcPachter_2008P-0069305-0070561/log decode/MarcPachter_2008P-0069305-0070561/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MarcPachter_2008P-0069305-0070561/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MarcPachter_2008P-0069305-0070561/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MarcPachter_2008P-0069305-0070561/log decode/MarcPachter_2008P-0069305-0070561/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THAT▁AND▁THEN▁SHE▁WENT▁OFF▁ON▁A▁TEAR▁AND▁SHE▁SAID▁O▁WILL▁THERE▁WAS▁THAT▁ONE▁TIME▁THAT▁I▁WAS▁AN▁ACTRESS▁I▁IT▁WAS▁FOR▁A▁CHARITY▁AND▁CONNECTICUT▁WHEN▁I▁WAS▁A▁CONGRESS▁WOMAN▁AND▁I▁GOT▁UP▁THERE▁AND▁SHE▁WENT▁ON▁AND▁ON▁AND▁THAT▁I▁GOT▁ON▁THE▁STAGE
+
+Finished

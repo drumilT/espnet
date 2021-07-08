@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/StefanaBroadbent_2009G-0048598-0049218/data decode/StefanaBroadbent_2009G-0048598-0049218/log decode/StefanaBroadbent_2009G-0048598-0049218/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/StefanaBroadbent_2009G-0048598-0049218/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/StefanaBroadbent_2009G-0048598-0049218/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/StefanaBroadbent_2009G-0048598-0049218/log decode/StefanaBroadbent_2009G-0048598-0049218/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁ACCESS▁AT▁WORK▁IS▁ACTUALLY▁DOING▁PRIVATE▁EMIL▁AND▁FROM▁HIS▁OFFICE▁I▁REALLY▁THINK▁THAT▁THE▁NUMBER▁IS▁CONSERVATIVE
+
+Finished

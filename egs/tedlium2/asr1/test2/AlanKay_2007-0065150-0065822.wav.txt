@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AlanKay_2007-0065150-0065822/data decode/AlanKay_2007-0065150-0065822/log decode/AlanKay_2007-0065150-0065822/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AlanKay_2007-0065150-0065822/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AlanKay_2007-0065150-0065822/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AlanKay_2007-0065150-0065822/log decode/AlanKay_2007-0065150-0065822/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WHAT▁HAVE▁YOU▁NOTICED▁ABOUT▁WHAT▁YOU▁DID▁AND▁SO▁SIX▁YEAR▁OLD▁LOREN▁THERE▁NOTICED▁THAT▁THE▁FIRST▁ONE▁TOOK▁ONE
+
+Finished

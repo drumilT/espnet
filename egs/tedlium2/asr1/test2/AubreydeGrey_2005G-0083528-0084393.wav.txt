@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AubreydeGrey_2005G-0083528-0084393/data decode/AubreydeGrey_2005G-0083528-0084393/log decode/AubreydeGrey_2005G-0083528-0084393/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AubreydeGrey_2005G-0083528-0084393/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AubreydeGrey_2005G-0083528-0084393/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AubreydeGrey_2005G-0083528-0084393/log decode/AubreydeGrey_2005G-0083528-0084393/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁FINALLY▁OF▁COURSE▁THAT▁I▁THINK▁IT'S▁BETTER▁SAY▁THAT▁A▁LARGE▁PART▁OF▁THE▁REASON▁WHY▁THE▁PUBLIC▁A▁SIGN▁BIBLENT▁ABOUTATING▁NOW▁IS▁THE▁GLAABLE▁CHANCE▁I▁SPOKE▁ABOUT▁EARLY▁AT▁THE▁COPING▁STRATEGY
+
+Finished

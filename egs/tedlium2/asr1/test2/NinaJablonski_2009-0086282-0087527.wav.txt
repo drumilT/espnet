@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/NinaJablonski_2009-0086282-0087527/data decode/NinaJablonski_2009-0086282-0087527/log decode/NinaJablonski_2009-0086282-0087527/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/NinaJablonski_2009-0086282-0087527/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/NinaJablonski_2009-0086282-0087527/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/NinaJablonski_2009-0086282-0087527/log decode/NinaJablonski_2009-0086282-0087527/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁PART▁OF▁IT▁WRITTEN▁IN▁YOUR▁SKIN▁UNDERSTAND▁IT▁APPRECIATE▁IT▁CELEBRATE▁IT▁GO▁OUT▁ISN'T▁IT▁BEAUTIFUL▁ISN'T▁IT▁WONDERFUL▁YOU▁ARE▁THE▁PRODUCTS▁OF▁EVOLUTION▁THANK▁YOU
+
+Finished

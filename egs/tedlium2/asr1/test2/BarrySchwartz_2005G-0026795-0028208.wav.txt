@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BarrySchwartz_2005G-0026795-0028208/data decode/BarrySchwartz_2005G-0026795-0028208/log decode/BarrySchwartz_2005G-0026795-0028208/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BarrySchwartz_2005G-0026795-0028208/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BarrySchwartz_2005G-0026795-0028208/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BarrySchwartz_2005G-0026795-0028208/log decode/BarrySchwartz_2005G-0026795-0028208/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁TO▁PEOPLE▁LIKE▁YOU▁AND▁ME▁WHICH▁IF▁YOU▁THINK▁ABOUT▁IT▁MAKES▁NO▁SENSE▁AT▁ALL▁SINCE▁WE▁CAN'T▁BUY▁THEM▁WHY▁DO▁THEY▁MARKET▁TO▁US▁IF▁WE▁CAN▁BUY▁THEM▁THE▁ANSWER▁IS▁THAT▁THEY▁EXPECT▁US▁TO▁CALL▁OUR▁DOCTORS▁THE▁NEXT▁MORNING▁AND▁ASK▁FOR▁OUR▁PRESCRIPTIONS▁TO▁BE▁CHANGED
+
+Finished

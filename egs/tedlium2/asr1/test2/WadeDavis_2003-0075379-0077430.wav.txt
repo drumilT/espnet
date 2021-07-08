@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0075379-0077430/data decode/WadeDavis_2003-0075379-0077430/log decode/WadeDavis_2003-0075379-0077430/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0075379-0077430/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0075379-0077430/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0075379-0077430/log decode/WadeDavis_2003-0075379-0077430/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁DISTORTION▁OF▁REALITY▁ACREES▁THE▁DISILLUSION▁OF▁REALITY▁IN▁FACT▁I▁USED▁TO▁ARGUE▁WITH▁MY▁PROFESSOR▁RICHARD▁AMANCIALTIES▁WHO▁WAS▁A▁MAN▁TO▁SPARK▁THIS▁LIKE▁A▁ELEC▁ERA▁WITH▁HIS▁DISCOVERY▁OF▁MAGIC▁MUSHROOMS▁AND▁MEXICO▁IN▁THE▁NINETEEN▁THIRTIES▁I▁USED▁TO▁ARGUE▁THAT▁YOU▁COULDN'T▁CLASSIFY▁THESE▁STRICT▁MEANS▁WAS▁LOOSENED▁EUGENIC▁BECAUSE▁BY▁THE▁TIME▁YOU'RE▁UNDER▁THE▁EFFECT▁THERE▁IS▁KNOWN▁HOME▁ANY▁MORE▁TO▁EXPERIENCE▁HALLUCINATION
+
+Finished

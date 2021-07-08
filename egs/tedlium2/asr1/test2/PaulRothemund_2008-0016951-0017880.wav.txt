@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/PaulRothemund_2008-0016951-0017880/data decode/PaulRothemund_2008-0016951-0017880/log decode/PaulRothemund_2008-0016951-0017880/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/PaulRothemund_2008-0016951-0017880/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/PaulRothemund_2008-0016951-0017880/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/PaulRothemund_2008-0016951-0017880/log decode/PaulRothemund_2008-0016951-0017880/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁IN▁A▁HIGH▁LOVE▁LANGUAGE▁YOU'LL▁DESCRIBE▁THAT▁SELF▁ON▁THEN▁YOU▁CAN▁HAVE▁A▁COMPILER▁SINCE▁CAN▁IT▁TAKE▁THAT▁DESCRIPTION▁AND▁IT'S▁CAN▁TURN▁IT▁INTO▁ACTUAL▁MOLECULES▁THAT▁CAN▁BE▁SENT▁TO▁ITS▁SYNTHESISER
+
+Finished

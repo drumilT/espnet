@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ShekharKapur_2009I-0038523-0039671/data decode/ShekharKapur_2009I-0038523-0039671/log decode/ShekharKapur_2009I-0038523-0039671/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ShekharKapur_2009I-0038523-0039671/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ShekharKapur_2009I-0038523-0039671/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ShekharKapur_2009I-0038523-0039671/log decode/ShekharKapur_2009I-0038523-0039671/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁HOW▁FAR▁DOES▁ETERNITY▁GO▁WHAT▁DOES▁FOR▁EVER▁MEAN▁AND▁I▁WOULD▁LIE▁THERE▁CRYING▁AT▁NIGHT▁BECAUSE▁MY▁IMAGINATION▁COULD▁NOT▁TOUCH▁A▁CREEVITY▁SO▁WHAT▁DID▁I▁DO
+
+Finished

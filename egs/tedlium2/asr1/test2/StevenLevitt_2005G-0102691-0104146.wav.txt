@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/StevenLevitt_2005G-0102691-0104146/data decode/StevenLevitt_2005G-0102691-0104146/log decode/StevenLevitt_2005G-0102691-0104146/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/StevenLevitt_2005G-0102691-0104146/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/StevenLevitt_2005G-0102691-0104146/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/StevenLevitt_2005G-0102691-0104146/log decode/StevenLevitt_2005G-0102691-0104146/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁OTHER▁POSSIBLE▁CONCLUSION▁HIS▁WILL▁MAYBE▁AFTER▁COMING▁TO▁MY▁FATHER▁THREE▁TIMES▁GETTING▁SENT▁HOME▁WITH▁BOS▁EVILS▁HE▁STILL▁FELT▁SICK▁HE▁WOULDN'T▁FIND▁ANOTHER▁DOCTOR▁KATE▁AND▁THAT'S▁COMPLETELY▁POSSIBLE▁IF▁THAT'S▁A▁CASE▁I▁THINK▁WE'RE▁STUCK▁WITH▁CONVENTIONAL▁CARCYS▁FOR▁A▁LONG▁TIME▁TO▁COME▁THEY▁GIVE▁HER▁MUCH
+
+Finished

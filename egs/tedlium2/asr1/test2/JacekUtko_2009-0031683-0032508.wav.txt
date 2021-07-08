@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JacekUtko_2009-0031683-0032508/data decode/JacekUtko_2009-0031683-0032508/log decode/JacekUtko_2009-0031683-0032508/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JacekUtko_2009-0031683-0032508/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JacekUtko_2009-0031683-0032508/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JacekUtko_2009-0031683-0032508/log decode/JacekUtko_2009-0031683-0032508/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IN▁YOUR▁COMPANY▁CONTAIN▁YOUR▁COMPANY▁ABSENT▁OUT▁IT▁CAN▁EVEN▁CHANGE▁YOU▁AND▁WHOSE▁RESPONSIBLE▁DESIGNERS▁GIVE▁POWER▁TO▁DESIGN▁HER
+
+Finished

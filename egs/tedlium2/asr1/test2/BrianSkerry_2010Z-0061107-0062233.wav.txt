@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BrianSkerry_2010Z-0061107-0062233/data decode/BrianSkerry_2010Z-0061107-0062233/log decode/BrianSkerry_2010Z-0061107-0062233/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BrianSkerry_2010Z-0061107-0062233/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BrianSkerry_2010Z-0061107-0062233/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BrianSkerry_2010Z-0061107-0062233/log decode/BrianSkerry_2010Z-0061107-0062233/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BUT▁DESPITE▁THIS▁AMAZING▁LONGEVITY▁THEY▁ARE▁NOW▁CONSIDERED▁CRITICALLY▁ENDANGERED▁IN▁THE▁PACIFIC▁WHERE▁I▁MADE▁THIS▁PHOTOGRAPH▁THEIR▁STOCKS▁OF▁DECLINED▁ABOUT▁NINETY▁PER▁CENT▁IN▁THE▁LAST▁FIFTEEN▁YEARS
+
+Finished

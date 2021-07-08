@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ElizabethGilbert_2009-0103588-0105046/data decode/ElizabethGilbert_2009-0103588-0105046/log decode/ElizabethGilbert_2009-0103588-0105046/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ElizabethGilbert_2009-0103588-0105046/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ElizabethGilbert_2009-0103588-0105046/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ElizabethGilbert_2009-0103588-0105046/log decode/ElizabethGilbert_2009-0103588-0105046/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WHEN▁HE▁WAKES▁UP▁AND▁DISCOVERS▁THAT▁IT'S▁TUESDAY▁ELEVEN▁A▁M▁AND▁HE'S▁NO▁LONGER▁A▁GLIMPSE▁OF▁GOD▁I'M▁HIS▁JUST▁AN▁AGING▁MORTAL▁WITH▁REALLY▁BAD▁KNEES▁AND▁YOU▁KNOW▁MAYBE▁HE'S▁NEVER▁GOING▁TO▁ASCEND▁TO▁THAT▁HEIGHT▁AGAIN▁AND▁MAYBE▁NOBODY▁WILL▁EVER
+
+Finished

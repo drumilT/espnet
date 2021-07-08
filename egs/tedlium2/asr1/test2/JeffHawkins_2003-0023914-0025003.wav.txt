@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JeffHawkins_2003-0023914-0025003/data decode/JeffHawkins_2003-0023914-0025003/log decode/JeffHawkins_2003-0023914-0025003/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JeffHawkins_2003-0023914-0025003/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JeffHawkins_2003-0023914-0025003/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JeffHawkins_2003-0023914-0025003/log decode/JeffHawkins_2003-0023914-0025003/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁I▁SELL▁MY▁GOSSIPS▁VERY▁DEPRESS▁US▁BUT▁I▁CAN▁MAKE▁A▁DIFFERENCE▁IN▁THIS▁FIELD▁SO▁I▁WHAT▁I▁DOES▁IT▁WENT▁BACK▁IN▁THE▁COMPUTER▁IN▁STREAMS▁WELL▁OFF▁TO▁WORK▁HERE▁FOR▁WHILE▁DO▁SOMETHING▁THAT'S▁ONE▁IT▁DESIGNED▁OLDEST▁COMPETE▁UPON▁IT▁AND
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MichaelMoschen_2002-0169798-0170491/data decode/MichaelMoschen_2002-0169798-0170491/log decode/MichaelMoschen_2002-0169798-0170491/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MichaelMoschen_2002-0169798-0170491/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MichaelMoschen_2002-0169798-0170491/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MichaelMoschen_2002-0169798-0170491/log decode/MichaelMoschen_2002-0169798-0170491/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁WHAT▁I▁JUST▁DID▁WAS▁THEIR▁WORK▁FOR▁THE▁MATHEMATICS▁THE▁DIAMETER▁AND▁THE▁CIRCUMFERENCE▁SOMETIMES▁THE▁PIECES▁ARE
+
+Finished

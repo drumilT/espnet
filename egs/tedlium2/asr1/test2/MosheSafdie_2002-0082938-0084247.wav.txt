@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MosheSafdie_2002-0082938-0084247/data decode/MosheSafdie_2002-0082938-0084247/log decode/MosheSafdie_2002-0082938-0084247/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MosheSafdie_2002-0082938-0084247/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MosheSafdie_2002-0082938-0084247/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MosheSafdie_2002-0082938-0084247/log decode/MosheSafdie_2002-0082938-0084247/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BUT▁BY▁VIRTUE▁OF▁THE▁CHOICE▁OF▁MAKING▁PUTTING▁IT▁ON▁THE▁MOLE▁AND▁BY▁THE▁LINCOLN▁MEMORIAL▁THIS▁BECOMES▁THE▁STRUCTURE▁THAT▁IS▁THE▁SYMBOL▁OF▁PEACE▁ON▁THE▁MOLE▁AND▁THAT▁WAS▁A▁LOT▁OF▁HEAT▁TOO▁DEAL▁WITH
+
+Finished

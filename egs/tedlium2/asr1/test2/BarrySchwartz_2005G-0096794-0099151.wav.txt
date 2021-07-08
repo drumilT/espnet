@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BarrySchwartz_2005G-0096794-0099151/data decode/BarrySchwartz_2005G-0096794-0099151/log decode/BarrySchwartz_2005G-0096794-0099151/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BarrySchwartz_2005G-0096794-0099151/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BarrySchwartz_2005G-0096794-0099151/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BarrySchwartz_2005G-0096794-0099151/log decode/BarrySchwartz_2005G-0096794-0099151/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁ABOUT▁THEM▁THEY▁BLAME▁THEMSELVES▁CLINICAL▁DEPRESSION▁HAS▁EXPLODED▁IN▁THE▁INDUSTRIAL▁WORLD▁IN▁THE▁LAST▁GENERATION▁I▁BELIEVE▁A▁SIGNIFICANT▁NOT▁THE▁ONLY▁BUT▁A▁SIGNIFICANT▁CONTRIBUTOR▁TO▁THIS▁EXPLOSION▁OF▁DEPRESSION▁AND▁ALSO▁SUICIDE▁IS▁THAT▁PEOPLE▁HAVE▁EXPERIENCES▁THAT▁ARE▁DISAPPOINTING▁CAUSE▁THEIR▁STANDARDS▁ARE▁SO▁HIGH▁AND▁WHEN▁THEY▁HAVE▁TO▁EXPLAIN▁THESE▁EXPERIENCES▁TO▁THEMSELVES▁THEY▁THINK▁THEY▁ARE▁AT▁FAULT
+
+Finished

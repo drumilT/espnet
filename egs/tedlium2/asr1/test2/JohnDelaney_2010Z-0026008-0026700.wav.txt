@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JohnDelaney_2010Z-0026008-0026700/data decode/JohnDelaney_2010Z-0026008-0026700/log decode/JohnDelaney_2010Z-0026008-0026700/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JohnDelaney_2010Z-0026008-0026700/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JohnDelaney_2010Z-0026008-0026700/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JohnDelaney_2010Z-0026008-0026700/log decode/JohnDelaney_2010Z-0026008-0026700/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IT'S▁IMMENSELY▁COMPLEX▁NOW▁I▁DON'T▁EXPECT▁ALL▁OF▁YOU▁TO▁SEE▁ALL▁THE▁DETAILS▁HERE▁BUT▁WHAT▁I▁WANT▁YOU▁TO▁SEE▁IS▁THIS▁IS▁ABOUT▁TEN▁PER▁CENT
+
+Finished

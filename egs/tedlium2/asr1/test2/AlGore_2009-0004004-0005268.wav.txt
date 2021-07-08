@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AlGore_2009-0004004-0005268/data decode/AlGore_2009-0004004-0005268/log decode/AlGore_2009-0004004-0005268/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AlGore_2009-0004004-0005268/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AlGore_2009-0004004-0005268/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AlGore_2009-0004004-0005268/log decode/AlGore_2009-0004004-0005268/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁A▁RAPID▁FAST▁FORWARD▁OF▁WHAT'S▁HAPPENED▁OVER▁THE▁LAST▁TWENTY▁FIVE▁YEARS▁THE▁PERMANENT▁ICE▁IS▁MARKED▁AND▁RED▁AND▁AS▁YOU▁SEE▁IT▁EXPANDS▁TO▁THE▁DARK▁BLUE▁THAT'S▁THE▁ANNUAL▁ICE▁IN▁WINTER▁AND▁IT▁CONTRACTS▁IN▁SUMMER
+
+Finished

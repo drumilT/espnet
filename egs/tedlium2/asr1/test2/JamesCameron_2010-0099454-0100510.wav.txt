@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JamesCameron_2010-0099454-0100510/data decode/JamesCameron_2010-0099454-0100510/log decode/JamesCameron_2010-0099454-0100510/fbank
+steps/make_fbank_pitch.sh: moving decode/JamesCameron_2010-0099454-0100510/data/feats.scp to decode/JamesCameron_2010-0099454-0100510/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JamesCameron_2010-0099454-0100510/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JamesCameron_2010-0099454-0100510/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JamesCameron_2010-0099454-0100510/log decode/JamesCameron_2010-0099454-0100510/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WAS▁DONE▁WITHOUT▁RISK▁YOU▁HAVE▁TO▁BE▁WILLING▁TO▁TAKE▁THOSE▁RISKS▁SO▁THAT'S▁THE▁THOUGHT▁I▁WOULD▁LEAVE▁YOU▁WITH▁IS▁IT▁IN▁WHATEVER▁YOU'RE▁DOING▁FAILURE
+
+Finished

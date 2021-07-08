@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/RAMashelkar_2009I-0061179-0062358/data decode/RAMashelkar_2009I-0061179-0062358/log decode/RAMashelkar_2009I-0061179-0062358/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/RAMashelkar_2009I-0061179-0062358/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/RAMashelkar_2009I-0061179-0062358/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/RAMashelkar_2009I-0061179-0062358/log decode/RAMashelkar_2009I-0061179-0062358/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SOCKET▁MET▁BY▁USING▁HEATED▁HIDING▁CITY▁POLITICS▁IN▁OUR▁PIPES▁RATHER▁USING▁A▁HEATED▁SHIPS▁AND▁UNIQUE▁HIGHANKAL▁DESIGN▁HUMAN▁LIKE▁LOOKS▁PLEGSIANS▁AND▁FUNCTIONS▁AND▁I▁LIKE
+
+Finished

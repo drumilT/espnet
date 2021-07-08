@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JacquelineNovogratz_2009S-0007663-0008978/data decode/JacquelineNovogratz_2009S-0007663-0008978/log decode/JacquelineNovogratz_2009S-0007663-0008978/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JacquelineNovogratz_2009S-0007663-0008978/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JacquelineNovogratz_2009S-0007663-0008978/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JacquelineNovogratz_2009S-0007663-0008978/log decode/JacquelineNovogratz_2009S-0007663-0008978/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁A▁THERE'S▁A▁RAGING▁DEBATE▁AS▁TO▁HOW▁BEST▁WE▁LIFT▁PEOPLE▁OUT▁OF▁POVERTY▁HOW▁BEST▁WE▁RELEASE▁THEIR▁ENERGIES▁ON▁THE▁ONE▁HAND▁WE▁HAVE▁PEOPLE▁THAT▁SAY▁THE▁AID▁SYSTEM▁IS▁SO▁BROKEN▁WE▁NEED▁TO▁THROW▁IT▁OUT
+
+Finished

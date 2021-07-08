@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BenCameron_2010X-0059033-0059929/data decode/BenCameron_2010X-0059033-0059929/log decode/BenCameron_2010X-0059033-0059929/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BenCameron_2010X-0059033-0059929/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BenCameron_2010X-0059033-0059929/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BenCameron_2010X-0059033-0059929/log decode/BenCameron_2010X-0059033-0059929/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THAT▁FOR▁A▁LONG▁TIME▁WE▁ARE▁CRITICAL▁TO▁THE▁HEALTH▁OF▁THE▁ECONOMIC▁COMMUNITIES▁IN▁YOUR▁TOWN▁AND▁ABSOLUTELY▁I▁HOPE▁YOU▁KNOW▁THAT▁EVERY▁DOLLAR▁SPENT▁ON▁A▁PERFORMING▁ART▁TICKET▁IN▁A▁COMMUNITY
+
+Finished

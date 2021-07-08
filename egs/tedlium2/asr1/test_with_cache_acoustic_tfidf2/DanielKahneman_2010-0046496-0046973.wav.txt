@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁IT'S▁THE▁FINITE▁RESOURCE▁THAT▁WE▁ARE▁SPENDING▁WHILE▁WE▁ARE▁ON▁THIS▁EARTH
+
+Finished

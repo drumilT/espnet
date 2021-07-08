@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁WELL▁LOSE▁TWENTY▁PERCENT▁OF▁OUR▁THING▁AND▁FISH▁EGGS▁TO▁BIRDS'S▁GREAT▁BIRDS▁BIRD'S'S
+
+Finished

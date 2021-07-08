@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MajoraCarter_2006-0077234-0078607/data decode/MajoraCarter_2006-0077234-0078607/log decode/MajoraCarter_2006-0077234-0078607/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MajoraCarter_2006-0077234-0078607/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MajoraCarter_2006-0077234-0078607/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MajoraCarter_2006-0077234-0078607/log decode/MajoraCarter_2006-0077234-0078607/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁TO▁WELL▁LOVE▁COMMUNITY▁PARKS▁NOW▁WE'LL▁HAVING▁IN▁LESS▁THAN▁THAT▁STAD▁I▁TOLD▁YOU▁ABOUT▁EARLIER▁AND▁ALTHOUGH▁LESS▁THAN▁TWENTY▁FIVE▁FOR▁CENT▁OF▁SOUTHRONK'S▁RESIDENCE▁OWN▁CARS▁THESE▁PROJECTS▁INCLUDE▁THOUSANDS▁OF▁NEW▁OF▁NEW▁PARKING▁SPACES▁YET▁ZIP▁IN▁TERMS▁OF▁MASS▁BY
+
+Finished

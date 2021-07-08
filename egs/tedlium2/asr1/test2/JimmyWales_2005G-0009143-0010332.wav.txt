@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JimmyWales_2005G-0009143-0010332/data decode/JimmyWales_2005G-0009143-0010332/log decode/JimmyWales_2005G-0009143-0010332/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JimmyWales_2005G-0009143-0010332/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JimmyWales_2005G-0009143-0010332/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JimmyWales_2005G-0009143-0010332/log decode/JimmyWales_2005G-0009143-0010332/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IS▁TO▁GET▁A▁FREE▁ENCYCLOPAEDIA▁TO▁EVERY▁SINGLE▁PERSON▁ON▁THE▁PLANET▁AND▁SO▁IF▁YOU▁THINK▁ABOUT▁WHAT▁THAT▁MEANS▁IT▁MEANS▁A▁LOT▁MORE▁THAN▁JUST▁BUILDING▁A▁COOL▁WEB▁SIGHT▁WE▁REALLY▁INTEREST▁IN▁ALL▁THE▁ISSUES▁OF▁DIGITAL▁DIVIDE▁POVERTY▁WERE▁A▁WIDE
+
+Finished

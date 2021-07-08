@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BjornLomborg_2005-0047007-0047726/data decode/BjornLomborg_2005-0047007-0047726/log decode/BjornLomborg_2005-0047007-0047726/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BjornLomborg_2005-0047007-0047726/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BjornLomborg_2005-0047007-0047726/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BjornLomborg_2005-0047007-0047726/log decode/BjornLomborg_2005-0047007-0047726/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁THAT▁IS▁REALLY▁WHITE▁COMES▁IN▁BAD▁PORTER▁IS▁NOT▁TO▁SAY▁THAT▁IF▁WE▁HAD▁ALL▁THE▁MONEY▁IN▁THE▁WORLD▁WE▁WOULDN'T▁WANT▁TO▁DO▁IT▁BUT▁IT'S▁TO▁SAY▁WHEN▁WE▁DON'T
+
+Finished

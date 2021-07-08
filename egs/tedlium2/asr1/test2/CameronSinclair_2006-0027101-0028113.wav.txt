@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/CameronSinclair_2006-0027101-0028113/data decode/CameronSinclair_2006-0027101-0028113/log decode/CameronSinclair_2006-0027101-0028113/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/CameronSinclair_2006-0027101-0028113/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/CameronSinclair_2006-0027101-0028113/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/CameronSinclair_2006-0027101-0028113/log decode/CameronSinclair_2006-0027101-0028113/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SOCIALLY▁RESPONSIBLE▁DESIGNERS▁WHO▁REALLY▁BELIEVE▁THAT▁THIS▁WORLD▁HAS▁GOT▁A▁LOT▁SMALLER▁AND▁THAT▁WE▁HAVE▁THE▁OPPORTUNITY▁BUT▁NOT▁THE▁RESPONSIBILITY▁OF▁THE▁OPPORTUNITY▁TO▁REALLY▁GET▁INVOLVED▁IN▁MAKING▁CHANGE
+
+Finished

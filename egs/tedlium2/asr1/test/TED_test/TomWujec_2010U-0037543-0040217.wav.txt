@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/TomWujec_2010U-0037543-0040217/data decode/TomWujec_2010U-0037543-0040217/log decode/TomWujec_2010U-0037543-0040217/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/TomWujec_2010U-0037543-0040217/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/TomWujec_2010U-0037543-0040217/data/feats.scp decode/download/tedlium2.transformer.v1/data/train_trim_sp/cmvn.ark decode/TomWujec_2010U-0037543-0040217/log decode/TomWujec_2010U-0037543-0040217/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁and▁the▁fundamental▁lesson▁i▁believe▁is▁that▁design▁truly▁is▁a▁contact▁sport▁it▁demands▁that▁we▁bring▁all▁of▁our▁senses▁to▁the▁task▁and▁that▁we▁apply▁the▁very▁best▁of▁our▁thinking▁our▁feeling▁and▁our▁doing▁to▁the▁challenge▁that▁we▁have▁at▁hand▁and▁sometimes▁a▁little▁prototype▁of▁this▁experience▁is▁all▁that▁it▁takes▁to▁turn▁us▁from▁an▁oh▁oh▁oh▁moment▁to▁an▁oh▁moment▁that▁can▁make▁a▁big▁difference▁thank▁you▁very▁much
+
+Finished

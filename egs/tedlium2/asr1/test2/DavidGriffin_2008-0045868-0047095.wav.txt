@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidGriffin_2008-0045868-0047095/data decode/DavidGriffin_2008-0045868-0047095/log decode/DavidGriffin_2008-0045868-0047095/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidGriffin_2008-0045868-0047095/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidGriffin_2008-0045868-0047095/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidGriffin_2008-0045868-0047095/log decode/DavidGriffin_2008-0045868-0047095/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁ALICE▁GO▁OVER▁TO▁INDIA▁SOMETIMES▁YOU▁CAN▁TELL▁A▁BROAD▁STORY▁IN▁A▁FOCUSED▁WAY▁WE▁WERE▁LOOKING▁AT▁THE▁SAME▁ISSUE▁THAT▁RICHARD▁ROMAN▁TOUCHES▁UPON▁IN▁HIS▁NEW▁WORLD▁POPULATION▁PROJECT▁FOR▁THE▁FIRST▁TIME▁IN▁HISTORY
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/CarolynSteel_2009G-0054098-0054928/data decode/CarolynSteel_2009G-0054098-0054928/log decode/CarolynSteel_2009G-0054098-0054928/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/CarolynSteel_2009G-0054098-0054928/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/CarolynSteel_2009G-0054098-0054928/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/CarolynSteel_2009G-0054098-0054928/log decode/CarolynSteel_2009G-0054098-0054928/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁AS▁YOU▁CAN▁SEE▁FROM▁THESE▁MAPS▁OF▁LONDON▁IN▁THE▁NINETY▁YEARS▁AFTER▁THE▁TRAINS▁CAME▁IT▁GOES▁FROM▁BEING▁A▁LITTLE▁BLOB▁THAT▁IT▁WAS▁QUITE▁EASY▁TO▁FEED
+
+Finished

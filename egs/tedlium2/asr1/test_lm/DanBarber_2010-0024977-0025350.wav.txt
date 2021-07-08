@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁WHAT'S▁THE▁STAINABLE▁ABOUT▁FEEDING▁CHICKEN▁TO▁FISH
+
+Finished

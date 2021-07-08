@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/OliverSacks_2009-0020679-0021521/data decode/OliverSacks_2009-0020679-0021521/log decode/OliverSacks_2009-0020679-0021521/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/OliverSacks_2009-0020679-0021521/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/OliverSacks_2009-0020679-0021521/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/OliverSacks_2009-0020679-0021521/log decode/OliverSacks_2009-0020679-0021521/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SHE▁HAD▁A▁SENSE▁OF▁HUMOUR▁SHE▁KNEW▁IT▁WAS▁A▁HALLUCINATION▁BUT▁SHE▁WAS▁FRIGHTENED▁SHE▁HAD▁LIVED▁NINETY▁FIVE▁YEARS▁AND▁SHE▁HAD▁NEVER▁HAD▁A▁HALLUCINATION▁BEFORE
+
+Finished

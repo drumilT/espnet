@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BenjaminWallace_2008P-0081228-0081954/data decode/BenjaminWallace_2008P-0081228-0081954/log decode/BenjaminWallace_2008P-0081228-0081954/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BenjaminWallace_2008P-0081228-0081954/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BenjaminWallace_2008P-0081228-0081954/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BenjaminWallace_2008P-0081228-0081954/log decode/BenjaminWallace_2008P-0081228-0081954/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁ANY▁ONE▁OF▁THE▁WINES▁SERVED▁AT▁THIS▁TASTING▁IF▁I▁HAD▁BEEN▁SERVED▁IT▁AT▁A▁DINNER▁PARTY▁IT▁WOULD▁HAVE▁BEEN▁YOU▁KNOW▁THE▁WINE▁EXPERIENCE▁OF▁MY▁LIFETIME▁AND▁INCREDIBLY
+
+Finished

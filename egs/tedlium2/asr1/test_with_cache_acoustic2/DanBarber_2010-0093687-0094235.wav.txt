@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁HOW▁AGAIN▁TO▁FEED▁THE▁WORLD▁CAN▁I▁BE▁HONEST▁I▁DON'T▁LOVE▁THAT▁QUESTION
+
+Finished

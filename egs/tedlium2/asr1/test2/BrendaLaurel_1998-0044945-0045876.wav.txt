@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BrendaLaurel_1998-0044945-0045876/data decode/BrendaLaurel_1998-0044945-0045876/log decode/BrendaLaurel_1998-0044945-0045876/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BrendaLaurel_1998-0044945-0045876/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BrendaLaurel_1998-0044945-0045876/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BrendaLaurel_1998-0044945-0045876/log decode/BrendaLaurel_1998-0044945-0045876/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁THESE▁VOICES▁WILL▁BE▁ACCOMPANIED▁BY▁PHOTOGRAPHS▁THAT▁THEY▁TOOK▁FOR▁US▁OF▁THEIR▁ALLIES▁OF▁THE▁THINGS▁THAT▁THEY▁VALUE▁AND▁CARE▁ABOUT▁THESE▁ARE▁PICTURES▁THE▁GIRLS▁THEMSELVES▁NEVER▁SAW▁BUT▁THEY▁GAVE▁TO▁US
+
+Finished

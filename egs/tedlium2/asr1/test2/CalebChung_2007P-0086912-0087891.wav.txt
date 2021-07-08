@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/CalebChung_2007P-0086912-0087891/data decode/CalebChung_2007P-0086912-0087891/log decode/CalebChung_2007P-0086912-0087891/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/CalebChung_2007P-0086912-0087891/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/CalebChung_2007P-0086912-0087891/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/CalebChung_2007P-0086912-0087891/log decode/CalebChung_2007P-0086912-0087891/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁AND▁WE'RE▁STILL▁TRYING▁TO▁KEEP▁WITH▁WITH▁THE▁WITH▁A▁REAL▁CHARACTER▁SO▁NOW▁YOU▁GO▁BACK▁AND▁YOU▁COVER▁THE▁WHOLE▁THING▁WITH▁CLAY▁NOW▁YOU▁START▁DOING▁OUT▁THE▁SCULPTURE▁FOR▁THIS▁AND▁YOU▁CAN▁SEE▁THAT▁WE▁GOT▁A▁GUY▁FROM▁WHO'S▁JUST▁A
+
+Finished

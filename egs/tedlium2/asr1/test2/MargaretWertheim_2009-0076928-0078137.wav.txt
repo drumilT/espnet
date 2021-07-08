@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MargaretWertheim_2009-0076928-0078137/data decode/MargaretWertheim_2009-0076928-0078137/log decode/MargaretWertheim_2009-0076928-0078137/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MargaretWertheim_2009-0076928-0078137/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MargaretWertheim_2009-0076928-0078137/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MargaretWertheim_2009-0076928-0078137/log decode/MargaretWertheim_2009-0076928-0078137/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁THIS▁PROJECT▁REALLY▁HAS▁TAKEN▁ON▁THIS▁INNER▁ORGANIC▁LIFE▁OF▁ITS▁OWN▁THAT'S▁THE▁TOTALITY▁OF▁ALL▁THE▁PEOPLE▁WHO'VE▁COME▁TO▁IT▁AND▁THEIR▁INDIVIDUAL▁VISIONS▁AND▁THEIR▁ENGAGEMENT▁WITH▁THIS▁MATHEMATICAL▁MO
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/StephenPetranek_2002-0070073-0071020/data decode/StephenPetranek_2002-0070073-0071020/log decode/StephenPetranek_2002-0070073-0071020/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/StephenPetranek_2002-0070073-0071020/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/StephenPetranek_2002-0070073-0071020/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/StephenPetranek_2002-0070073-0071020/log decode/StephenPetranek_2002-0070073-0071020/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁ALMOST▁ALL▁THE▁MONEY▁THAT▁SPENT▁ON▁SCIENCE▁AND▁THIS▁COUNTRY▁COMES▁THROUGH▁THE▁FEDERAL▁GOVERNMENT▁ONE▁WAY▁OR▁ANOTHER▁AND▁THEY▁GET▁THE▁PRIOR▁AT▁US▁AND▁OF▁THEIR▁PEOPLE▁AT▁THE▁NATIONAL▁SCIENCE▁THAT▁THEY▁SHOULD
+
+Finished

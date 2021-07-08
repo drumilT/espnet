@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MichaelSpecter_2010-0056985-0058444/data decode/MichaelSpecter_2010-0056985-0058444/log decode/MichaelSpecter_2010-0056985-0058444/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MichaelSpecter_2010-0056985-0058444/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MichaelSpecter_2010-0056985-0058444/data/feats.scp decode/download/tedlium2.transformer.v1/data/train_trim_sp/cmvn.ark decode/MichaelSpecter_2010-0056985-0058444/log decode/MichaelSpecter_2010-0056985-0058444/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁and▁he's▁going▁to▁land▁in▁a▁couple▁hours▁going▁to▁run▁a▁car▁and▁he's▁going▁to▁come▁to▁long▁beach▁and▁he's▁going▁to▁tend▁one▁of▁these▁fabulous▁ted▁dinners▁tonight▁and▁he▁doesn't▁know▁that▁he's▁infected▁with▁a▁paralytic▁disease▁and▁we▁know▁either▁because▁that's▁the▁way▁the▁world▁works▁that's▁the▁planet▁we▁live▁on
+
+Finished

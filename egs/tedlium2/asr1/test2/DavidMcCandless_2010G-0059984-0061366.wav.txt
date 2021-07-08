@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidMcCandless_2010G-0059984-0061366/data decode/DavidMcCandless_2010G-0059984-0061366/log decode/DavidMcCandless_2010G-0059984-0061366/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidMcCandless_2010G-0059984-0061366/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidMcCandless_2010G-0059984-0061366/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidMcCandless_2010G-0059984-0061366/log decode/DavidMcCandless_2010G-0059984-0061366/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IT▁LOVES▁THEM▁AT▁THE▁CAUSE▁AND▁BEAUTIFUL▁ITS▁THE▁LANGUAGE▁OF▁THE▁EYE▁AND▁HE▁COMBINED▁THE▁LANGUAGE▁OF▁THE▁EYE▁WITH▁A▁LANGUAGE▁OF▁THE▁MIND▁WHICH▁IS▁ABOUT▁WORDS▁AND▁NUMBERS▁AND▁CONCEPTS▁HE▁STOPS▁SPEAKING▁TWO▁LANGUAGES▁SIMULTANEOUSLY▁EACH▁ENHANCING▁THE▁OTHER
+
+Finished

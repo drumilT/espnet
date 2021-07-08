@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AnthonyAtala_2009P-0094975-0096695/data decode/AnthonyAtala_2009P-0094975-0096695/log decode/AnthonyAtala_2009P-0094975-0096695/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AnthonyAtala_2009P-0094975-0096695/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AnthonyAtala_2009P-0094975-0096695/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AnthonyAtala_2009P-0094975-0096695/log decode/AnthonyAtala_2009P-0094975-0096695/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁I▁ALWAYS▁LIKE▁TO▁SHOW▁THIS▁CARTOON▁THIS▁HAS▁HAD▁A▁STOP▁OR▁AN▁AWAY▁STAGE▁AND▁THERE▁YOU▁SEE▁THAT▁STAGE▁GHOST▁DRIVER▁AND▁HE▁GOES▁ON▁THE▁TIP▁TOP▁PANEL▁HE▁GOES▁AID▁B▁C▁D▁E▁F▁HE▁FINALLY▁STOPS▁ON▁AN▁AWAY▁STAGE▁AND▁THOUGH▁SO▁USUALLY▁THE▁BASIC▁SCIENTISTS▁THE▁BOTTOMLESS▁USUALLY▁THE▁SURGEONS
+
+Finished

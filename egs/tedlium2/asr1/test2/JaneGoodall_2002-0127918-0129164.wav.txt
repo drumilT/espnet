@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JaneGoodall_2002-0127918-0129164/data decode/JaneGoodall_2002-0127918-0129164/log decode/JaneGoodall_2002-0127918-0129164/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JaneGoodall_2002-0127918-0129164/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JaneGoodall_2002-0127918-0129164/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JaneGoodall_2002-0127918-0129164/log decode/JaneGoodall_2002-0127918-0129164/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁CAUSE▁THEY'RE▁BUYING▁INTO▁IT▁AND▁THERE▁THE▁ONES▁WHO▁GET▁TO▁DECIDE▁WHAT▁THEY'RE▁GOING▁TO▁DO▁IT▁ISN'T▁SOMETHING▁THAT▁THEIR▁PARENTS▁TELL▁THEM▁OR▁THEIR▁TEACHERS▁TELL▁THEM▁THAT'S▁EFFECTIVE▁BUT▁IF▁THEY▁DECIDE▁THEMSELVES
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EleniGabreMadhin_2007G-0004088-0004917/data decode/EleniGabreMadhin_2007G-0004088-0004917/log decode/EleniGabreMadhin_2007G-0004088-0004917/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EleniGabreMadhin_2007G-0004088-0004917/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EleniGabreMadhin_2007G-0004088-0004917/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EleniGabreMadhin_2007G-0004088-0004917/log decode/EleniGabreMadhin_2007G-0004088-0004917/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁FREEDOM▁TO▁CHOOSE▁WHERE▁TO▁LIVE▁WHAT▁TO▁DO▁WHAT▁TO▁BUY▁WHAT▁TO▁SELL▁FROM▁WHOM▁TO▁WHOM▁WHEN▁AND▁HOW
+
+Finished

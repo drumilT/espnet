@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BlaiseAguerayArcas_2007-0022084-0023357/data decode/BlaiseAguerayArcas_2007-0022084-0023357/log decode/BlaiseAguerayArcas_2007-0022084-0023357/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BlaiseAguerayArcas_2007-0022084-0023357/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BlaiseAguerayArcas_2007-0022084-0023357/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BlaiseAguerayArcas_2007-0022084-0023357/log decode/BlaiseAguerayArcas_2007-0022084-0023357/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁OH▁TO▁SHOW▁YOU▁WHAT▁I▁THINK▁IS▁REALLY▁THAT▁THE▁PUNCH▁LINE▁BEHIND▁THIS▁IS▁THIS▁TECHNOLOGY▁THE▁CITIZENS▁TECHNOLOGY▁AND▁IT'S▁NOT▁NECESSARILY▁SO▁APPARENT▁FROM▁LOOKING▁AT▁THE▁ENVIRONMENTS▁THAT▁HAVE▁PUT▁UP▁ON▁THE▁WEB▁SIDE▁WE▁AM▁WE▁HAD▁TO▁WORRY▁ABOUT▁THE▁LAWYERS▁AND▁SO▁ON
+
+Finished

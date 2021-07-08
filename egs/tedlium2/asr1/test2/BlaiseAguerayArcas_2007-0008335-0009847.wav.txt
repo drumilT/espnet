@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BlaiseAguerayArcas_2007-0008335-0009847/data decode/BlaiseAguerayArcas_2007-0008335-0009847/log decode/BlaiseAguerayArcas_2007-0008335-0009847/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BlaiseAguerayArcas_2007-0008335-0009847/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BlaiseAguerayArcas_2007-0008335-0009847/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BlaiseAguerayArcas_2007-0008335-0009847/log decode/BlaiseAguerayArcas_2007-0008335-0009847/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁A▁MAYBE▁THIS▁IS▁A▁KIND▁OF▁ARTIFICIAL▁WAY▁TO▁READ▁AN▁EVIL▁I▁WOULDN'T▁RECOMMEND▁IT▁THIS▁IS▁A▁MORE▁REALISTIC▁CASE▁THIS▁IS▁AN▁ISSUE▁OF▁THE▁GUARDIAN▁EVERY▁LARGE▁IMAGE▁IS▁THE▁BEGINNING▁OF▁A▁SECTION▁AND▁THIS▁REALLY▁GIVES▁YOU▁THE▁JOY▁AND▁THE▁GOOD▁EXPERIENCE▁OF▁READING▁A▁THE▁REAL▁PAPER▁VERSION▁OF▁FUN
+
+Finished

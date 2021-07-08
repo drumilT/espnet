@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JaneMcGonigal_2010-0064212-0065979/data decode/JaneMcGonigal_2010-0064212-0065979/log decode/JaneMcGonigal_2010-0064212-0065979/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JaneMcGonigal_2010-0064212-0065979/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JaneMcGonigal_2010-0064212-0065979/data/feats.scp decode/download/tedlium2.transformer.v1/data/train_trim_sp/cmvn.ark decode/JaneMcGonigal_2010-0064212-0065979/log decode/JaneMcGonigal_2010-0064212-0065979/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁five▁million▁people▁use▁it▁every▁month▁they▁have▁compiled▁more▁information▁about▁world▁of▁warcraft▁on▁the▁internet▁than▁any▁other▁topic▁covered▁on▁any▁other▁wiki▁in▁the▁world▁they▁are▁building▁an▁epic▁story▁they▁are▁building▁an▁epic▁knowledge▁resource▁about▁the▁world▁of▁warcraft▁okay▁so▁these▁are▁four▁superpowers▁that▁add▁up
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ChrisAnderson_2010G-0096734-0097923/data decode/ChrisAnderson_2010G-0096734-0097923/log decode/ChrisAnderson_2010G-0096734-0097923/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ChrisAnderson_2010G-0096734-0097923/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ChrisAnderson_2010G-0096734-0097923/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ChrisAnderson_2010G-0096734-0097923/log decode/ChrisAnderson_2010G-0096734-0097923/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁PART▁OF▁THE▁CROWD▁THAT▁MAY▁BE▁ABOUT▁TO▁LAUNCH▁THE▁BIGGEST▁LEARNING▁CYCLE▁IN▁HUMAN▁HISTORY▁A▁CYCLE▁CAPABLE▁OF▁CARRYING▁ALL▁OF▁US▁TO▁A▁SMARTER▁WISER▁MORE▁BEAUTIFUL▁PLACE
+
+Finished

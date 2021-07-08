@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AndersYnnerman_2010X-0059574-0060785/data decode/AndersYnnerman_2010X-0059574-0060785/log decode/AndersYnnerman_2010X-0059574-0060785/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AndersYnnerman_2010X-0059574-0060785/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AndersYnnerman_2010X-0059574-0060785/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AndersYnnerman_2010X-0059574-0060785/log decode/AndersYnnerman_2010X-0059574-0060785/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IT'S▁A▁TOUCH▁DEVISED▁THOUGH▁WE▁HAVE▁DEVELOPED▁BASED▁ON▁THESE▁OUTGRADMS▁USING▁STANDARD▁GRAPHIC▁STEEP▁USE▁IT▁ACTUALLY▁LOOKS▁LIKE▁THIS▁ENERGISTER▁AGAIN▁GIVE▁YOU▁FEELING▁FOR▁WHAT▁IT▁LOOKS▁LIKE▁IT'S▁REALLY▁AN▁IT▁REALLY▁AS▁WORKS▁LIKE▁A▁HUGE▁ICE
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/IrwinRedlener_2008-0132647-0134075/data decode/IrwinRedlener_2008-0132647-0134075/log decode/IrwinRedlener_2008-0132647-0134075/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/IrwinRedlener_2008-0132647-0134075/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/IrwinRedlener_2008-0132647-0134075/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/IrwinRedlener_2008-0132647-0134075/log decode/IrwinRedlener_2008-0132647-0134075/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁WE'RE▁TRYING▁TO▁TELL▁HIM▁IT'S▁NOT▁FUTILE▁WE▁CAN▁CHANGE▁THE▁SURVIVAL▁RACE▁BY▁DOING▁A▁SOME▁COMMON▁SENSICAL▁THINGS▁SO▁THE▁GOLIER▁IS▁TO▁MINIMIZE▁FATALITIES▁AND▁AVERAGE▁ONE▁TO▁LEAVE▁YOU▁WITH▁THE▁PERSONAL▁POINTS▁AT▁I▁THINK▁YOU▁MIGHT▁BE▁INTERESTED▁THE▁KEY▁IS
+
+Finished

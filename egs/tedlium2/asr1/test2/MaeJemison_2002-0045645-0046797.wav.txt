@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MaeJemison_2002-0045645-0046797/data decode/MaeJemison_2002-0045645-0046797/log decode/MaeJemison_2002-0045645-0046797/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MaeJemison_2002-0045645-0046797/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MaeJemison_2002-0045645-0046797/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MaeJemison_2002-0045645-0046797/log decode/MaeJemison_2002-0045645-0046797/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁CRETIVITY▁THAT▁ALLOWED▁US▁THAT▁WE▁REQUIRED▁TO▁HAVE▁TO▁CONCEIVE▁AND▁BUILD▁AND▁WATCH▁THE▁SPACE▁SHUTTLE▁SPRINGS▁FROM▁THE▁SAME▁SOURCES▁THE▁IMAGINATION▁AND▁ANALYSIS▁IT▁TOOK▁TO▁CARVE▁A▁WOUNDUS▁STATUE
+
+Finished

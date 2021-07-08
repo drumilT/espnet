@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁THING'S▁THE▁ONE▁THAT▁RELIES▁ON▁TWO▁BILLION▁YEARS
+
+Finished

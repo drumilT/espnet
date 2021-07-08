@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ElizabethGilbert_2009-0005908-0007914/data decode/ElizabethGilbert_2009-0005908-0007914/log decode/ElizabethGilbert_2009-0005908-0007914/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ElizabethGilbert_2009-0005908-0007914/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ElizabethGilbert_2009-0005908-0007914/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ElizabethGilbert_2009-0005908-0007914/log decode/ElizabethGilbert_2009-0005908-0007914/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁I'M▁SERIOUSLY▁TOOMED▁DOOMED▁LIKE▁THEY▁COME▁TO▁ME▁NOW▁IT▁ALL▁WORRIED▁AND▁THEY▁SAY▁AREN'T▁YOU▁AFRAID▁I'M▁AREN'T▁YOU▁AFRAID▁YOU'RE▁NEVER▁GOING▁TO▁BE▁ABLE▁TO▁TALK▁THAT▁I'M▁AREN'T▁YOU▁AFRAID▁YOU'RE▁GOING▁TO▁KEEP▁WRITING▁FOR▁YOUR▁WHOLE▁LIFE▁AND▁YOU'RE▁NEVER▁AGAIN▁GUNNOW▁CREED▁A▁BOOK▁THAT▁ANYBODY▁IN▁THE▁WORLD▁CARES▁ABOUT▁AT▁ALL▁EVER▁AGAIN
+
+Finished

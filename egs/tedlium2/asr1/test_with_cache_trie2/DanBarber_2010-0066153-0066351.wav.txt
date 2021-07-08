@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁ANIMALS▁IS▁AN▁ECOLOGICAL▁NETWORK'S▁AN▁ECOLOGICAL▁NET▁THE▁WORKS▁I'M
+
+Finished

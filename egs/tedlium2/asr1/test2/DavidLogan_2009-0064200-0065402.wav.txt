@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidLogan_2009-0064200-0065402/data decode/DavidLogan_2009-0064200-0065402/log decode/DavidLogan_2009-0064200-0065402/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidLogan_2009-0064200-0065402/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidLogan_2009-0064200-0065402/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidLogan_2009-0064200-0065402/log decode/DavidLogan_2009-0064200-0065402/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SANG▁WE'RE▁GREAT▁THAT▁SOUNDS▁PRETTY▁GOOD▁BUT▁I▁SHOULD▁REALLY▁TALK▁STAGE▁FIVE▁RIGHT▁LIFE▁IS▁GREAT▁WILL▁IN▁FACT▁THERE▁ARE▁THREE▁SOMEWHAT▁COUNTER▁INTUITIVE▁FINDINGS▁THAT▁COME▁OUT▁OF▁ALL▁THIS▁THE▁FIRST▁ONE
+
+Finished

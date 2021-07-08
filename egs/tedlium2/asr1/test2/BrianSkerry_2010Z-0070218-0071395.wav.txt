@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BrianSkerry_2010Z-0070218-0071395/data decode/BrianSkerry_2010Z-0070218-0071395/log decode/BrianSkerry_2010Z-0070218-0071395/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BrianSkerry_2010Z-0070218-0071395/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BrianSkerry_2010Z-0070218-0071395/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BrianSkerry_2010Z-0070218-0071395/log decode/BrianSkerry_2010Z-0070218-0071395/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁NORTH▁ATLANTIC▁RIGHT▁WHALE▁IS▁LISTED▁AS▁THE▁MOST▁ENDANGERED▁SPECIES▁OF▁WHALE▁ON▁THE▁PLANET▁TO▁DAY▁BECAUSE▁THEY▁ARE▁URBAN▁WHALES▁THEY▁LIVE▁ALONG▁THE▁EAST▁COAST▁OF▁NORTH▁AMERICA▁UNITED▁STATES▁AND▁CANADA▁AND▁THEY▁HAVE▁TO▁DEAL▁WITH▁ALL▁THESE▁URBAN▁ILLS
+
+Finished

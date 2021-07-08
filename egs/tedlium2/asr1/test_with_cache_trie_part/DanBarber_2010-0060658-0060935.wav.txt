@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁LOOK▁AT▁THEIR▁BELLIES▁PINK▁THEY'RE▁FEASTS▁THING▁IT'S▁GREAT▁THING'S▁A▁FEAST▁THING'S▁THING'S
+
+Finished

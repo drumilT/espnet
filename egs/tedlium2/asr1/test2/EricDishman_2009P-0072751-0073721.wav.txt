@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EricDishman_2009P-0072751-0073721/data decode/EricDishman_2009P-0072751-0073721/log decode/EricDishman_2009P-0072751-0073721/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EricDishman_2009P-0072751-0073721/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EricDishman_2009P-0072751-0073721/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EricDishman_2009P-0072751-0073721/log decode/EricDishman_2009P-0072751-0073721/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁PROBLEM▁IS▁OUR▁UNDERSTANDING▁OF▁FALLS▁TO▁DAY▁LIKE▁MIMI▁AS▁GET▁A▁SURVEY▁IN▁THE▁MAIL▁THREE▁MONTHS▁AFTER▁YOU▁FELL▁FROM▁THE▁STATES▁SAYING▁WHAT▁WERE▁YOU▁DOING▁WHEN▁YOU'RE▁FELL
+
+Finished

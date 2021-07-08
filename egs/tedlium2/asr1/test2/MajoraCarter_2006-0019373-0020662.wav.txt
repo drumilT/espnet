@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MajoraCarter_2006-0019373-0020662/data decode/MajoraCarter_2006-0019373-0020662/log decode/MajoraCarter_2006-0019373-0020662/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MajoraCarter_2006-0019373-0020662/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MajoraCarter_2006-0019373-0020662/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MajoraCarter_2006-0019373-0020662/log decode/MajoraCarter_2006-0019373-0020662/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AS▁A▁BLACK▁PERSON▁IN▁AMERICA▁I▁AM▁TWICE▁AS▁LIKELY▁AS▁A▁WHITE▁PERSON▁TO▁LIVE▁IN▁AN▁AREA▁WHERE▁AIR▁POLLUTION▁POSE▁IS▁THE▁GREATEST▁RISK▁OF▁MY▁HEALTH▁I▁AM▁FIVE▁TIMES▁MORE▁LIKELY▁TO▁LIVE▁WITHIN▁WALKING▁DISTANCE▁OF▁A▁POWER▁PLANT▁OR▁CHEMICAL▁FACILITY▁WHICH▁I▁DO
+
+Finished

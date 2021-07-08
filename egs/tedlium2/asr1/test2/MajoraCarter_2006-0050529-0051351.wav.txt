@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MajoraCarter_2006-0050529-0051351/data decode/MajoraCarter_2006-0050529-0051351/log decode/MajoraCarter_2006-0050529-0051351/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MajoraCarter_2006-0050529-0051351/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MajoraCarter_2006-0050529-0051351/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MajoraCarter_2006-0050529-0051351/log decode/MajoraCarter_2006-0050529-0051351/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁THAT'S▁REDESIGNED▁BY▁MATTHEW'S▁NEELSON▁LANDSCAPE▁ARCHITECTS▁AND▁ONCE▁THIS▁PATH▁IS▁CONSTRUCTED▁IT'LL▁CONNECT▁THE▁SOUTH▁WRONGS▁WITH▁MORE▁THAN▁FOUR▁HUNDRED▁ACRES▁OF▁RANDAL'S▁ISLAND▁PARK
+
+Finished

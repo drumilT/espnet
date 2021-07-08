@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁THANK▁YOU▁I▁AM▁SIXTY▁AND▁TO▁SAY▁MORE▁ABOUT▁ABOUT▁TO▁A▁TERRA▁POWER▁RIGHT▁UH▁M▁UH▁UH▁UH▁A▁UH▁I▁UHMS▁A▁UH
+
+Finished

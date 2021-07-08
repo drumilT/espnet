@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁BY▁CASUAL▁CHANGELY▁DOING▁SOMETHING▁AS▁SYMBOL▁IS▁NAMING▁A▁PERSON▁A▁CHILD
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EthanZuckerman_2010G-0044872-0046262/data decode/EthanZuckerman_2010G-0044872-0046262/log decode/EthanZuckerman_2010G-0044872-0046262/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EthanZuckerman_2010G-0044872-0046262/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EthanZuckerman_2010G-0044872-0046262/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EthanZuckerman_2010G-0044872-0046262/log decode/EthanZuckerman_2010G-0044872-0046262/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁YOU▁START▁LOOKING▁AT▁HOW▁THE▁GLOBAL▁PLAIN▁FLIGHTS▁MOVE▁AND▁YOU▁SUDDENLY▁DISCOVER▁THAT▁THE▁WORLD▁ISN'T▁EVEN▁CLOSE▁TO▁FLAT▁IT'S▁EXTREMELY▁LUMPY▁THERE▁ARE▁PARTS▁OF▁THE▁WORLD▁THAT▁ARE▁VERY▁VERY▁WELL▁CONNECTED▁THERE'S▁BASICALLY▁A▁GIANT▁PATHWAY▁IN▁THE▁SKY▁BETWEEN▁LONDON▁AND▁NEW▁YORK
+
+Finished

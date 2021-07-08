@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EricTopol_2009P-0059849-0061308/data decode/EricTopol_2009P-0059849-0061308/log decode/EricTopol_2009P-0059849-0061308/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EricTopol_2009P-0059849-0061308/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EricTopol_2009P-0059849-0061308/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EricTopol_2009P-0059849-0061308/log decode/EricTopol_2009P-0059849-0061308/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁THAT'S▁SO▁THE▁FIRST▁NIGHT▁AND▁THIS▁ONE▁ARE▁NOW▁A▁SIXTY▁SEVEN▁AND▁THAT'S▁NOT▁A▁GOOD▁SCORE▁AND▁THIS▁TELLS▁YOUR▁COURSE▁HOW▁MUCH▁YOU▁HAD▁IN▁RIM▁SLEEP▁IN▁DEEP▁SLEEP▁AND▁ALL▁THIS▁SORT▁OF▁IT▁THIS▁WAS▁REALLY▁FASCINATING▁BECAUSE▁THIS▁GAVE▁THAT▁QUANTITATION▁ABOUT▁ALL▁THE▁DIFFERENT▁FACES▁OF▁SLEEP
+
+Finished

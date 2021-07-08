@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/LawrenceLessig_2010X-0108706-0109566/data decode/LawrenceLessig_2010X-0108706-0109566/log decode/LawrenceLessig_2010X-0108706-0109566/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/LawrenceLessig_2010X-0108706-0109566/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/LawrenceLessig_2010X-0108706-0109566/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/LawrenceLessig_2010X-0108706-0109566/log decode/LawrenceLessig_2010X-0108706-0109566/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁VALUE▁OF▁FREEDOM▁IT'S▁A▁VALUE▁OF▁COMMUNITY▁IT'S▁A▁VALUE▁OF▁THE▁LIMITS▁AND▁REGULATION▁ITS▁VALUE▁RESPECTING▁THE▁CREATOR
+
+Finished

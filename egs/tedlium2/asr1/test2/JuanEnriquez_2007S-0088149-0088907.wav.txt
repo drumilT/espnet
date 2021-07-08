@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JuanEnriquez_2007S-0088149-0088907/data decode/JuanEnriquez_2007S-0088149-0088907/log decode/JuanEnriquez_2007S-0088149-0088907/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JuanEnriquez_2007S-0088149-0088907/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JuanEnriquez_2007S-0088149-0088907/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JuanEnriquez_2007S-0088149-0088907/log decode/JuanEnriquez_2007S-0088149-0088907/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁STEAM▁TO▁SEPARATE▁THE▁STUFF▁YOU▁ALSO▁HAVE▁TO▁SEPARATE▁OUT▁THE▁SULPHUR▁THE▁DIFFERENCE▁BETWEEN▁LIGHT▁CRUDE▁AND▁HEAVY▁CRUDE▁AND▁IT'S▁ABOUT▁FOURTEEN▁BOX▁OF▁BARREL
+
+Finished

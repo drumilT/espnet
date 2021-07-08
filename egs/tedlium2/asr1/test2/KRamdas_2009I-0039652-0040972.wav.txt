@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/KRamdas_2009I-0039652-0040972/data decode/KRamdas_2009I-0039652-0040972/log decode/KRamdas_2009I-0039652-0040972/fbank
+steps/make_fbank_pitch.sh: moving decode/KRamdas_2009I-0039652-0040972/data/feats.scp to decode/KRamdas_2009I-0039652-0040972/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/KRamdas_2009I-0039652-0040972/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/KRamdas_2009I-0039652-0040972/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/KRamdas_2009I-0039652-0040972/log decode/KRamdas_2009I-0039652-0040972/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SHE▁STARTS▁EVERY▁LECTURE▁WITH▁THE▁PRAYER▁BUT▁SHE▁IS▁A▁SINGLE▁FIISTY▁FINANCIALLY▁INDEPENDENT▁WOMAN▁IN▁A▁COUNTRY▁WHERE▁GIRLS▁ARE▁MARRIED▁OFF▁AT▁THE▁AGE▁OF▁TWELVE▁SHE▁IS▁ALSO▁IMMENSELY▁PRAGMATIC
+
+Finished

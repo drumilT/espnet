@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JonathanHaidt_2008-0037232-0038650/data decode/JonathanHaidt_2008-0037232-0038650/log decode/JonathanHaidt_2008-0037232-0038650/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JonathanHaidt_2008-0037232-0038650/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JonathanHaidt_2008-0037232-0038650/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JonathanHaidt_2008-0037232-0038650/log decode/JonathanHaidt_2008-0037232-0038650/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THAT▁SECOND▁FOUNDATION▁UNDERLIES▁THE▁OTHER▁THIRTY▁PER▁CENT▁OF▁THE▁MORAL▁STATEMENTS▁HAVE▁HEARD▁I▁HEAR▁IT▁HEAD▁THIRD▁FOUNDATION▁IS▁IN▁GROUP▁LOYALTY▁DO▁FIND▁GROUPS▁OF▁IN▁THE▁ANIMAL▁KINGDOM▁YOU▁DO▁FIND▁PROPERTY▁GROUPS▁WITH▁THESE▁GROUPS▁ARE▁ALWAYS▁EITHER▁VERY▁SMALL▁OR▁THEIR▁ALL▁SIBLINGS▁IT'S▁ONLY▁AMONG▁HUMANS
+
+Finished

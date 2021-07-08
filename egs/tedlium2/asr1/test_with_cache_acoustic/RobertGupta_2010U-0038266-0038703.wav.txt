@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁AND▁IN▁A▁PLACE▁I▁KNOW▁THAT▁I▁SHAMELESSLY▁STOLE▁FROM▁CELLISTS▁SO▁PLEASE▁FORGIVE▁YOU
+
+Finished

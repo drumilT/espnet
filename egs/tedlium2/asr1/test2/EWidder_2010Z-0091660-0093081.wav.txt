@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EWidder_2010Z-0091660-0093081/data decode/EWidder_2010Z-0091660-0093081/log decode/EWidder_2010Z-0091660-0093081/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EWidder_2010Z-0091660-0093081/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EWidder_2010Z-0091660-0093081/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EWidder_2010Z-0091660-0093081/log decode/EWidder_2010Z-0091660-0093081/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁SO▁THE▁PLACE▁THAT▁WE▁TOOK▁IT▁TO▁WITH▁THIS▁A▁PLACE▁CALLED▁THE▁BRIAN▁POOL▁WHICH▁IS▁IN▁THE▁NORTHERN▁PART▁OF▁THE▁GULF▁OF▁MEXICO▁IT'S▁A▁MAGICAL▁PLACE▁AND▁I▁KNOW▁THIS▁FOOTAGE▁ISN'T▁GOING▁TO▁LOOK▁LIKE▁ANYTHING▁TO▁YOU▁WE▁HAD▁A▁CRUMMY▁CAMERA▁AT▁THE▁TIME▁BUT▁I▁WAS▁ECSTATIC
+
+Finished

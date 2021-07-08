@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidMerrill_2009-0012424-0013732/data decode/DavidMerrill_2009-0012424-0013732/log decode/DavidMerrill_2009-0012424-0013732/fbank
+steps/make_fbank_pitch.sh: moving decode/DavidMerrill_2009-0012424-0013732/data/feats.scp to decode/DavidMerrill_2009-0012424-0013732/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidMerrill_2009-0012424-0013732/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidMerrill_2009-0012424-0013732/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidMerrill_2009-0012424-0013732/log decode/DavidMerrill_2009-0012424-0013732/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁LIKE▁POURING▁A▁COLOR▁THE▁WAY▁WE▁MIGHT▁POUR▁LIQUID▁SO▁IN▁THIS▁CASE▁WE'VE▁GOT▁THREE▁SPECTACLES▁CAN▁FIGURE▁TO▁BE▁PAINT▁BUCKETS▁AND▁I▁CAN▁USE▁THEM▁TO▁POUR▁COLOR▁INTO▁THAT▁CENTRAL▁ONE▁WHERE▁THEY▁GET▁MIXED▁WE▁OVERSHOOT▁WE▁CAN▁POUR▁A▁LITTLE▁BIT▁BACK
+
+Finished

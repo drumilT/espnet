@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ElizabethGilbert_2009-0009442-0011118/data decode/ElizabethGilbert_2009-0009442-0011118/log decode/ElizabethGilbert_2009-0009442-0011118/fbank
+steps/make_fbank_pitch.sh: moving decode/ElizabethGilbert_2009-0009442-0011118/data/feats.scp to decode/ElizabethGilbert_2009-0009442-0011118/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ElizabethGilbert_2009-0009442-0011118/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ElizabethGilbert_2009-0009442-0011118/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ElizabethGilbert_2009-0009442-0011118/log decode/ElizabethGilbert_2009-0009442-0011118/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AREN'T▁YOU▁AFRAID▁YOU'RE▁NEVER▁GOING▁TO▁HAVE▁ANY▁SUCCESS▁AREN'T▁YOU▁AFRAID▁THE▁HUMILIATION▁OF▁REJECTION▁WILL▁KILL▁YOU▁AREN'T▁YOU▁AFRAID▁THAT▁YOU▁CAN▁WORK▁YOUR▁WHOLE▁LIFE▁AT▁THIS▁CRAFT▁AND▁NOTHING'S▁EVER▁GOING▁TO▁COME▁OF▁IT▁YOU'RE▁GOING▁TO▁DIE▁ON▁A▁SCRAP▁HEAP▁OF▁BROKEN▁DREAMS▁WITH▁YOUR▁MOUTH▁FILLED▁WITH▁BITTER▁ASH▁OF▁FAILURE
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/CarolinePhillips_2010G-0009310-0010446/data decode/CarolinePhillips_2010G-0009310-0010446/log decode/CarolinePhillips_2010G-0009310-0010446/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/CarolinePhillips_2010G-0009310-0010446/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/CarolinePhillips_2010G-0009310-0010446/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/CarolinePhillips_2010G-0009310-0010446/log decode/CarolinePhillips_2010G-0009310-0010446/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THAT▁THE▁HURDY▁GURDY▁APPEARED▁ABOUT▁A▁THOUSAND▁YEARS▁AGO▁AND▁IT▁TOOK▁TWO▁PEOPLE▁TO▁PLAY▁IT▁ONE▁TO▁TURN▁THE▁CRANK▁AND▁ANOTHER▁PERSON▁YES▁TO▁PLAY▁THE▁MELODY▁BY▁PHYSICALLY▁PULLING▁UP▁LARGE▁WOODEN▁PEGS▁O▁K
+
+Finished

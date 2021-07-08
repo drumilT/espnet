@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidSRose_2007U-0086184-0087303/data decode/DavidSRose_2007U-0086184-0087303/log decode/DavidSRose_2007U-0086184-0087303/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidSRose_2007U-0086184-0087303/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidSRose_2007U-0086184-0087303/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidSRose_2007U-0086184-0087303/log decode/DavidSRose_2007U-0086184-0087303/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁NEVER▁EVER▁LOOK▁AT▁THE▁SCREEN▁YOU'RE▁MAKING▁A▁CONNECTION▁WITH▁YOUR▁AUDIENCE▁OVER▁HERE▁I'M▁AND▁YOU▁ALWAYS▁WANT▁ONE▁TO▁DO▁A▁WILD▁ONE▁CONNECTION▁AND▁THE▁SCREEN▁TO▁COME▁VISUALLY▁BEHIND▁YOU▁AND▁SUPPLEMENT▁WHAT▁YOUR▁DOING▁INSTEAD▁OF▁REPLACE▁YOU▁AND▁THAT▁IS▁HAD▁A▁PITCH▁TO
+
+Finished

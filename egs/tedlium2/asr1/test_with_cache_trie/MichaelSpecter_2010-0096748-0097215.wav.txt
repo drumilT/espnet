@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁TODAY'S▁SOMETHING▁THE▁WORLD▁NEEDS▁RIGHT▁NOW▁THANK▁YOU
+
+Finished

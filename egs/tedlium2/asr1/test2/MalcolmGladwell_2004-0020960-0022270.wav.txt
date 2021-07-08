@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MalcolmGladwell_2004-0020960-0022270/data decode/MalcolmGladwell_2004-0020960-0022270/log decode/MalcolmGladwell_2004-0020960-0022270/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MalcolmGladwell_2004-0020960-0022270/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MalcolmGladwell_2004-0020960-0022270/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MalcolmGladwell_2004-0020960-0022270/log decode/MalcolmGladwell_2004-0020960-0022270/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁HOW▁IT▁IS▁NOT▁SO▁EASILY▁PLACATED▁HOW▁WAS▁A▁MAN▁OF▁CERTAIN▁DEGREE▁OF▁INTELLECTUAL▁STANDARDS▁AND▁THIS▁WAS▁NOT▁GOOD▁ENOUGH▁FOR▁HIM▁AND▁HE▁THIS▁QUESTION▁BEDEVILLED▁HIM▁FOR▁YEARS▁AND▁HE▁WOULD▁THINK▁IT▁TOO▁AND▁SAY▁WHAT▁WAS▁WRONG▁WHY▁COULD▁WE▁NOT▁MAKE▁SENSE▁OF
+
+Finished

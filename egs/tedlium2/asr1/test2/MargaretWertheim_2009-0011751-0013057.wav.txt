@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MargaretWertheim_2009-0011751-0013057/data decode/MargaretWertheim_2009-0011751-0013057/log decode/MargaretWertheim_2009-0011751-0013057/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MargaretWertheim_2009-0011751-0013057/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MargaretWertheim_2009-0011751-0013057/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MargaretWertheim_2009-0011751-0013057/log decode/MargaretWertheim_2009-0011751-0013057/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THAT▁IS▁ABOUT▁TWELVE▁FEET▁LONG▁MY▁SISTER▁AND▁I▁STARTED▁THIS▁PROJECT▁IN▁TWO▁THOUSAND▁AND▁FIVE▁BECAUSE▁IN▁THAT▁YEAR▁AT▁LEAST▁IN▁THE▁SIGNS▁PRESS▁THERE▁WAS▁A▁LOT▁OF▁TALK▁ABOUT▁GLOBE▁OR▁WARMING▁AND▁THE▁EFFECT▁THAT▁GLOBE▁WARMING▁WAS▁HAVING▁ON▁CORAL▁REEFS
+
+Finished

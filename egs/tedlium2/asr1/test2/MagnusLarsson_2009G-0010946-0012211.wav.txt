@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MagnusLarsson_2009G-0010946-0012211/data decode/MagnusLarsson_2009G-0010946-0012211/log decode/MagnusLarsson_2009G-0010946-0012211/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MagnusLarsson_2009G-0010946-0012211/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MagnusLarsson_2009G-0010946-0012211/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MagnusLarsson_2009G-0010946-0012211/log decode/MagnusLarsson_2009G-0010946-0012211/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BUT▁MOVING▁MOUNTAINS▁CAN▁BE▁DANGEROUS▁TO▁TRY▁AND▁EXPLAIN▁WHY▁DRY▁AREAS▁COVER▁MORE▁THAN▁ONE▁THIRD▁OF▁THE▁EARTH'S▁LAND▁SURFACES▁SUMMER▁ALREADY▁DESERTS▁OTHERS▁ARE▁BEING▁SERIOUSLY▁DEGRADED▁BY▁THE▁SUN
+
+Finished

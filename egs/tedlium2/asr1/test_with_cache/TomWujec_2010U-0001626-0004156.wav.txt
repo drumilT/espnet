@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/TomWujec_2010U-0001626-0004156/data decode/TomWujec_2010U-0001626-0004156/log decode/TomWujec_2010U-0001626-0004156/fbank
+steps/make_fbank_pitch.sh: moving decode/TomWujec_2010U-0001626-0004156/data/feats.scp to decode/TomWujec_2010U-0001626-0004156/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/TomWujec_2010U-0001626-0004156/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/TomWujec_2010U-0001626-0004156/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/TomWujec_2010U-0001626-0004156/log decode/TomWujec_2010U-0001626-0004156/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THREE▁YEARS▁AGO▁HERE▁AT▁TED▁PETER▁SKILLMAN▁INTRODUCED▁A▁DESIGN▁CHALLENGE▁CALLED▁THE▁MARSHMALLOW▁CHALLENGE▁AND▁THE▁IDEA▁IS▁PRETTY▁SIMPLE▁TEAMS▁OF▁FOUR▁HAVE▁TO▁BUILD▁THE▁TALLEST▁FREE▁STANDING▁STRUCTURE▁OUT▁OF▁TWENTY▁STICKS▁ASPAGHETTY▁ONE▁YARD▁OF▁TAPE▁ONE▁YARD▁OF▁STRING▁AND▁A▁MARTIANALOW▁THE▁MARTIANAL▁HAS▁TO▁BE▁ON▁TOP▁AND▁THOUGH▁IT▁SEEMS▁REALLY▁SIMPLE▁IT'S▁ACTUALLY▁PRETTY▁HARD▁BECAUSE▁IT▁FORCES▁PEOPLE▁TO▁COLLABORATE▁VERY▁QUICKLY
+
+Finished

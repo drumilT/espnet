@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AndersYnnerman_2010X-0088927-0089942/data decode/AndersYnnerman_2010X-0088927-0089942/log decode/AndersYnnerman_2010X-0088927-0089942/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AndersYnnerman_2010X-0088927-0089942/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AndersYnnerman_2010X-0088927-0089942/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AndersYnnerman_2010X-0088927-0089942/log decode/AndersYnnerman_2010X-0088927-0089942/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THIS▁IS▁SOMETHING▁THAT▁WE▁COULD▁USE▁US▁AT▁ALL▁TO▁REALLY▁UNDERSTAND▁HOW▁THE▁NEARERS▁ARE▁WORKING▁HOW▁THE▁BRAIN▁IS▁WORKING▁AND▁WE▁CAN▁DO▁THIS▁WAS▁VERY▁HIGH▁OFFICIAL▁QUALITY▁AND▁VERY▁FAST▁RESOLUTION
+
+Finished

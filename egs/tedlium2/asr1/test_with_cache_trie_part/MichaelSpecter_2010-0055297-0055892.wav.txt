@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁SHE▁WOULD▁WOULD▁THINK▁IN▁A▁VAC▁TODAYD▁HER▁GET▁AGAINST▁POLIOH▁NO▁WAY▁FINE▁I'M▁ANYONE▁I'M
+
+Finished

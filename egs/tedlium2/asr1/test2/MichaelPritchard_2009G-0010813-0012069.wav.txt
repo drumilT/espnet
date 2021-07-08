@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MichaelPritchard_2009G-0010813-0012069/data decode/MichaelPritchard_2009G-0010813-0012069/log decode/MichaelPritchard_2009G-0010813-0012069/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MichaelPritchard_2009G-0010813-0012069/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MichaelPritchard_2009G-0010813-0012069/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MichaelPritchard_2009G-0010813-0012069/log decode/MichaelPritchard_2009G-0010813-0012069/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WHEN▁I▁WAS▁WATCHING▁THE▁DEVASTATING▁NEWS▁OF▁THE▁AGENT'S▁AN▁ARMY▁AS▁IT▁ROLLED▁IN▁PLAYING▁OUT▁ANTIVI▁THE▁DAYS▁AND▁WEEKS▁THAT▁FOLLOWED▁PEOPLE▁FLEEING▁TO▁THE▁HILLS▁BEING▁FORCED▁TO▁DRINK▁CONTAMINATED▁WATER
+
+Finished

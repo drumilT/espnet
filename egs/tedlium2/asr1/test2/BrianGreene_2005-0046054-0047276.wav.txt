@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BrianGreene_2005-0046054-0047276/data decode/BrianGreene_2005-0046054-0047276/log decode/BrianGreene_2005-0046054-0047276/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BrianGreene_2005-0046054-0047276/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BrianGreene_2005-0046054-0047276/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BrianGreene_2005-0046054-0047276/log decode/BrianGreene_2005-0046054-0047276/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁I▁CAN▁ONLY▁SHOW▁OF▁COURSE▁TWO▁DIMENSIONS▁ON▁A▁SCREEN▁SOME▁YOU▁GUS▁WILL▁FIX▁THAT▁ONE▁DAY▁BUT▁ANYTHING▁THAT'S▁NOT▁FLAT▁IN▁THE▁SCREEN▁AS▁A▁NEW▁DIMENSION▁GOES▁SMALLER▁SMALLER▁SMALLER▁AND▁WAY▁DOWN▁IN▁THE▁MICROSCOPIC▁DEPTHS▁OF▁SPACE▁ITSELF
+
+Finished

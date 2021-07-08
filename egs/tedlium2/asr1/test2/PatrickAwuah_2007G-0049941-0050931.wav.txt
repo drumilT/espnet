@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/PatrickAwuah_2007G-0049941-0050931/data decode/PatrickAwuah_2007G-0049941-0050931/log decode/PatrickAwuah_2007G-0049941-0050931/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/PatrickAwuah_2007G-0049941-0050931/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/PatrickAwuah_2007G-0049941-0050931/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/PatrickAwuah_2007G-0049941-0050931/log decode/PatrickAwuah_2007G-0049941-0050931/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁CAUSE▁I▁REALIZED▁THAT▁THE▁STATE▁OF▁THE▁AFRICAN▁CONTINENT▁WOULD▁MATTER▁TO▁MY▁CHILDREN▁AND▁THEIR▁CHILDREN▁THAT▁THE▁STATE▁OF▁THE▁WORLD
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WillWright_2007-0042625-0043637/data decode/WillWright_2007-0042625-0043637/log decode/WillWright_2007-0042625-0043637/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WillWright_2007-0042625-0043637/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WillWright_2007-0042625-0043637/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WillWright_2007-0042625-0043637/log decode/WillWright_2007-0042625-0043637/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WHERE▁THE▁SPINE▁LIMBS▁ARE▁CUT▁IN▁THOSE▁HOUSE▁STRIPES▁SHOULD▁RUN▁HOW▁TO▁BE▁SHADED▁AND▁SO▁WERE▁PROCEDURELY▁GENERATING▁THE▁TEXTURE▁METHOD▁THIS▁IS▁SOMETHING▁A▁TEXTURE▁ARTIST▁WOULD▁TAKE▁MANY▁MANY▁DAYS▁TO▁WORK▁ON▁AND▁THEN▁WE▁CAN▁TEST▁IT▁OUT▁WHEN▁WE'VE▁DONE▁THAT
+
+Finished

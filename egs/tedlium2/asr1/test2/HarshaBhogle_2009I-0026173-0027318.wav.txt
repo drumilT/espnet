@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/HarshaBhogle_2009I-0026173-0027318/data decode/HarshaBhogle_2009I-0026173-0027318/log decode/HarshaBhogle_2009I-0026173-0027318/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/HarshaBhogle_2009I-0026173-0027318/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/HarshaBhogle_2009I-0026173-0027318/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/HarshaBhogle_2009I-0026173-0027318/log decode/HarshaBhogle_2009I-0026173-0027318/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THEN▁IS▁IT▁O▁KIR▁THE▁NEXT▁RIDES▁ARE▁SOLD▁FOR▁FIFTY▁FIVE▁MILLION▁DOLLARS▁IN▁EXAGGERS▁SOLD▁FOR▁SIX▁HUNDRED▁AND▁TWELVE▁MILLION▁DOLLARS▁SO▁IT'S▁A▁BIT▁OF▁A▁CUR▁OF▁THAT▁AND▁THEN▁ANOTHER▁BIG▁ACCIDENT▁HAPPENED▁IN▁OUR▁CRICKET
+
+Finished

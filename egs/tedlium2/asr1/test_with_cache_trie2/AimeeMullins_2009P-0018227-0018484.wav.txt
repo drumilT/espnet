@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁SO▁THERE'S▁NOT▁JUST▁ABOUT▁THE▁WORDS▁THERE'S▁THERE▁THAT'S
+
+Finished

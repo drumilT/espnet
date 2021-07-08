@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ElizabethGilbert_2009-0088499-0090524/data decode/ElizabethGilbert_2009-0088499-0090524/log decode/ElizabethGilbert_2009-0088499-0090524/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ElizabethGilbert_2009-0088499-0090524/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ElizabethGilbert_2009-0088499-0090524/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ElizabethGilbert_2009-0088499-0090524/log decode/ElizabethGilbert_2009-0088499-0090524/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁NOT▁AS▁BAD▁BUT▁THE▁WORST▁BOOK▁EVER▁WRITTEN▁AND▁I'M▁AN▁I▁SURE▁TO▁THINK▁I▁SHOULD▁JUST▁DUMP▁THIS▁PROJECT▁YOU▁KNOW▁I'M▁BUT▁THEN▁I▁REMEMBERED▁TOM▁TALKING▁TO▁THE▁OPEN▁AIR▁AND▁I▁I▁TRIED▁IT▁I'M▁SO▁I▁JUST▁LIFTED▁MY▁FACE▁UP▁FROM▁THE▁MANUSCRIPT▁AND▁I▁DIRECTED▁MY▁COMMENTS▁TO▁AN▁EMPTY▁CORNER▁OF▁THE▁ROOM▁AND▁I▁I▁SAID▁ALOUD▁AH▁LISTEN▁YOU▁THING
+
+Finished

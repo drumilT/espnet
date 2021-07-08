@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/CKWilliams_2001-0109414-0110426/data decode/CKWilliams_2001-0109414-0110426/log decode/CKWilliams_2001-0109414-0110426/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/CKWilliams_2001-0109414-0110426/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/CKWilliams_2001-0109414-0110426/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/CKWilliams_2001-0109414-0110426/log decode/CKWilliams_2001-0109414-0110426/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁THE▁GIRL▁REMEMBERS▁IN▁THIS▁INFINITE▁INSTANT▁ALREADY▁NOW▁SO▁MANY▁TIMES▁DIVIDED▁THE▁SADNESS▁SHE▁FELT▁ONCE▁HARDLY▁KNOWING▁SHE▁FELT▁IT
+
+Finished

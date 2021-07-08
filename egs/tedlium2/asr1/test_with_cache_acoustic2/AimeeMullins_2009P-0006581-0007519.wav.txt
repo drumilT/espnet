@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁SEE▁NOW▁DECREPIT▁LAID▁UP▁DONE▁UP▁DONE▁FOR▁DONE▁IN▁CRACKED▁UP▁COUNTED▁OUT
+
+Finished

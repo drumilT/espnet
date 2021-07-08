@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/HeatherKnight_2010W-0001553-0002932/data decode/HeatherKnight_2010W-0001553-0002932/log decode/HeatherKnight_2010W-0001553-0002932/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/HeatherKnight_2010W-0001553-0002932/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/HeatherKnight_2010W-0001553-0002932/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/HeatherKnight_2010W-0001553-0002932/log decode/HeatherKnight_2010W-0001553-0002932/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SOME▁OF▁THE▁GREAT▁GREATEST▁INNOVATIONS▁AND▁DEVELOPMENTS▁AH▁IN▁THE▁WORLD▁OFTEN▁HAPPEN▁AT▁THE▁INTERSECTION▁OF▁TWO▁FIELDS▁SO▁TO▁NIGHT▁I'D▁LIKE▁TO▁TELL▁YOU▁ABOUT▁THE▁INTERSECTION▁THAT▁I▁MOST▁EXCITED▁ABOUT▁AT▁THIS▁VERY▁MOMENT▁WHICH▁IS▁ENTERTAINMENT▁AND▁RBOTICS
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MichaelPollan_2007-0069013-0070136/data decode/MichaelPollan_2007-0069013-0070136/log decode/MichaelPollan_2007-0069013-0070136/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MichaelPollan_2007-0069013-0070136/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MichaelPollan_2007-0069013-0070136/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MichaelPollan_2007-0069013-0070136/log decode/MichaelPollan_2007-0069013-0070136/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WHAT▁ELSE▁WHAT▁ELSE▁IS▁YOU▁HAVE▁A▁BUT▁ALL▁THE▁SIX▁DIFFERENT▁SPECIES▁RABBITS▁ACTUALLY▁ARE▁ALL▁PERFORMING▁ECHOLOGICAL▁SERVICES▁FOR▁ONE▁ANOTHER▁SUCH▁THAT▁THE▁MANURE▁OF▁ONE▁IS▁THE▁LUNCH▁FOR▁THE▁OTHER▁AND▁AND▁THEY▁TAKE▁CARE▁OF▁PAST▁FOR▁ONE▁ANOTHER
+
+Finished

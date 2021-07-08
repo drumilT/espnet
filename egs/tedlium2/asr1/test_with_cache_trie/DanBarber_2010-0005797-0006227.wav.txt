@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁ONE▁TODAY▁THE▁HEAD▁OF▁THE▁COMPANY▁CALLED▁AN▁AS▁IF▁I'D▁SPEAK▁OUT▁AN▁EVENT
+
+Finished

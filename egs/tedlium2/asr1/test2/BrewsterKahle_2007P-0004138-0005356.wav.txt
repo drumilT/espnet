@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BrewsterKahle_2007P-0004138-0005356/data decode/BrewsterKahle_2007P-0004138-0005356/log decode/BrewsterKahle_2007P-0004138-0005356/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BrewsterKahle_2007P-0004138-0005356/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BrewsterKahle_2007P-0004138-0005356/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BrewsterKahle_2007P-0004138-0005356/log decode/BrewsterKahle_2007P-0004138-0005356/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁OF▁THOSE▁AROUND▁AS▁OR▁AS▁BROADLY▁AS▁WE▁CAN▁I'M▁GOING▁TO▁START▁AN▁END▁THIS▁TALK▁WITH▁A▁COUPLE▁THINGS▁THAT▁ARE▁CARVED▁IN▁STONE▁ONE▁IS▁WHAT'S▁ON▁THE▁BOSTON▁PUBLIC▁LIBRARY▁CARVED▁ABOVE▁THEIR▁DOOR▁IS▁FREE▁TO▁ALL
+
+Finished

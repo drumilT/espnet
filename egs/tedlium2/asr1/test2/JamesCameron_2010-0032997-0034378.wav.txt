@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JamesCameron_2010-0032997-0034378/data decode/JamesCameron_2010-0032997-0034378/log decode/JamesCameron_2010-0032997-0034378/fbank
+steps/make_fbank_pitch.sh: moving decode/JamesCameron_2010-0032997-0034378/data/feats.scp to decode/JamesCameron_2010-0032997-0034378/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JamesCameron_2010-0032997-0034378/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JamesCameron_2010-0032997-0034378/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JamesCameron_2010-0032997-0034378/log decode/JamesCameron_2010-0032997-0034378/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁SO▁THAT▁THAT▁THAT▁GOT▁ME▁VERY▁EXCITED▁I▁THOUGHT▁WHILE▁THIS▁IS▁THIS▁IS▁SOMETHING▁IN▁NEEDS▁TO▁BE▁EMBRACED▁INTO▁THE▁CINEMATIC▁ART▁SO▁WITH▁THE▁TERMINATOR▁TO▁WHICH▁WAS▁MY▁NEXT▁FILM▁WE▁TOOK▁THAT▁MUCH▁FARTHER▁WORKING▁WITH▁ILEM▁WE▁CREATED▁THE▁LIQUID▁METAL
+
+Finished

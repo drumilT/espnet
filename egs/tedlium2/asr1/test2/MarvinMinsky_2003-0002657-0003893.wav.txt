@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MarvinMinsky_2003-0002657-0003893/data decode/MarvinMinsky_2003-0002657-0003893/log decode/MarvinMinsky_2003-0002657-0003893/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MarvinMinsky_2003-0002657-0003893/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MarvinMinsky_2003-0002657-0003893/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MarvinMinsky_2003-0002657-0003893/log decode/MarvinMinsky_2003-0002657-0003893/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁ARE▁TERRIBLY▁HARD▁THERE▁AND▁INCREDIBLY▁COMPLEX▁THROUGH▁YOU▁I▁CAN'T▁I▁HAVE▁NO▁IDEA▁OF▁HOW▁THEY▁WORK▁BUT▁THINKING▁IS▁REALLY▁VERY▁STRAIGHTFORWARD▁IT'S▁JUST▁SORT▁OF▁SOME▁KIND▁OF▁LOGICAL▁REASONING▁OR▁SOMETHING
+
+Finished

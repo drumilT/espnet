@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁ANYONE▁WE▁CAN▁MEASURE▁THAT▁MISERY▁VERY▁VERY▁CLEARLY▁IN▁TERMS▁OF▁THIS
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BarrySchuler_2008P-0055515-0056713/data decode/BarrySchuler_2008P-0055515-0056713/log decode/BarrySchuler_2008P-0055515-0056713/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BarrySchuler_2008P-0055515-0056713/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BarrySchuler_2008P-0055515-0056713/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BarrySchuler_2008P-0055515-0056713/log decode/BarrySchuler_2008P-0055515-0056713/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁FOR▁ABOUT▁FIVE▁THOUSAND▁DOLLARS▁AND▁ABOUT▁AN▁HOUR▁OR▁A▁HALF▁HOUR▁YOU▁WILL▁SEE▁THAT▁HAPPEN▁IN▁NEXT▁FIVE▁YEARS▁AND▁WHAT▁THAT▁MEANS▁IS▁YOU▁ARE▁GOING▁TO▁WALK▁AROUND▁WITH▁YOUR▁OWN▁PERSONAL▁GENOM▁ON▁A▁SMART▁CART
+
+Finished

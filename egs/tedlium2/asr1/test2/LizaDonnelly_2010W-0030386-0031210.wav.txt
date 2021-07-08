@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/LizaDonnelly_2010W-0030386-0031210/data decode/LizaDonnelly_2010W-0030386-0031210/log decode/LizaDonnelly_2010W-0030386-0031210/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/LizaDonnelly_2010W-0030386-0031210/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/LizaDonnelly_2010W-0030386-0031210/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/LizaDonnelly_2010W-0030386-0031210/log decode/LizaDonnelly_2010W-0030386-0031210/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BUT▁I▁BELIEVE▁IT▁THE▁RULES▁THAT▁I▁AM▁TALKING▁ABOUT▁OUR▁UNIVERSAL▁OF▁COURSE▁THAT▁EACH▁CULTURE▁HAS▁ITS▁DIFFERENT▁COATS▁OF▁BEHAVIOR▁AND▁DRESS▁AND▁TRADITIONS
+
+Finished

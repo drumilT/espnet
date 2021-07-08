@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JamesHowardKunstler_2004-0028729-0029483/data decode/JamesHowardKunstler_2004-0028729-0029483/log decode/JamesHowardKunstler_2004-0028729-0029483/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JamesHowardKunstler_2004-0028729-0029483/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JamesHowardKunstler_2004-0028729-0029483/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JamesHowardKunstler_2004-0028729-0029483/log decode/JamesHowardKunstler_2004-0028729-0029483/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁I▁WANT▁YOU▁TO▁THINK▁ABOUT▁THAT▁WHEN▁YOU▁THINK▁ABOUT▁THOSE▁YOUNG▁MEN▁AND▁WOMEN▁WHO▁ARE▁OVER▁IN▁PLACES▁LIKE▁A▁ROCK▁SPILLING▁THEIR▁BLOOD▁IN▁THE▁SAND
+
+Finished

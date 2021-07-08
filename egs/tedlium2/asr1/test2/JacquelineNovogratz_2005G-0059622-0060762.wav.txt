@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JacquelineNovogratz_2005G-0059622-0060762/data decode/JacquelineNovogratz_2005G-0059622-0060762/log decode/JacquelineNovogratz_2005G-0059622-0060762/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JacquelineNovogratz_2005G-0059622-0060762/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JacquelineNovogratz_2005G-0059622-0060762/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JacquelineNovogratz_2005G-0059622-0060762/log decode/JacquelineNovogratz_2005G-0059622-0060762/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁THE▁PRODUCTION▁SIDE▁IS▁WORKING▁ON▁THE▁DISTRIBUTION▁SIDE▁THOUGH▁AS▁A▁WORLD▁WE▁HAVE▁A▁LOT▁OF▁WORK▁TO▁DO▁RIGHT▁NOW▁NINETY▁FIVE▁PER▁CENT▁OF▁THESE▁NETS▁ARE▁BEING▁BOUGHT▁BY▁THE▁U▁N▁AND▁THENCE▁GIVEN▁PRIMARILY▁TO▁PEOPLE
+
+Finished

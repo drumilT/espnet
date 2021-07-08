@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidMacaulay_2002-0019596-0020499/data decode/DavidMacaulay_2002-0019596-0020499/log decode/DavidMacaulay_2002-0019596-0020499/fbank
+steps/make_fbank_pitch.sh: moving decode/DavidMacaulay_2002-0019596-0020499/data/feats.scp to decode/DavidMacaulay_2002-0019596-0020499/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidMacaulay_2002-0019596-0020499/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidMacaulay_2002-0019596-0020499/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidMacaulay_2002-0019596-0020499/log decode/DavidMacaulay_2002-0019596-0020499/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁BITS▁OF▁LIGHT▁THAT▁COME▁DOWN▁BETWEEN▁THE▁BUILDINGS▁THAT▁SORT▁OF▁CREATE▁A▁MAP▁THAT'S▁TRAVELLING▁ABOVE▁YOUR▁HEAD▁OF▁JUST▁USUALLY▁BLUE▁ESPECIALLY▁IN▁THE▁SUMMER
+
+Finished

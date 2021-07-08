@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DanAriely_2008P-0042818-0044200/data decode/DanAriely_2008P-0042818-0044200/log decode/DanAriely_2008P-0042818-0044200/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DanAriely_2008P-0042818-0044200/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DanAriely_2008P-0042818-0044200/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DanAriely_2008P-0042818-0044200/log decode/DanAriely_2008P-0042818-0044200/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁PEOPLE▁DON'T▁CHECK▁AND▁THEY▁DON'T▁JOIN▁THE▁COUNTRIES▁ON▁THE▁RIGHT▁THE▁ONE▁THAT▁GIVE▁A▁LOT▁HAVE▁A▁SLIGHTLY▁DIFFERENT▁FORM▁IT▁SAYS▁CHECK▁THE▁BOX▁BELOW▁IF▁YOU▁DON'T▁WANT▁TO▁PARTICIPATE▁INTERESTING▁ME▁ENOUGH▁WHEN▁PEOPLE▁GET▁THIS▁THEY▁AGAIN▁DON'T▁CHECK
+
+Finished

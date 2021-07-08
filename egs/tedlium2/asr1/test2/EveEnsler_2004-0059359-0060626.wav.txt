@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EveEnsler_2004-0059359-0060626/data decode/EveEnsler_2004-0059359-0060626/log decode/EveEnsler_2004-0059359-0060626/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EveEnsler_2004-0059359-0060626/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EveEnsler_2004-0059359-0060626/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EveEnsler_2004-0059359-0060626/log decode/EveEnsler_2004-0059359-0060626/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁I▁DON'T▁THINK▁I▁EVER▁UNDERSTOOD▁PLEASURE▁UNTIL▁THAT▁MOMENT▁AND▁HOW▁WOMEN▁HAVE▁FOUND▁A▁WAY▁TO▁KEEP▁THEIR▁PLEASURE▁ALIVE▁IT▁HAS▁TAKEN▁ME▁THIS▁JOURNEY▁TO▁ASLAM▁ABOUT▁WHERE▁I▁HAVE▁WITNESSED▁AND▁MET▁WOMEN▁WITH▁THEIR▁FACES▁MELTED▁OFF
+
+Finished

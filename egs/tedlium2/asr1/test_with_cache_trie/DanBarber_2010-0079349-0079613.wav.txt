@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁TO▁MEASURE▁UP▁IMPURITIES▁AND▁THEN▁HE▁ADDED
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ElizabethGilbert_2009-0086595-0088499/data decode/ElizabethGilbert_2009-0086595-0088499/log decode/ElizabethGilbert_2009-0086595-0088499/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ElizabethGilbert_2009-0086595-0088499/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ElizabethGilbert_2009-0086595-0088499/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ElizabethGilbert_2009-0086595-0088499/log decode/ElizabethGilbert_2009-0086595-0088499/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁WHEN▁I▁HEARD▁THAT▁STORY▁IT▁STARTED▁A▁SHIFT▁A▁LITTLE▁BIT▁THE▁WAY▁THAT▁I▁WORKED▁TOO▁AND▁IT▁ALREADY▁SAVED▁ME▁ONCE▁THIS▁IDEA▁IT▁SAVED▁ME▁WHEN▁I▁WAS▁IN▁THE▁MIDDLE▁OF▁WRITING▁EAT▁PRAY▁LOVE▁AND▁I▁FELL▁INTO▁ONE▁OF▁THOSE▁SORT▁OF▁PITS▁OF▁DESPAIR▁THAT▁WE▁ALL▁FALL▁INTO▁AND▁WERE▁WORKING▁ON▁SOMETHING▁THAT'S▁NOT▁COMING▁AND▁YOU▁START▁TO▁THINK▁THIS▁IS▁CAN▁BE▁A▁DISASTER▁THIS▁CAN▁BE▁THE▁WORST▁BOOK▁EVERETT
+
+Finished

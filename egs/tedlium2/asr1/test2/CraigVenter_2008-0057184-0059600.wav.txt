@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/CraigVenter_2008-0057184-0059600/data decode/CraigVenter_2008-0057184-0059600/log decode/CraigVenter_2008-0057184-0059600/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/CraigVenter_2008-0057184-0059600/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/CraigVenter_2008-0057184-0059600/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/CraigVenter_2008-0057184-0059600/log decode/CraigVenter_2008-0057184-0059600/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THERE'S▁ENSIGNS▁CALLED▁RESTRICTION▁IN▁Z▁ARMS▁EXACTLY▁DIGEST▁D▁AND▁A▁THE▁CROMISSONE▁THAT▁WAS▁IN▁THE▁SOUTH▁DOESN'T▁HAVE▁ONE▁AH▁THE▁SOUTH▁THE▁PROMISE▁WHOM▁WE▁PUT▁IN▁DOES▁IT▁GOT▁EXPRESSED▁AND▁IT▁RECOGNIZED▁THE▁OTHER▁PROMISED▁HOME▁AH▁AS▁FOREIGN▁MATERIAL▁CHEWED▁IT▁UP▁AND▁SO▁WE▁ENDED▁UP▁JUST▁WITH▁THE▁CELL▁WITH▁THE▁NEW▁PROMISSEL▁IT▁TURNED▁BLUE▁BECAUSE▁OF▁THE▁GENES▁WE▁PUT▁IN▁IT
+
+Finished

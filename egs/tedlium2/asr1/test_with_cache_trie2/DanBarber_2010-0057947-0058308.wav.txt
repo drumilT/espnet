@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁UNLIKE▁COULD▁HE▁FISH▁FOR▁ALLIG▁GREAT▁FARM▁I'D▁EVER▁BEEN▁AT▁ANIMALS▁A▁ANIMALS▁A
+
+Finished

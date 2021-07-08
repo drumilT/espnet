@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁WHAT▁COULD▁THAT▁HAVE▁TO▁DO▁WITH▁THE▁PERCEVAL▁EFFECT▁WELL▁WELL▁DAT▁LET▁DAT▁LET▁DAT▁WELL
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MajoraCarter_2010X-0093451-0094558/data decode/MajoraCarter_2010X-0093451-0094558/log decode/MajoraCarter_2010X-0093451-0094558/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MajoraCarter_2010X-0093451-0094558/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MajoraCarter_2010X-0093451-0094558/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MajoraCarter_2010X-0093451-0094558/log decode/MajoraCarter_2010X-0093451-0094558/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁I▁KNOW▁A▁LITTLE▁BIT▁ABOUT▁THESE▁ISSUES▁BECAUSE▁FOR▁MANY▁YEARS▁I▁SPENT▁A▁LONG▁TIME▁I'M▁IN▁THE▁NONPROFIT▁INDUSTRIAL▁COMPLEX▁AND▁A▁I'M▁A▁RECOVERING▁EXECUTIVE▁DIRECTOR▁A▁TWO▁YEARS▁CLEAN
+
+Finished

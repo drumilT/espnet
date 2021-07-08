@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/NicholasChristakis_2010S-0062408-0063832/data decode/NicholasChristakis_2010S-0062408-0063832/log decode/NicholasChristakis_2010S-0062408-0063832/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/NicholasChristakis_2010S-0062408-0063832/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/NicholasChristakis_2010S-0062408-0063832/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/NicholasChristakis_2010S-0062408-0063832/log decode/NicholasChristakis_2010S-0062408-0063832/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THEIR▁CURVE▁STARTED▁SHIFTING▁AND▁THAT▁AS▁INDICATED▁BY▁THE▁WHITE▁LINE▁OCCURRED▁FORTY▁SIX▁DAYS▁BEFORE▁THE▁PEAK▁OF▁THE▁EPIDEMIC▁SO▁THIS▁WOULD▁BE▁A▁TECHNIC▁WERE▁WHY▁WE▁COULD▁GET▁MORE▁THAN▁A▁MONTH▁AND▁A▁HALF▁WARNING▁ABOUT▁A▁FLEW▁EPIDEMIC▁IN▁A▁PARTICULAR▁POPULATION
+
+Finished

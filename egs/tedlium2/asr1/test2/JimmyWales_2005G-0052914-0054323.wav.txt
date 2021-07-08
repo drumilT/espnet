@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JimmyWales_2005G-0052914-0054323/data decode/JimmyWales_2005G-0052914-0054323/log decode/JimmyWales_2005G-0052914-0054323/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JimmyWales_2005G-0052914-0054323/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JimmyWales_2005G-0052914-0054323/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JimmyWales_2005G-0052914-0054323/log decode/JimmyWales_2005G-0052914-0054323/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BY▁HAVING▁THIS▁FIRM▁NEUTRALITY▁POLICY▁WHICH▁IS▁NON▁NEGOTIABLE▁FROM▁THE▁BEGINNING▁WE▁INSURE▁THAT▁PEOPLE▁CAN▁WORK▁TOGETHER▁AND▁THAT▁THE▁ENTRIES▁DON'T▁BECOME▁SIMPLY▁A▁WAR▁BACK▁AND▁FORTH▁BETWEEN▁THE▁LEFT▁AND▁THE▁RIGHT▁IF▁YOU▁ENGAGE▁IN▁THAT▁TYPE▁OF▁BEHAVIOUR▁YOU'LL▁BE▁ASKED▁TO▁LEAVE▁THE▁COMMUNITY
+
+Finished

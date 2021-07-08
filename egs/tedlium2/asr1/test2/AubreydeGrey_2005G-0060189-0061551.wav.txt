@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AubreydeGrey_2005G-0060189-0061551/data decode/AubreydeGrey_2005G-0060189-0061551/log decode/AubreydeGrey_2005G-0060189-0061551/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AubreydeGrey_2005G-0060189-0061551/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AubreydeGrey_2005G-0060189-0061551/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AubreydeGrey_2005G-0060189-0061551/log decode/AubreydeGrey_2005G-0060189-0061551/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THIS▁IS▁THE▁VERY▁IMPORTANT▁POINT▁FOR▁ME▁TO▁GET▁ACROSS▁BECAUSE▁YOU▁KNOW▁MOST▁PEOPLE▁WHEN▁THEY▁HEAR▁THAT▁I▁PROJECT▁THE▁PEOPLE▁OF▁OTHER▁A▁LOT▁OF▁PEOPLE▁ARE▁LIGHTED▁THERE▁GOING▁TO▁LIVE▁TO▁FOOT▁TO▁A▁THOUSAND▁OR▁MORE▁THEY▁THINK▁THAT▁I'M▁SAYING▁THAT▁WILL▁GET▁AN▁INVENT▁THERAPES▁IN▁THE▁NEXT▁FEW▁DECADES▁THAT▁ARE▁SO
+
+Finished

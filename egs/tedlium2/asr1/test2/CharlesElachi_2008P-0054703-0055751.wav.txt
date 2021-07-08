@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/CharlesElachi_2008P-0054703-0055751/data decode/CharlesElachi_2008P-0054703-0055751/log decode/CharlesElachi_2008P-0054703-0055751/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/CharlesElachi_2008P-0054703-0055751/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/CharlesElachi_2008P-0054703-0055751/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/CharlesElachi_2008P-0054703-0055751/log decode/CharlesElachi_2008P-0054703-0055751/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁OUR▁FOUR▁YEARS▁LATER▁AND▁ARE▁STOOD▁WORKING▁NOW▁YOU▁SAY▁CHILD▁YOU▁KNOW▁YOU▁ARE▁REALLY▁LYING▁TO▁US▁AS▁OWN▁BUT▁THAT'S▁NOT▁THROUGH▁WE▁REALLY▁BELIEVE▁THEY▁WERE▁GONE▁TO▁LAST▁NINETY▁DAYS▁OR▁HUNDRED▁DAYS▁BECAUSE▁OUR▁SOLAR▁POWER
+
+Finished

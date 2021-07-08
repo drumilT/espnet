@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EricGiler_2009G-0017207-0018195/data decode/EricGiler_2009G-0017207-0018195/log decode/EricGiler_2009G-0017207-0018195/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EricGiler_2009G-0017207-0018195/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EricGiler_2009G-0017207-0018195/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EricGiler_2009G-0017207-0018195/log decode/EricGiler_2009G-0017207-0018195/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THEY▁TOOK▁IT▁GOT▁ABOUT▁FIFTY▁PERCENTITY▁EFFICIENCY▁BY▁THE▁WAY▁THAT▁STILL▁A▁COUPLE▁THOUSAND▁TIMES▁MORE▁EFFICIENT▁THAN▁A▁BATTERY▁WOULD▁BE▁TO▁DO▁THE▁SAME▁THING▁BUT▁WERE▁ABLE▁TO▁LIGHT▁THAT▁AND
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AshrafGhani_2005G-0078708-0079663/data decode/AshrafGhani_2005G-0078708-0079663/log decode/AshrafGhani_2005G-0078708-0079663/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AshrafGhani_2005G-0078708-0079663/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AshrafGhani_2005G-0078708-0079663/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AshrafGhani_2005G-0078708-0079663/log decode/AshrafGhani_2005G-0078708-0079663/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁YOU▁SEE▁BECAUSE▁I▁MEAN▁I▁GIVE▁YOU▁ONE▁STICKS▁NINETY▁ONE▁PER▁CENT▁OF▁THE▁MEN▁ENOUGH▁HONEST▁THAN▁EIGHTY▁SIX▁PER▁CENT▁OF▁THE▁WOMAN▁LISTEN▁TO▁AT▁LEAST▁THREE▁RADIO▁STATIONS▁AT▁THE
+
+Finished

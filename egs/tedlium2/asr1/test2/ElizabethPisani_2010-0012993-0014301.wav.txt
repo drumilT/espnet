@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ElizabethPisani_2010-0012993-0014301/data decode/ElizabethPisani_2010-0012993-0014301/log decode/ElizabethPisani_2010-0012993-0014301/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ElizabethPisani_2010-0012993-0014301/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ElizabethPisani_2010-0012993-0014301/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ElizabethPisani_2010-0012993-0014301/log decode/ElizabethPisani_2010-0012993-0014301/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁FEET▁AND▁HE▁WENT▁DOWN▁AND▁STARTED▁INJECTING▁PEOPLE▁SO▁HE▁OBJECTS▁THE▁FIRST▁SKY▁AND▁THEN▁HE▁JEXIE'S▁WIPING▁THE▁NEEDLE▁ON▁HIS▁SURET▁AND▁IN▁JACKSON▁NEXT▁SKY▁AND▁FRANKIE▁SAYS▁YOU▁KNOW▁SO▁I'M▁NUMBER▁TWENTY▁TWO▁IN▁LINE
+
+Finished

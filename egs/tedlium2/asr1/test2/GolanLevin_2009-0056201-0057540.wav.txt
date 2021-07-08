@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/GolanLevin_2009-0056201-0057540/data decode/GolanLevin_2009-0056201-0057540/log decode/GolanLevin_2009-0056201-0057540/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/GolanLevin_2009-0056201-0057540/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/GolanLevin_2009-0056201-0057540/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/GolanLevin_2009-0056201-0057540/log decode/GolanLevin_2009-0056201-0057540/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁FAIRLY▁BIG▁DISTANCE▁AWAY▁HOW▁THESE▁LITTLE▁TINY▁BALLS▁ARE▁ACTUALLY▁POINTING▁IN▁ONE▁WAY▁ANOTHER▁TO▁REVEAL▁WHAT▁YOU'RE▁INTERESTED▁IN▁AND▁WHERE▁YOUR▁ATTENTION▁IS▁DIRECTED▁SO▁AS▁A▁LOT▁OF▁EMOTIONAL▁COMMUNICATION▁THAT▁HAPPENS▁THERE▁AND▁SO▁I'VE▁BEEN▁NUMB
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/HannaRosin_2010W-0038221-0039588/data decode/HannaRosin_2010W-0038221-0039588/log decode/HannaRosin_2010W-0038221-0039588/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/HannaRosin_2010W-0038221-0039588/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/HannaRosin_2010W-0038221-0039588/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/HannaRosin_2010W-0038221-0039588/log decode/HannaRosin_2010W-0038221-0039588/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁OH▁IT▁LOOKS▁LIKE▁WOMEN▁GOT▁SOME▁POWER▁BOOST▁ON▁A▁VIDIO▁GAME▁OR▁YOU▁KNOW▁LIKE▁THEY'VE▁SNUG▁IN▁SOME▁SECRET▁SYRUM▁INTO▁THEIR▁BIRTH▁CONTROL▁PILLS▁LETS▁THEM▁YOU▁KNOW▁SHOOT▁UP▁PIE▁AH▁BUT▁OF▁COURSE▁IT'S▁NOT▁ABOUT▁THAT▁WHAT▁IT'S▁ABOUT▁IS▁THAT▁THE▁ECONOMY▁HAS▁CHANGED▁A▁LOT▁WE
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/TomWujec_2010U-0031142-0032519/data decode/TomWujec_2010U-0031142-0032519/log decode/TomWujec_2010U-0031142-0032519/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/TomWujec_2010U-0031142-0032519/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/TomWujec_2010U-0031142-0032519/data/feats.scp decode/download/tedlium2.transformer.v1/data/train_trim_sp/cmvn.ark decode/TomWujec_2010U-0031142-0032519/log decode/TomWujec_2010U-0031142-0032519/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁so▁the▁same▁team▁went▁from▁being▁the▁very▁worst▁to▁being▁among▁the▁very▁best▁they▁produced▁the▁tallest▁structures▁in▁the▁least▁amount▁of▁time▁so▁there's▁deep▁lessons▁for▁us▁about▁the▁nature▁of▁incentives▁and▁success
+
+Finished

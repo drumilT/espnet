@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidCarson_2003-0079085-0080159/data decode/DavidCarson_2003-0079085-0080159/log decode/DavidCarson_2003-0079085-0080159/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidCarson_2003-0079085-0080159/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidCarson_2003-0079085-0080159/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidCarson_2003-0079085-0080159/log decode/DavidCarson_2003-0079085-0080159/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁I▁DIDN'T▁SOME▁WORK▁FOR▁A▁MICROSOFT▁I▁FEARS▁BACK▁IT▁WAS▁A▁WORLD▁WIDE▁BRANDON▁CAMPAIGN▁AND▁I▁WAS▁INTERESTING▁TO▁ME▁MY▁BACKGROUNDS▁AND▁SOCIOLOGY▁I▁HAVE▁NO▁DESIGNED▁TRAINING▁AND▁SAID▁MY▁PEOPLE▁SAY▁WILL▁THAT▁EACH▁WAY
+
+Finished

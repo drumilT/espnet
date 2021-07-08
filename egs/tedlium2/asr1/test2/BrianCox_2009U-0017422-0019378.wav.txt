@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BrianCox_2009U-0017422-0019378/data decode/BrianCox_2009U-0017422-0019378/log decode/BrianCox_2009U-0017422-0019378/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BrianCox_2009U-0017422-0019378/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BrianCox_2009U-0017422-0019378/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BrianCox_2009U-0017422-0019378/log decode/BrianCox_2009U-0017422-0019378/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁I▁WILL▁LEAVE▁THE▁FINAL▁WORD▁TO▁AN▁ER▁AN▁ENGLISH▁SCIENTIST▁HUMPHREY▁DAVY▁WHO▁I▁SUSPECT▁WHEN▁DEFENDING▁HIS▁PROTEGES▁USELESS▁EXPERIMENTS▁HIS▁PROTEGEE▁WAS▁MICHAEL▁FARADAY▁AHEM▁SAID▁THAT▁SAID▁THIS▁NOTHING▁IS▁SO▁DANGEROUS▁TO▁THE▁PROGRESS▁OF▁THE▁HUMAN▁MIND▁THAN▁TO▁ASSUME▁THAT▁OUR▁VIEWS▁OF▁SCIENCE▁OR▁ULTIMATE
+
+Finished

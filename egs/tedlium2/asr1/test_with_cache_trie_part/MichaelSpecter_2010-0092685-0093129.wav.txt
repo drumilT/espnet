@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁BENDING▁IT'S▁UGLY▁GETS▁BENEATH▁US▁AND▁WE▁REALLY▁HAVE▁TO▁STOP▁STOP▁IT▁AWHILE▁IT'S▁TO▁STOP▁IT
+
+Finished

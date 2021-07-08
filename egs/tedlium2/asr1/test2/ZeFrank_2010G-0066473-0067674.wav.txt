@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ZeFrank_2010G-0066473-0067674/data decode/ZeFrank_2010G-0066473-0067674/log decode/ZeFrank_2010G-0066473-0067674/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ZeFrank_2010G-0066473-0067674/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ZeFrank_2010G-0066473-0067674/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ZeFrank_2010G-0066473-0067674/log decode/ZeFrank_2010G-0066473-0067674/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁DEATH▁THREATS▁EVEN▁AND▁AT▁ONE▁PERFECT▁I▁IN▁PARTICULAR▁KEPT▁ON▁WRITING▁ME▁THESE▁A▁PRETTY▁AWFUL▁MESSAGES▁AND▁HE▁WAS▁DRESSED▁IN▁BATMAN▁AS▁ES▁BATMAN▁AND▁HE▁SAID▁I'M▁DRESSED▁AS▁BAT▁MAN▁TO▁HIDE▁MY▁IDENTITY▁JUST▁IN▁THE▁CASE▁I'VE▁GOT▁THE▁REAL▁BAD
+
+Finished

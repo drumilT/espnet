@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BjornLomborg_2005-0085972-0087305/data decode/BjornLomborg_2005-0085972-0087305/log decode/BjornLomborg_2005-0085972-0087305/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BjornLomborg_2005-0085972-0087305/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BjornLomborg_2005-0085972-0087305/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BjornLomborg_2005-0085972-0087305/log decode/BjornLomborg_2005-0085972-0087305/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁LIKEWISE▁PEOPLE▁OF▁US▁A▁SAYING▁BUT▁WHAT▁ABOUT▁THE▁EYE▁RACK▁WORE▁HERE▁WE'VE▁SPEND▁A▁HUNDRED▁BILLION▁DOLLS▁SAY▁WHY▁DON'T▁WE▁SPEND▁THAT▁ON▁DOING▁GOOD▁IN▁THE▁WORLD▁I'M▁ALL▁FOR▁THAT▁IF▁ANY▁ONE▁OF▁YOU▁GOES▁CAN▁TALK▁BUSH▁IN▁TO▁DO▁THAT▁THAT'S▁FINE▁BUT▁THE▁POINT▁OF▁COURSE▁IT'S▁STILL▁TO▁SAY▁IF▁YOU▁GET▁ANOTHER▁HUNDRED▁BILLY▁ENOUGH
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MihalyCsikszentmihalyi_2004-0051307-0052530/data decode/MihalyCsikszentmihalyi_2004-0051307-0052530/log decode/MihalyCsikszentmihalyi_2004-0051307-0052530/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MihalyCsikszentmihalyi_2004-0051307-0052530/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MihalyCsikszentmihalyi_2004-0051307-0052530/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MihalyCsikszentmihalyi_2004-0051307-0052530/log decode/MihalyCsikszentmihalyi_2004-0051307-0052530/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IN▁ORDER▁TO▁HEAR▁ME▁AND▁UNDERSTAND▁WHAT▁I'M▁SAYING▁YOU▁NEED▁TO▁PROCESS▁ABOUT▁SIXTY▁BITS▁FOR▁SECOND▁THAT'S▁WHY▁YOU▁CAN'T▁HEAR▁MORE▁THAN▁TWO▁PEOPLE▁YOU▁CAN'T▁UNDERSTAND▁MORE▁THAN▁TWO▁PEOPLE▁TALKING▁TO▁YOU
+
+Finished

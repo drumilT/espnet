@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MalcolmGladwell_2004-0033164-0034053/data decode/MalcolmGladwell_2004-0033164-0034053/log decode/MalcolmGladwell_2004-0033164-0034053/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MalcolmGladwell_2004-0033164-0034053/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MalcolmGladwell_2004-0033164-0034053/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MalcolmGladwell_2004-0033164-0034053/log decode/MalcolmGladwell_2004-0033164-0034053/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IT▁WAS▁TECHNICALLY▁SPEAKING▁SUSAN▁ASIDE▁PREGGOT▁IS▁A▁BETTER▁TO▁MAKE▁A▁SAUCE▁THAN▁RAGOUT▁THAT▁QUALITY▁THAT▁TO▁MAKE▁A▁PACE▁IS▁MUCH▁BETTER▁THE▁SMICE▁SPICE▁MIXES▁FAR▁SUPERIOR
+
+Finished

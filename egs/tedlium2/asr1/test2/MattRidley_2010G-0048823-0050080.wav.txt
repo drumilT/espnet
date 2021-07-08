@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MattRidley_2010G-0048823-0050080/data decode/MattRidley_2010G-0048823-0050080/log decode/MattRidley_2010G-0048823-0050080/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MattRidley_2010G-0048823-0050080/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MattRidley_2010G-0048823-0050080/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MattRidley_2010G-0048823-0050080/log decode/MattRidley_2010G-0048823-0050080/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁HE▁HAS▁FOUR▁HUNDRED▁NINETY▁EIGHT▁PEOPLE▁DOING▁HIS▁DINNER▁TO▁NIGHT▁TOO▁THEREIN▁BESTROSE▁AND▁CAFES▁AND▁RESTAURALS▁AND▁SHOPS▁ALL▁OVER▁PARIS▁AND▁THEY▁ARE▁ALL▁READY▁TO▁SERVE▁YOU▁AT▁AN▁HOUR'S▁NOTICE▁WITH▁AN▁EXCELLENT▁MEAL▁THAT▁PROBABLY▁GOT▁HIGHER▁QUALITY▁THAN▁LOUIS▁THE▁FOURTEENTH▁EVEN▁HER
+
+Finished

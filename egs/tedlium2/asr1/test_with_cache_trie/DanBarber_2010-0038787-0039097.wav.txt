@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁RELATION▁THEY▁PUSHED▁WATER▁OFF▁THE▁LAND▁AND▁OUT▁INTO▁THE▁RIVER
+
+Finished

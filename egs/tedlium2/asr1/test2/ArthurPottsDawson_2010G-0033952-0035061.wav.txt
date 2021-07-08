@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ArthurPottsDawson_2010G-0033952-0035061/data decode/ArthurPottsDawson_2010G-0033952-0035061/log decode/ArthurPottsDawson_2010G-0033952-0035061/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ArthurPottsDawson_2010G-0033952-0035061/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ArthurPottsDawson_2010G-0033952-0035061/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ArthurPottsDawson_2010G-0033952-0035061/log decode/ArthurPottsDawson_2010G-0033952-0035061/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IN▁THE▁CANAL▁WHICH▁IS▁JUST▁ASKED▁BY▁THE▁RESTAURANT▁THERE'S▁IN▁A▁HUNDREDS▁OF▁METRES▁OF▁COIL▁PIPING▁THIS▁TAKES▁THE▁TEMPERATURE▁OF▁THE▁CANAL▁AND▁TURNS▁TO▁INTO▁THIS▁FOUR▁DEGREES▁HE'D▁EXCHANGE▁I'VE▁NO▁IDEA▁HOW▁IT▁WORKS▁BUT▁I▁PAY▁A▁LOT▁OF▁MONEY▁FOR▁IT
+
+Finished

@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/GaryFlake_2010-0005245-0006253/data decode/GaryFlake_2010-0005245-0006253/log decode/GaryFlake_2010-0005245-0006253/fbank
+steps/make_fbank_pitch.sh: moving decode/GaryFlake_2010-0005245-0006253/data/feats.scp to decode/GaryFlake_2010-0005245-0006253/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/GaryFlake_2010-0005245-0006253/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/GaryFlake_2010-0005245-0006253/data/feats.scp decode/download/tedlium2.transformer.v1/data/train_trim_sp/cmvn.ark decode/GaryFlake_2010-0005245-0006253/log decode/GaryFlake_2010-0005245-0006253/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁this▁is▁because▁in▁the▁mid▁era▁here▁people▁are▁the▁most▁active▁and▁over▁here▁they're▁most▁frail▁we▁can▁step▁back▁out▁again▁and▁then▁reorganize▁the▁data▁by▁cause▁of▁death
+
+Finished

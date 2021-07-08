@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/PaulRomer_2009G-0077621-0078669/data decode/PaulRomer_2009G-0077621-0078669/log decode/PaulRomer_2009G-0077621-0078669/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/PaulRomer_2009G-0077621-0078669/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/PaulRomer_2009G-0077621-0078669/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/PaulRomer_2009G-0077621-0078669/log decode/PaulRomer_2009G-0077621-0078669/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SOME▁OF▁MY▁CITIZENS▁WILL▁MOVE▁INTO▁THAT▁CITY▁AS▁WELL▁OTHERS▁WILL▁HOLD▁BACK▁BUT▁THIS▁WILL▁BE▁THE▁GATEWAY▁THAT▁WILL▁CONNECT▁THE▁MODERN▁ECONOMY▁IN▁THE▁MODERN▁WORLD▁TO▁MY▁COUNTRY
+
+Finished

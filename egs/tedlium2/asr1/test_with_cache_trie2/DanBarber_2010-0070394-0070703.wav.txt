@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁AN▁EVERY▁EATING▁THEY▁FLY▁ONE▁HUNDRED▁A▁FIFTY▁MILES▁ABACK
+
+Finished

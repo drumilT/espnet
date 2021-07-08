@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁I▁HOPE▁I▁HAVE▁GIVEN▁YOU▁A▁SENSE▁OF▁HOW▁DIFFICULT▁IT▁IS▁THANK▁YOU
+
+Finished

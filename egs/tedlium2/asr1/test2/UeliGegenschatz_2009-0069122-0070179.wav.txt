@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/UeliGegenschatz_2009-0069122-0070179/data decode/UeliGegenschatz_2009-0069122-0070179/log decode/UeliGegenschatz_2009-0069122-0070179/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/UeliGegenschatz_2009-0069122-0070179/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/UeliGegenschatz_2009-0069122-0070179/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/UeliGegenschatz_2009-0069122-0070179/log decode/UeliGegenschatz_2009-0069122-0070179/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁A▁HELMET▁IN▁THE▁MOUNTAINS▁I▁AM▁ALWAYS▁WEARING▁A▁HELMET▁BECAUSE▁OF▁A▁LANDING▁SIDES▁USUALLY▁ITS▁DIFFICULTIES▁NOT▁LIKE▁RECKLESS▁KIND▁I▁MEAN▁WHERE▁YOU▁HAVE▁LIKE▁THE▁BIG▁LANDINGS▁IT▁IS▁ALL▁WELL▁THAT▁YOU▁HAVE▁TO▁BE▁PREPARED
+
+Finished

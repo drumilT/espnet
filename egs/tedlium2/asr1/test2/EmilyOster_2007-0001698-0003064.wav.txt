@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EmilyOster_2007-0001698-0003064/data decode/EmilyOster_2007-0001698-0003064/log decode/EmilyOster_2007-0001698-0003064/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EmilyOster_2007-0001698-0003064/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EmilyOster_2007-0001698-0003064/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EmilyOster_2007-0001698-0003064/log decode/EmilyOster_2007-0001698-0003064/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁A▁PRETTY▁WELL▁EDUCATED▁AUDIENCE▁AND▁SO▁IMAGINE▁YOU▁ALL▁KNOW▁SOMETHING▁OF▁THAT▁AIDS▁AH▁YOU▁PROBABLY▁KNOW▁THAT▁ROUGHLY▁TWENTY▁FIVE▁MILLION▁PEOPLE▁IN▁AFRICA▁ARE▁INFECTED▁WITH▁THE▁VIRUS▁THE▁AGE▁IS▁A▁DISEASE▁OF▁POVERTY▁AND▁THAT▁IF▁WE▁COULD▁BRING▁AFRICA▁OUT▁OF▁POVERTY▁WE▁WOULD▁DECREASE▁AIDS▁AS▁WELL
+
+Finished

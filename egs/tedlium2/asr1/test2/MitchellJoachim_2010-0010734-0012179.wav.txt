@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MitchellJoachim_2010-0010734-0012179/data decode/MitchellJoachim_2010-0010734-0012179/log decode/MitchellJoachim_2010-0010734-0012179/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MitchellJoachim_2010-0010734-0012179/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MitchellJoachim_2010-0010734-0012179/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MitchellJoachim_2010-0010734-0012179/log decode/MitchellJoachim_2010-0010734-0012179/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁WHAT▁WE▁DO▁IS▁WE▁GROW▁EXTRA▁CELLURE▁MATRIX▁FROM▁PIGS▁WE▁USE▁A▁MODIFIEDING▁JET▁PRINTER▁AND▁WE▁PRINT▁GEOMETRY▁THEY▁PUT▁GEOMETRY▁WHERE▁WE▁CAN▁MAKE▁INDUSTRIAL▁DESIGN▁OBJECTS▁RIGHT▁LIKE▁GUB▁IN▁OAK▁SHOES▁LEATHER▁BELTS▁HAND▁BAGS▁ET▁CETERA
+
+Finished

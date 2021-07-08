@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EricMead_2009P-0013346-0014883/data decode/EricMead_2009P-0013346-0014883/log decode/EricMead_2009P-0013346-0014883/fbank
+steps/make_fbank_pitch.sh: moving decode/EricMead_2009P-0013346-0014883/data/feats.scp to decode/EricMead_2009P-0013346-0014883/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EricMead_2009P-0013346-0014883/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EricMead_2009P-0013346-0014883/data/feats.scp decode/download/tedlium2.transformer.v1/data/train_trim_sp/cmvn.ark decode/EricMead_2009P-0013346-0014883/log decode/EricMead_2009P-0013346-0014883/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁so▁this▁is▁a▁trick▁that▁i▁often▁teach▁to▁young▁children▁that▁are▁interested▁in▁magic▁because▁you▁can▁learn▁a▁great▁deal▁about▁deception▁by▁studying▁this▁very▁even▁though▁it's▁a▁very▁simple▁trick▁methodologically▁probably▁many▁of▁you▁in▁the▁room▁know▁this▁trick▁what▁happens▁is▁this▁i▁hold▁the▁knife▁in▁my▁hand
+
+Finished

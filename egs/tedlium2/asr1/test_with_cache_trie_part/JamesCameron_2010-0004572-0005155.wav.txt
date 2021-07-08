@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁SAID▁THE▁FACT▁THAT▁WHENEVER▁I▁WASN'T▁IN▁SCHOOL▁I▁WAS▁I▁WAS▁OUT▁IN▁THE▁WOODS▁HIKING▁AND▁TAKING
+
+Finished

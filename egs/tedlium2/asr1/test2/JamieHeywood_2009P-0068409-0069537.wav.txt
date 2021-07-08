@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JamieHeywood_2009P-0068409-0069537/data decode/JamieHeywood_2009P-0068409-0069537/log decode/JamieHeywood_2009P-0068409-0069537/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JamieHeywood_2009P-0068409-0069537/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JamieHeywood_2009P-0068409-0069537/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JamieHeywood_2009P-0068409-0069537/log decode/JamieHeywood_2009P-0068409-0069537/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁WE▁DID▁WE▁TOOK▁ALL▁THE▁PATIENCE▁LIKE▁UMBERTO▁THAT'S▁THE▁APPLE▁BACKGROUND▁WE▁STOLE▁THAT▁AS▁WE▁HAVE▁TIME▁TO▁BUILD▁OUR▁OWN▁IS▁A▁REAL▁ACT▁BY▁THE▁WAY▁THIS▁IS▁NOT▁JUST▁GRAPHICS▁AND▁YOU▁TAKE▁THE▁DATE▁AS▁WE▁FIND▁THE▁PIECES▁LIKE▁HIM▁AND▁WE▁BRING▁THEIR▁DATA▁TOGETHER
+
+Finished

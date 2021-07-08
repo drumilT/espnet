@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁TO▁GET▁HE▁WANT▁TO▁PAY▁TWENTY▁EIGHT▁BILLION▁DOLLARS▁FOR▁DARK▁YEAR▁AND▁I'M▁TOTALLY▁WITH▁YOU
+
+Finished

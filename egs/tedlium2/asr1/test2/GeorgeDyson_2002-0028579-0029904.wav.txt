@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/GeorgeDyson_2002-0028579-0029904/data decode/GeorgeDyson_2002-0028579-0029904/log decode/GeorgeDyson_2002-0028579-0029904/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/GeorgeDyson_2002-0028579-0029904/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/GeorgeDyson_2002-0028579-0029904/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/GeorgeDyson_2002-0028579-0029904/log decode/GeorgeDyson_2002-0028579-0029904/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁THEY▁HAD▁A▁LOT▁OF▁FUN▁DOING▁THIS▁BUT▁NO▁CHILDREN▁WERE▁ALLOWED▁MY▁DAD▁COULD▁TELL▁ME▁HE▁WAS▁BUILDING▁A▁SPACESHIP▁AND▁GOING▁TO▁GO▁TO▁SATURN▁BUT▁HE▁COULD▁NOT▁SAY▁ANYTHING▁ABOUT▁SAW▁ALL▁MY▁LIFE▁I▁HAVE▁WANTED▁TO▁FIND▁THE▁STUFF▁OUT▁AND▁SPENT▁THE▁LAST▁FOUR▁YEARS
+
+Finished

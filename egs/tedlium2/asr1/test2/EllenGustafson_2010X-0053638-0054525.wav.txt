@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EllenGustafson_2010X-0053638-0054525/data decode/EllenGustafson_2010X-0053638-0054525/log decode/EllenGustafson_2010X-0053638-0054525/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EllenGustafson_2010X-0053638-0054525/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EllenGustafson_2010X-0053638-0054525/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EllenGustafson_2010X-0053638-0054525/log decode/EllenGustafson_2010X-0053638-0054525/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SEND▁MADE▁IT'S▁A▁TIME▁FOR▁A▁DIFFERENT▁SENSE▁OF▁PERSONAL▁RESPONSIBILITY▁AND▁FOOD▁CHOICE▁BECAUSE▁THE▁CHOICE▁IS▁ACTUALLY▁CHOICES▁INSTEAD▁OF▁THREE▁QUARTERS▁OF▁THE▁PRODUCTS▁BEING▁MADE▁JUST▁FROM▁CORN▁SOY▁AND▁WHEAT
+
+Finished

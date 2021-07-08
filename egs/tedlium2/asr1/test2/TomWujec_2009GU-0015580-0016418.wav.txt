@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/TomWujec_2009GU-0015580-0016418/data decode/TomWujec_2009GU-0015580-0016418/log decode/TomWujec_2009GU-0015580-0016418/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/TomWujec_2009GU-0015580-0016418/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/TomWujec_2009GU-0015580-0016418/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/TomWujec_2009GU-0015580-0016418/log decode/TomWujec_2009GU-0015580-0016418/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁THE▁NORTH▁STAR▁CORRESPONDS▁TO▁THE▁M▁CENTER▁OF▁THE▁DEVICE▁THE▁ECLIPTIC▁WHICH▁IS▁THE▁PATH▁OF▁THE▁SUN▁MOON▁AND▁PLANETS▁CORRESPOND▁TO▁AN▁OFFSET▁CIRCLE
+
+Finished

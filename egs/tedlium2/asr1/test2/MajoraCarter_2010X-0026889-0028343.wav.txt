@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MajoraCarter_2010X-0026889-0028343/data decode/MajoraCarter_2010X-0026889-0028343/log decode/MajoraCarter_2010X-0026889-0028343/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MajoraCarter_2010X-0026889-0028343/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MajoraCarter_2010X-0026889-0028343/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MajoraCarter_2010X-0026889-0028343/log decode/MajoraCarter_2010X-0026889-0028343/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IN▁A▁FEW▁SHORT▁MONTHS▁JUST▁IMAGINE▁THAT▁THE▁AIR▁SURROUNDING▁YOU▁KNOW▁THESE▁PLACES▁IT'S▁FILLED▁WITH▁THE▁RESIDUE▁OF▁EXPLOSIVES▁AND▁COAL▁AND▁WE▁VISITED▁TO▁GIVE▁SOME▁OF▁THE▁PEOPLE▁THAT▁WE▁WERE▁WITH▁US▁THIS▁STRANGE▁LITTLE▁COUGH▁AND▁AFTER▁BEING▁ONLY▁THERE▁FOR▁JUST▁A▁FEW▁HOURS▁OR▁SO▁NOT▁JUST▁MINERS▁BUT▁EVERYBODY
+
+Finished

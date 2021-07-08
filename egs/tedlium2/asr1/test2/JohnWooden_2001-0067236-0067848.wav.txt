@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JohnWooden_2001-0067236-0067848/data decode/JohnWooden_2001-0067236-0067848/log decode/JohnWooden_2001-0067236-0067848/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JohnWooden_2001-0067236-0067848/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JohnWooden_2001-0067236-0067848/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JohnWooden_2001-0067236-0067848/log decode/JohnWooden_2001-0067236-0067848/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WE▁SIMPLY▁HAVEN'T▁MET▁THE▁TEST▁OF▁GIVING▁ALL▁AND▁SAVING▁NONE▁UNTIL▁THE▁GAME▁IS▁REALLY▁WON▁OF▁SHOWING▁WHAT▁IS▁MEANT▁BY▁GRET
+
+Finished

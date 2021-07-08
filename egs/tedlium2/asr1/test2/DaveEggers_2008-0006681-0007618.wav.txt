@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DaveEggers_2008-0006681-0007618/data decode/DaveEggers_2008-0006681-0007618/log decode/DaveEggers_2008-0006681-0007618/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DaveEggers_2008-0006681-0007618/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DaveEggers_2008-0006681-0007618/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DaveEggers_2008-0006681-0007618/log decode/DaveEggers_2008-0006681-0007618/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁IN▁THE▁BROOKLYN▁NEIGHBOURHOOD▁THAT▁I▁LIVED▁AND▁PART▁SLOPED▁THERE▁WERE▁A▁LOT▁OF▁WRITERS▁SINCE▁I▁GOT▁VERY▁HIGH▁PERCAPITA▁ARRATIA▁OF▁WRITERS▁TO▁A▁NORMAL▁PEOPLE▁MEANWHILE▁I▁HAD▁A
+
+Finished

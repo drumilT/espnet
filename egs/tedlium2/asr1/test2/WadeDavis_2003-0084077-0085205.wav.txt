@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0084077-0085205/data decode/WadeDavis_2003-0084077-0085205/log decode/WadeDavis_2003-0084077-0085205/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0084077-0085205/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0084077-0085205/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0084077-0085205/log decode/WadeDavis_2003-0084077-0085205/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁HONEST▁TO▁KNOW▁WELL▁IT▁TURNS▁OUT▁YOU▁TAKE▁EACH▁OF▁THE▁SEVENTEEN▁VARIETIES▁ON▁THE▁NIGHT▁OF▁A▁FULL▁MOON▁AND▁IT▁SINGS▁TO▁YOU▁IN▁A▁DIFFERENT▁KEY▁NOW▁THAT'S▁NOT▁GOING▁TO▁GET▁YOU▁A▁PAGE▁SHE▁HAD▁HARVARD▁BUT▁IT'S▁A▁LOT▁MORE▁INTEREST▁IN▁THE▁COUNTING▁STAMENS
+
+Finished

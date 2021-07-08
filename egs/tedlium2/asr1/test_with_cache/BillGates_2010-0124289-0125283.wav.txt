@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BillGates_2010-0124289-0125283/data decode/BillGates_2010-0124289-0125283/log decode/BillGates_2010-0124289-0125283/fbank
+steps/make_fbank_pitch.sh: moving decode/BillGates_2010-0124289-0125283/data/feats.scp to decode/BillGates_2010-0124289-0125283/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BillGates_2010-0124289-0125283/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BillGates_2010-0124289-0125283/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BillGates_2010-0124289-0125283/log decode/BillGates_2010-0124289-0125283/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁AND▁WE▁START▁OUT▁ACTUALLY▁BY▁TAKING▁THE▁WASTE▁THAT▁EXISTS▁TO▁DAY▁THAT▁SITTING▁IN▁THESE▁COOLING▁POOLS▁ARE▁DRYCASTING▁BY▁REACTORS▁THAT'S▁OUR▁FUEL
+
+Finished

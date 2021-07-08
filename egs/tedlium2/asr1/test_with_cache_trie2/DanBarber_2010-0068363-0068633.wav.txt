@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁GREAT▁FISH▁FARM▁COULD▁ALSO▁A▁BIRD▁BIRD▁SANCTUARY▁GOOD▁A▁FISH▁FARM
+
+Finished

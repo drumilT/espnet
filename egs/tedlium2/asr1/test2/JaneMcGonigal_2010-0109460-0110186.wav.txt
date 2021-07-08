@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JaneMcGonigal_2010-0109460-0110186/data decode/JaneMcGonigal_2010-0109460-0110186/log decode/JaneMcGonigal_2010-0109460-0110186/fbank
+steps/make_fbank_pitch.sh: moving decode/JaneMcGonigal_2010-0109460-0110186/data/feats.scp to decode/JaneMcGonigal_2010-0109460-0110186/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JaneMcGonigal_2010-0109460-0110186/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JaneMcGonigal_2010-0109460-0110186/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JaneMcGonigal_2010-0109460-0110186/log decode/JaneMcGonigal_2010-0109460-0110186/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁SO▁FINALLY▁THE▁LAST▁GAME▁WE'RE▁LAUNCHING▁AT▁MARCH▁THIRD▁THIS▁IS▁A▁GAME▁DONE▁WITH▁THE▁WHIRL▁BANK▁INSTITUTE▁IF▁YOU▁COMPLETE▁THE▁GAME▁YOU▁WILL▁BE
+
+Finished

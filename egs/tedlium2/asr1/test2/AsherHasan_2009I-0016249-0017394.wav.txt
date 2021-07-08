@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AsherHasan_2009I-0016249-0017394/data decode/AsherHasan_2009I-0016249-0017394/log decode/AsherHasan_2009I-0016249-0017394/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AsherHasan_2009I-0016249-0017394/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AsherHasan_2009I-0016249-0017394/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AsherHasan_2009I-0016249-0017394/log decode/AsherHasan_2009I-0016249-0017394/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁INDIANS▁INTO▁A▁BUOYANT▁MIDDLE▁CLASS▁BUT▁THERE▁ARE▁STILL▁OVER▁SIX▁HUNDRED▁AND▁FIFTY▁MILLION▁INDIANS▁PICASANES▁FOR▁A▁LANKINS▁BUNGLER▁ISSUES▁AND▁PARLEYS▁WHO▁REMAIN▁WASHED▁UP▁ON▁THE▁SHORES▁OF▁POVERTY
+
+Finished

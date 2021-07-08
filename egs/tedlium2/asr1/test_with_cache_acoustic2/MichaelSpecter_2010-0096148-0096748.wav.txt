@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁WE▁GOING▁TO▁BE▁HAPPY▁WE▁DO▁I▁KNOW▁THAT▁WE▁CAN▁AND▁AS▁FAR▁AS▁I'M▁CONCERNED
+
+Finished

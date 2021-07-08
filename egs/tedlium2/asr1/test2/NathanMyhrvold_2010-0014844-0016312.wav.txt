@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/NathanMyhrvold_2010-0014844-0016312/data decode/NathanMyhrvold_2010-0014844-0016312/log decode/NathanMyhrvold_2010-0014844-0016312/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/NathanMyhrvold_2010-0014844-0016312/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/NathanMyhrvold_2010-0014844-0016312/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/NathanMyhrvold_2010-0014844-0016312/log decode/NathanMyhrvold_2010-0014844-0016312/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WE▁WERE▁ABLE▁COMPLITHESIS▁IS▁TUKI▁IDEAS▁ONE▁IS▁THAT▁THIS▁IS▁SIMILAR▁TO▁A▁TRIOGENIC▁DOER▁SOMETHING▁YOU▁KEEP▁LIQUID▁NITROGENRIC▁WITH▁HELIUMON▁THEY▁HAVE▁INCREDIBLE▁INSULATIONS▁THAT▁LOTS▁PUT▁SOME▁INCREDIBLE▁INSULATION▁HERE▁THE▁OTHER▁IDEA▁IS▁KIND▁OF▁INTERESTING
+
+Finished

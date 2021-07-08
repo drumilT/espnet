@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁THINK▁ABOUT▁THAT▁IT'S▁AN▁INCREDIBLE▁FACT▁AND▁WHY▁IS▁IT▁TRUE
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JohnUnderkoffler_2010-0057257-0058361/data decode/JohnUnderkoffler_2010-0057257-0058361/log decode/JohnUnderkoffler_2010-0057257-0058361/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JohnUnderkoffler_2010-0057257-0058361/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JohnUnderkoffler_2010-0057257-0058361/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JohnUnderkoffler_2010-0057257-0058361/log decode/JohnUnderkoffler_2010-0057257-0058361/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THAT'S▁THE▁OLD▁WAY▁THAT'S▁THE▁OLD▁MANTOR▁RIGHT▁ONE▁MACHINE▁ONE▁HUMAN▁ONE▁MOUSE▁ONE▁SCREEN▁THAT▁DOESN'T▁REALLY▁CUT▁IT▁ANY▁MORE▁SO▁AH▁IN▁THE▁REAL▁WORLD▁WE▁HAVE▁PEOPLE▁WHO▁COLLABORATE▁WE▁HAVE▁PEOPLE▁WHO▁A
+
+Finished

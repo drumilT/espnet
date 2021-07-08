@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁LET'S▁CALL▁HIM▁DOWN▁TOO
+
+Finished

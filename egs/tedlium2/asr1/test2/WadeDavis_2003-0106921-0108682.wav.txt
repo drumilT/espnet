@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0106921-0108682/data decode/WadeDavis_2003-0106921-0108682/log decode/WadeDavis_2003-0106921-0108682/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0106921-0108682/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0106921-0108682/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0106921-0108682/log decode/WadeDavis_2003-0106921-0108682/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁MORE▁NARROW▁MORALITY▁OF▁THOUGHT▁BUT▁THAT▁WE▁WOULD▁WAKE▁FROM▁A▁DREAM▁ONE▁DAY▁HAVING▁FORGOTTEN▁THAT▁THERE▁WERE▁EVEN▁OTHER▁POSSIBILITIES▁AND▁ITS▁HUMBLING▁TO▁REMEMBER▁THAT▁OUR▁SPECIES▁HAS▁DRAPS▁BEEN▁AROUND▁FOR▁SIX▁HUNDRED▁THOUSAND▁YEARS▁THE▁NEEDLITHIC▁REVOLUTION▁WHICH▁GAVE▁US▁AGRICULTURE▁AT▁WHICH▁TIME▁WE▁SUCCUMB▁TO▁THE▁CULT▁OF▁THE▁SIEGE
+
+Finished

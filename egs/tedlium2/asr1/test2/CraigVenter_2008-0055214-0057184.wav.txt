@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/CraigVenter_2008-0055214-0057184/data decode/CraigVenter_2008-0055214-0057184/log decode/CraigVenter_2008-0055214-0057184/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/CraigVenter_2008-0055214-0057184/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/CraigVenter_2008-0055214-0057184/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/CraigVenter_2008-0055214-0057184/log decode/CraigVenter_2008-0055214-0057184/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THIS▁IS▁A▁MAJOR▁MECHANISM▁OF▁EVOLUTION▁RIGHT▁HERE▁WE▁FIND▁ALL▁KINDS▁OF▁SPECIES▁THAT▁HAVE▁TAKEN▁UP▁A▁SECOND▁CROMIS▁SOMBRE▁A▁THIRD▁ONE▁FROM▁SOMEWHERE▁ADDING▁THOUSANDS▁OF▁NEW▁TRAITS▁IN▁A▁SECOND▁TO▁THAT▁SPECIES▁SO▁PEOPLE▁WHO▁THINK▁OF▁EVOLUTION▁IS▁THIS▁ONE▁JEAN▁CHANGE▁IN▁IT▁TIME▁HAVE▁MISSED▁A▁MUCH▁OF▁BIOLOGY
+
+Finished

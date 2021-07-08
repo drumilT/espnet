@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DeborahRhodes_2010W-0114983-0115835/data decode/DeborahRhodes_2010W-0114983-0115835/log decode/DeborahRhodes_2010W-0114983-0115835/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DeborahRhodes_2010W-0114983-0115835/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DeborahRhodes_2010W-0114983-0115835/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DeborahRhodes_2010W-0114983-0115835/log decode/DeborahRhodes_2010W-0114983-0115835/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BUT▁THIS▁MORTALITY▁BANNER▁IS▁THE▁VERY▁SWORD▁WHICH▁MIMOGRAPHIES▁MOST▁ARDENT▁ADVOCATES▁USE▁TO▁DETER▁INNOVATION
+
+Finished

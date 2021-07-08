@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/IsaacMizrahi_2008-0055309-0056178/data decode/IsaacMizrahi_2008-0055309-0056178/log decode/IsaacMizrahi_2008-0055309-0056178/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/IsaacMizrahi_2008-0055309-0056178/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/IsaacMizrahi_2008-0055309-0056178/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/IsaacMizrahi_2008-0055309-0056178/log decode/IsaacMizrahi_2008-0055309-0056178/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BUT▁I▁AM▁REALLY▁A▁LITTLE▁BORED▁WITH▁HER▁THING▁I▁ALWAYS▁SAID▁TO▁MY▁PARTNER▁MARICA▁GARDINI▁WHO▁BOOKS▁EVERYTHING▁SHE▁BOOKS▁EVERYTHING▁AND▁SHE▁MAKES▁EVERYTHING▁HAPPEN▁AS▁SHE▁MAKES▁SORT▁OF▁DEALS
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MenaTrott_2006-0028870-0029599/data decode/MenaTrott_2006-0028870-0029599/log decode/MenaTrott_2006-0028870-0029599/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MenaTrott_2006-0028870-0029599/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MenaTrott_2006-0028870-0029599/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MenaTrott_2006-0028870-0029599/log decode/MenaTrott_2006-0028870-0029599/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁REACHED▁ALL▁OF▁THESE▁PEOPLE▁AND▁I▁HAD▁TENS▁A▁THOUSAND▁PEOPLE▁READING▁ABOUT▁MY▁LIFE▁EVERY▁DAY▁AND▁THEN▁I▁RODE▁A▁POST▁ABOUT▁A▁BANJO
+
+Finished

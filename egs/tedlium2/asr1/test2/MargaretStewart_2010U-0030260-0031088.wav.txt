@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MargaretStewart_2010U-0030260-0031088/data decode/MargaretStewart_2010U-0030260-0031088/log decode/MargaretStewart_2010U-0030260-0031088/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MargaretStewart_2010U-0030260-0031088/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MargaretStewart_2010U-0030260-0031088/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MargaretStewart_2010U-0030260-0031088/log decode/MargaretStewart_2010U-0030260-0031088/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IF▁YOU▁HAVE▁CONTENT▁THAT▁OTHERS▁ARE▁UPLETING▁TO▁YOU▁TUBE▁YOU▁SHOULD▁REGISTER▁IN▁THE▁CONTENT▁IDEA▁SYSTEM▁AND▁THEN▁YOU'LL▁HAVE▁THE▁CHOICE▁ABOUT▁HOW▁YOUR▁CONTENT▁IS▁USED
+
+Finished

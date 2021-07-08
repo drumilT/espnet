@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MechaiViravaidya_2010X-0007884-0009134/data decode/MechaiViravaidya_2010X-0007884-0009134/log decode/MechaiViravaidya_2010X-0007884-0009134/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MechaiViravaidya_2010X-0007884-0009134/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MechaiViravaidya_2010X-0007884-0009134/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MechaiViravaidya_2010X-0007884-0009134/log decode/MechaiViravaidya_2010X-0007884-0009134/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁WE▁HAD▁VERY▁VERY▁FEW▁DOCTORS▁SO▁WE▁DIDN'T▁TAKE▁NO▁AS▁AN▁ANSWER▁WE▁TOOK▁NO▁AS▁A▁QUESTION▁SO▁WE▁WENT▁TO▁THE▁NURSES▁AND▁THE▁MIDWIVES▁WHO▁WERE▁ALSO▁WOMEN▁AND▁DID▁A▁FANTASTIC▁JOB▁AT▁EXPLAINING▁HOW▁TO▁USE▁THE▁PILL
+
+Finished

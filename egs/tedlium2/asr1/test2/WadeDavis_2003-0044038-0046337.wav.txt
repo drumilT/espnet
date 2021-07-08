@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0044038-0046337/data decode/WadeDavis_2003-0044038-0046337/log decode/WadeDavis_2003-0044038-0046337/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0044038-0046337/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0044038-0046337/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0044038-0046337/log decode/WadeDavis_2003-0044038-0046337/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁FOUND▁RELIGIOUS▁IDEAS▁IT▁CAME▁OVER▁DURING▁THE▁TRAGIC▁DIOSCAR▁OF▁THE▁SLAVEYERRA▁BUT▁WHAT▁MAKES▁VOODOO▁SO▁INTERESTING▁AS▁THAT▁IT'S▁THIS▁LIVING▁RELATIONSHIP▁BETWEEN▁LIVING▁AND▁THE▁DEADS▁THE▁LIVING▁TO▁BIRTH▁HIS▁SPIRITS▁THE▁SPIRITS▁CAN▁BE▁INVOKED▁FROM▁BENEATH▁THE▁GREAT▁WATER▁RESPONDING▁TO▁THE▁RHYTHM▁OF▁THE▁DANCE▁TO▁MOMENTARILY▁DISPLAY▁THE▁SOUL▁OF▁THE▁LIVINGS▁SO▁THAT▁FOR▁THAT▁BRIEF▁SHINING▁MOMENT▁THE▁OKALI▁BECOMES▁THE▁GOD▁THAT'S▁WHY▁THE▁VODUS▁LIKE▁TO▁SAY▁THAT
+
+Finished

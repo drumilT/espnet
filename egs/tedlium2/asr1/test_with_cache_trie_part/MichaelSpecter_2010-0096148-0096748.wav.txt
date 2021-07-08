@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁WOULD▁GOING▁TO▁BE▁HAPPY▁WE▁DO▁I▁MEAN▁THAT▁WE▁CAN▁AND▁AS▁FAR▁AS▁I'M▁CONCERNED
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MarkBittman_2007P-0043405-0044303/data decode/MarkBittman_2007P-0043405-0044303/log decode/MarkBittman_2007P-0043405-0044303/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MarkBittman_2007P-0043405-0044303/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MarkBittman_2007P-0043405-0044303/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MarkBittman_2007P-0043405-0044303/log decode/MarkBittman_2007P-0043405-0044303/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁FOR▁THOSE▁THAT▁YOU▁DON'T▁KNOW▁IS▁SOME▁ONE▁WHO▁EATS▁ONLY▁LOCALLY▁GROWN▁FOOD▁WHICH▁IS▁FINE▁IF▁YOU▁LIVE▁IN▁CALIFORNIA▁BOTH▁REST▁OF▁US▁IT'S▁BIT▁OF▁A▁SAD▁JOKE
+
+Finished

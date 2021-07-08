@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BrianCox_2008-0009729-0011117/data decode/BrianCox_2008-0009729-0011117/log decode/BrianCox_2008-0009729-0011117/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BrianCox_2008-0009729-0011117/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BrianCox_2008-0009729-0011117/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BrianCox_2008-0009729-0011117/log decode/BrianCox_2008-0009729-0011117/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THERE'S▁MAGNETS▁HERIN▁THERE▁AND▁AGAIN▁AND▁HE▁USED▁TENDER▁SIZED▁REAL▁PERSON▁SHE▁GETS▁SOME▁SENSE▁OF▁THE▁SCALE▁AND▁IT'S▁IN▁THERE▁THOSE▁MANY▁BIG▁BANGS▁WILL▁BE▁CREATED▁SOME▁TIME▁IN▁THE▁SUMMER▁THIS▁YEAR▁AND▁ACTUALLY▁THIS▁MORNING▁I▁GOT▁A▁FEMALE▁SAYING▁THAT▁WE'VE▁JUST▁FINISHED▁TO▁DAY
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BjornLomborg_2005-0097664-0098462/data decode/BjornLomborg_2005-0097664-0098462/log decode/BjornLomborg_2005-0097664-0098462/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BjornLomborg_2005-0097664-0098462/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BjornLomborg_2005-0097664-0098462/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BjornLomborg_2005-0097664-0098462/log decode/BjornLomborg_2005-0097664-0098462/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AT▁THE▁END▁OF▁THE▁DAY▁YOU▁CAN▁DISAGREE▁WITH▁THE▁DISCUSSION▁OF▁HOW▁WE▁ACTUALLY▁PARADISE▁THESE▁BUT▁WE▁HAVE▁TO▁BE▁HONEST▁IN▁FRANK▁ABOUT▁SAYING▁IF▁THERE▁ARE▁SOME▁THINGS▁WE▁DO
+
+Finished

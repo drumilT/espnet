@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidCameron_2010-0072678-0073578/data decode/DavidCameron_2010-0072678-0073578/log decode/DavidCameron_2010-0072678-0073578/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidCameron_2010-0072678-0073578/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidCameron_2010-0072678-0073578/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidCameron_2010-0072678-0073578/log decode/DavidCameron_2010-0072678-0073578/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁CIVIL▁SERVICE▁BUT▁YOU▁DIDN'T▁REALLY▁HAVE▁THE▁INFORMATION▁THAT▁IN▁THE▁KNOWLEDGE▁AND▁THE▁ABILITY▁TO▁HELP▁BUILD▁THE▁STRONGER▁SOCIETY▁IN▁THE▁WAY▁TO▁YOU▁DO▁NOW
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/KimGorgens_2010X-0003994-0005125/data decode/KimGorgens_2010X-0003994-0005125/log decode/KimGorgens_2010X-0003994-0005125/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/KimGorgens_2010X-0003994-0005125/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/KimGorgens_2010X-0003994-0005125/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/KimGorgens_2010X-0003994-0005125/log decode/KimGorgens_2010X-0003994-0005125/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BUT▁AM▁I▁GIRL▁FRIENDS▁IN▁GRADUATE▁SCHOOL▁MARIE▁SAID▁CAN▁I▁FIGURED▁IT▁OUT▁IT'S▁NOT▁THAT▁YOU'RE▁MORE▁EROTIC▁THAN▁EVERYONE▁ELSE▁IT'S▁JUST▁THAT▁YOU'RE▁MORE▁HONEST▁ABOUT▁HOUND▁ERRATIC▁YOU▁ARE
+
+Finished

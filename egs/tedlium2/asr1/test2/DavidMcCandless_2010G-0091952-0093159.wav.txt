@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DavidMcCandless_2010G-0091952-0093159/data decode/DavidMcCandless_2010G-0091952-0093159/log decode/DavidMcCandless_2010G-0091952-0093159/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DavidMcCandless_2010G-0091952-0093159/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DavidMcCandless_2010G-0091952-0093159/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DavidMcCandless_2010G-0091952-0093159/log decode/DavidMcCandless_2010G-0091952-0093159/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁ITS▁IS▁MADE▁UP▁A▁CONCEPTS▁IT▁EXPLORES▁OUR▁WELL▁VIEWS▁AND▁IT▁HELPS▁US▁WHAT▁HELPS▁ME▁ANYWAY▁TO▁SEE▁WHAT▁OTHERS▁THINK▁AND▁TO▁SEE▁WHERE▁THEY▁ARE▁COMING▁FROM▁AND▁IT▁FEELS▁JUST▁INCREDIBLY▁COOL▁TO▁DO▁THAT
+
+Finished

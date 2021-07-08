@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ElizabethLesser_2010W-0031458-0032162/data decode/ElizabethLesser_2010W-0031458-0032162/log decode/ElizabethLesser_2010W-0031458-0032162/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ElizabethLesser_2010W-0031458-0032162/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ElizabethLesser_2010W-0031458-0032162/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ElizabethLesser_2010W-0031458-0032162/log decode/ElizabethLesser_2010W-0031458-0032162/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁FOUR▁AND▁A▁HALF▁YEARS▁OF▁STRUGGLE▁AGAINST▁LIES▁STUPIDITY▁AND▁AND▁COWARDICE▁WHO▁WROTE▁THAT
+
+Finished

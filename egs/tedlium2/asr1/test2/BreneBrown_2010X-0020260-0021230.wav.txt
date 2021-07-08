@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BreneBrown_2010X-0020260-0021230/data decode/BreneBrown_2010X-0020260-0021230/log decode/BreneBrown_2010X-0020260-0021230/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BreneBrown_2010X-0020260-0021230/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BreneBrown_2010X-0020260-0021230/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BreneBrown_2010X-0020260-0021230/log decode/BreneBrown_2010X-0020260-0021230/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WERE▁HERE▁IT'S▁WHAT▁GIVES▁PURPOSE▁AND▁MEANING▁TO▁OUR▁LIVES▁THIS▁IS▁THIS▁IS▁WHAT▁IT'S▁ALL▁ABOUT▁IT▁DOESN'T▁MATTER▁WHETHER▁YOU▁TALK▁TO▁PEOPLE▁WHO▁WERE▁IN▁SOCIAL▁JUSTICE▁AND▁MIDDLE▁HEALTH
+
+Finished

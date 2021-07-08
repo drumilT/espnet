@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MikeRowe_2008P-0053227-0054365/data decode/MikeRowe_2008P-0053227-0054365/log decode/MikeRowe_2008P-0053227-0054365/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MikeRowe_2008P-0053227-0054365/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MikeRowe_2008P-0053227-0054365/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MikeRowe_2008P-0053227-0054365/log decode/MikeRowe_2008P-0053227-0054365/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁I'VE▁BEEN▁HAVING▁HIM▁OVER▁TWO▁HUNDRED▁DIRTY▁JOBS▁I▁HAVE▁HIM▁ALL▁THE▁TIME▁BUT▁THAT▁ONE▁THAT▁ONE▁DRILLED▁SOMETHING▁HOME▁IN▁A▁WAY▁THAT▁I▁JUST▁WASN'T▁PREPARED▁FOR▁AND▁AS▁I▁STOOD▁THERE
+
+Finished

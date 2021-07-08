@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/IanDunbar_2007P-0050852-0052084/data decode/IanDunbar_2007P-0050852-0052084/log decode/IanDunbar_2007P-0050852-0052084/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/IanDunbar_2007P-0050852-0052084/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/IanDunbar_2007P-0050852-0052084/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/IanDunbar_2007P-0050852-0052084/log decode/IanDunbar_2007P-0050852-0052084/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁DOGS▁ACTUALLY▁EUTHENISED▁NOW▁BUT▁THIS▁WAS▁A▁DOG▁I▁WORKED▁WITH▁FOR▁A▁WHILE▁AND▁A▁LOT▁OF▁THE▁AGGRESSION▁HAPPENED▁ROUND▁THE▁KITCHEN▁SO▁WHILE▁I▁WAS▁THERE▁THAT▁WAS▁ON▁THE▁FOURTH▁VISIT▁WE▁DID▁A▁FOUR▁AND▁A▁HALF▁HOUR▁DOWN▁STAY▁WITH▁THE▁DOG▁ON▁HIS▁MAT
+
+Finished

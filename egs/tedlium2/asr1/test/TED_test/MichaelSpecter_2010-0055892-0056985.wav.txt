@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MichaelSpecter_2010-0055892-0056985/data decode/MichaelSpecter_2010-0055892-0056985/log decode/MichaelSpecter_2010-0055892-0056985/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MichaelSpecter_2010-0055892-0056985/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MichaelSpecter_2010-0055892-0056985/data/feats.scp decode/download/tedlium2.transformer.v1/data/train_trim_sp/cmvn.ark decode/MichaelSpecter_2010-0055892-0056985/log decode/MichaelSpecter_2010-0055892-0056985/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁why▁because▁we▁don't▁have▁polio▁and▁you▁know▁what▁we▁didn't▁have▁polio▁in▁this▁country▁yesterday▁today▁i▁don't▁know▁maybe▁a▁guy▁got▁on▁a▁plane▁in▁lagos▁this▁morning▁and▁he's▁flying▁to▁lax▁right▁now▁he's▁over▁ohio
+
+Finished

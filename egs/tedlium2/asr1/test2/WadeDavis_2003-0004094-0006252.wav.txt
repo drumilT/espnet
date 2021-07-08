@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0004094-0006252/data decode/WadeDavis_2003-0004094-0006252/log decode/WadeDavis_2003-0004094-0006252/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0004094-0006252/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0004094-0006252/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0004094-0006252/log decode/WadeDavis_2003-0004094-0006252/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BUDDHA▁STILL▁PURSUE▁THE▁BREATH▁OF▁THE▁DAMA▁IS▁TO▁REALLY▁REMEMBER▁THE▁CENTRAL▁REVELATION▁OF▁ANTHROPOLOGY▁AND▁THAT▁IS▁THE▁IDEA▁THAT▁THE▁WORLD▁IN▁WHICH▁WE▁LIVE▁IN▁DOES▁NOT▁EXIST▁IN▁SOME▁ABSOLUTE▁SENSE▁BUT▁IS▁JUST▁ONE▁MODEL▁OF▁REALITY▁THE▁CONSEQUENCE▁OF▁ONE▁PARTICULAR▁SET▁OF▁A▁ADAPT▁OF▁CHOICES▁THAT▁OUR▁LINEAGE▁MADE▁ALBEIT▁SUCCESSFULLY▁MANY▁GENERATIONS▁AGO
+
+Finished

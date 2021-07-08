@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/CraigVenter_2008-0015526-0016702/data decode/CraigVenter_2008-0015526-0016702/log decode/CraigVenter_2008-0015526-0016702/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/CraigVenter_2008-0015526-0016702/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/CraigVenter_2008-0015526-0016702/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/CraigVenter_2008-0015526-0016702/log decode/CraigVenter_2008-0015526-0016702/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁OUR▁ABILITY▁TO▁WRITE▁THE▁GENETICOAT▁HAS▁BEEN▁MOVING▁PRETTY▁SLOWLY▁UP▁BUT▁HAS▁A▁BEEN▁INCREASING▁AND▁OUR▁LATEST▁POINT▁WOULD▁PUT▁IT▁ON▁NOW▁UNEXPONENTIAL▁CURVE
+
+Finished

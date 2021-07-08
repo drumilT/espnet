@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DorisKearnsGoodwin_2008-0066326-0067686/data decode/DorisKearnsGoodwin_2008-0066326-0067686/log decode/DorisKearnsGoodwin_2008-0066326-0067686/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DorisKearnsGoodwin_2008-0066326-0067686/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DorisKearnsGoodwin_2008-0066326-0067686/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DorisKearnsGoodwin_2008-0066326-0067686/log decode/DorisKearnsGoodwin_2008-0066326-0067686/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁HE▁HAD▁ALL▁THE▁MONEY▁HE▁NEEDED▁TO▁PURSUE▁ANY▁LEISURE▁ACTIVITY▁HE▁WANTED▁HE▁OWNED▁A▁SPACIOUS▁RANCH▁IN▁THE▁COUNTRY▁SIDE▁OF▁PENTOS▁IN▁THE▁CITY'S▁SAILBOAT▁SPEED▁BOATS▁HE▁HAD▁SERVANTS▁TO▁ANSWER▁ANY▁WHIM▁AND▁HE▁HAD▁A▁FAMILY▁WHO▁LOVED▁HIM▁DEEPLY
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MichelleObama_2009P-0043846-0044805/data decode/MichelleObama_2009P-0043846-0044805/log decode/MichelleObama_2009P-0043846-0044805/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MichelleObama_2009P-0043846-0044805/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MichelleObama_2009P-0043846-0044805/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MichelleObama_2009P-0043846-0044805/log decode/MichelleObama_2009P-0043846-0044805/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁DIFFERENCE▁BETWEEN▁A▁STRUGGLING▁FAMILY▁AND▁A▁HEALTHY▁ONE▁IS▁OFTEN▁THE▁PRESENCE▁OF▁AN▁EMPOWERED▁WOMAN▁OR▁WOMEN▁AT▁THE▁CENTRE▁OF▁THAT▁FAMILY
+
+Finished

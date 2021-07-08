@@ -1,0 +1,17 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/GaryFlake_2010-0015469-0018126/data decode/GaryFlake_2010-0015469-0018126/log decode/GaryFlake_2010-0015469-0018126/fbank
+steps/make_fbank_pitch.sh: moving decode/GaryFlake_2010-0015469-0018126/data/feats.scp to decode/GaryFlake_2010-0015469-0018126/data/.backup
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/GaryFlake_2010-0015469-0018126/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/home/drumil/exp/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/GaryFlake_2010-0015469-0018126/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/GaryFlake_2010-0015469-0018126/log decode/GaryFlake_2010-0015469-0018126/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WE▁THINK▁IT▁CHANGES▁THE▁WAY▁INFORMATION▁CAN▁BE▁USED▁SO▁ON▁AN▁EXTRAPULATE▁ON▁THIS▁IDEA▁BENT▁WITH▁SOMETHING▁OF▁THE▁LITTLE▁A▁CRAZY▁WHAT▁WE'VE▁DONE▁HERE▁IS▁WE'VE▁TAKEN▁EVERY▁SINGLE▁WICKPEEDIA▁PAGE▁AND▁WE▁REDUCED▁IT▁DOWN▁TO▁A▁LITTLE▁SUMMARY▁SO▁THE▁SUMMARY▁CONSISTS▁OF▁JUST▁LITTLE▁SYNOPSIS▁AND▁THE▁ICON▁TO▁INDICATE▁THE▁TOPICAL▁AIRY▁THAT▁IT▁COMES▁FROM▁I'M▁ONLY▁SHOWING▁THE▁TOP▁FIVE▁HUNDRED▁MOST▁POPULAR▁WICKAPETIA▁PAGES▁STRAIGHT▁HERE▁EVEN▁IN▁THIS▁OMNISTIC▁VIEW
+
+Finished

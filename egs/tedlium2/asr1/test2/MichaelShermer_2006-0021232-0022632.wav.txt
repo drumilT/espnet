@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MichaelShermer_2006-0021232-0022632/data decode/MichaelShermer_2006-0021232-0022632/log decode/MichaelShermer_2006-0021232-0022632/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MichaelShermer_2006-0021232-0022632/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MichaelShermer_2006-0021232-0022632/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MichaelShermer_2006-0021232-0022632/log decode/MichaelShermer_2006-0021232-0022632/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WHAT'S▁THE▁MORE▁LIKELY▁EXPLANATION▁AND▁BEFORE▁WE▁SAY▁SOMETHING▁IS▁OUT▁OF▁THIS▁WORLD▁WE▁SHOULD▁FIRST▁MAKE▁SURE▁THAT▁IT'S▁NOT▁IN▁THIS▁WORLD▁WHAT'S▁MORE▁LIKELY▁THAT▁ARNOLD▁HAD▁A▁LITTLE▁EXTRATERRESTRIAL▁HELP▁IN▁HIS▁RUN▁FOR▁THE▁GOVERNORSHIP▁OR▁THAT▁THE▁WORLD▁WEEKLY▁NEWS▁MAKES▁STUFF▁UP
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AuretvanHeerden_2010G-0050443-0051178/data decode/AuretvanHeerden_2010G-0050443-0051178/log decode/AuretvanHeerden_2010G-0050443-0051178/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AuretvanHeerden_2010G-0050443-0051178/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AuretvanHeerden_2010G-0050443-0051178/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AuretvanHeerden_2010G-0050443-0051178/log decode/AuretvanHeerden_2010G-0050443-0051178/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁ONLY▁HOW▁TO▁PREVENT▁THAT▁BUT▁I'M▁AT▁LEAST▁GOING▁TO▁USE▁MY▁GOOD▁OFFICES▁TO▁GET▁YOU▁FOLKS▁TOGETHER▁TO▁COME▁UP▁WITH▁THE▁RESPONSE
+
+Finished

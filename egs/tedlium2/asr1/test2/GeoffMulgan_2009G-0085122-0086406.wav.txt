@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/GeoffMulgan_2009G-0085122-0086406/data decode/GeoffMulgan_2009G-0085122-0086406/log decode/GeoffMulgan_2009G-0085122-0086406/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/GeoffMulgan_2009G-0085122-0086406/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/GeoffMulgan_2009G-0085122-0086406/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/GeoffMulgan_2009G-0085122-0086406/log decode/GeoffMulgan_2009G-0085122-0086406/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁I▁THINK▁WHAT▁THIS▁IS▁ALL▁ABOUT▁IN▁THIS▁WHOLE▁MOVEMENT▁WHICH▁IS▁GROWING▁FROM▁THE▁MARGIN'S▁REMAINS▁QUITE▁SMALL▁NOTHING▁LIKE▁THE▁RESOURCES▁OF▁A▁SURN▁OR▁A▁DARKER▁AND▁I▁BE▁EMERA▁DU▁PONT▁WHAT▁ITS▁TELLING▁US▁IS▁A▁CAPITALISM▁IS▁GOING▁TO▁BECOME▁MORE▁SOCIAL
+
+Finished

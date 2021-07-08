@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AimeeMullins_1998-0027433-0028573/data decode/AimeeMullins_1998-0027433-0028573/log decode/AimeeMullins_1998-0027433-0028573/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AimeeMullins_1998-0027433-0028573/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AimeeMullins_1998-0027433-0028573/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AimeeMullins_1998-0027433-0028573/log decode/AimeeMullins_1998-0027433-0028573/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THESE▁POSTERS▁AND▁THE▁MAGAZINE▁COVERS▁OF▁HE▁BELIEVES▁COACH▁AND▁WAS▁THAT▁WE▁GOT▁STOCKING▁IN▁IT▁TURNED▁TO▁BE▁A▁GREAT▁PARTNERSHIP▁BECAUSE▁HE'D▁NEVER▁COACHED▁A▁SABLE▁ATHLEY▁SO▁THERE▁FOR▁HE▁HAD▁NO
+
+Finished

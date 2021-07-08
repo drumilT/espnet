@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MargaretWertheim_2009-0027345-0028679/data decode/MargaretWertheim_2009-0027345-0028679/log decode/MargaretWertheim_2009-0027345-0028679/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MargaretWertheim_2009-0027345-0028679/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MargaretWertheim_2009-0027345-0028679/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MargaretWertheim_2009-0027345-0028679/log decode/MargaretWertheim_2009-0027345-0028679/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁WE▁GOT▁INVITED▁TO▁DO▁THE▁WHOLE▁THING▁IN▁NEW▁YORK▁AND▁IN▁LONDON▁AND▁IN▁LOS▁ANGELES▁AND▁IN▁EACH▁OF▁THESE▁CITIES▁THE▁LOCAL▁CITIZEN▁HUNDREDS▁AND▁HUNDREDS▁OF▁THEM▁HAVE▁MADE▁A▁REEFED▁IN▁MORE▁AND▁MORE▁PEOPLE▁YET▁INVOLVED▁OF▁THIS▁MOST▁OF▁WHOM
+
+Finished

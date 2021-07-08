@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁THEY▁FEED▁IT▁BY▁DRAINING▁THE▁LAND▁THEY▁BUILT▁THIS▁INTRICATE▁SERIES▁OF▁CANALS
+
+Finished

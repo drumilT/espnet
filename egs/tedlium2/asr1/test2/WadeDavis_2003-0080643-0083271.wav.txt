@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0080643-0083271/data decode/WadeDavis_2003-0080643-0083271/log decode/WadeDavis_2003-0080643-0083271/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0080643-0083271/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0080643-0083271/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0080643-0083271/log decode/WadeDavis_2003-0080643-0083271/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁MORE▁PLOTS▁TO▁THE▁UNRELATED▁PLANTS▁THAT▁WHEN▁COMBINED▁IN▁THIS▁WAY▁CREATED▁A▁KIND▁OF▁BILE▁CHEMICAL▁VERSION▁OF▁THE▁HOME▁AND▁GREAT▁IN▁THE▁SOME▁OF▁THE▁PARTS▁BUT▁WE▁USE▁THAT▁GREAT▁EUPHEMISM▁TRIAL▁IN▁THE▁ERROR▁WHICH▁IS▁EXPOSED▁TO▁BE▁MEANINGLESS▁BUT▁YOU▁ASK▁THE▁INDIANS▁AND▁THEY▁SAY▁THE▁PLANTS▁TALK▁TO▁US▁OR▁WHAT▁DOES▁THAT▁MEAN▁THIS▁TRIED▁THE▁KOFAN▁HAS▁SEVENTEEN▁VARIETIES▁OF▁IOWASKA▁ALL▁OF▁WHICH▁THEY'RE▁A▁GREAT▁DISTANCE▁IN▁THE▁FOREST▁ALL▁OF▁WHICH▁ARE▁REFERABLE▁TO▁OUR▁EYE
+
+Finished

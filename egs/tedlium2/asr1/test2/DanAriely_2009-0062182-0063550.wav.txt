@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/DanAriely_2009-0062182-0063550/data decode/DanAriely_2009-0062182-0063550/log decode/DanAriely_2009-0062182-0063550/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/DanAriely_2009-0062182-0063550/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/DanAriely_2009-0062182-0063550/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/DanAriely_2009-0062182-0063550/log decode/DanAriely_2009-0062182-0063550/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BUT▁THIS▁DID▁NOT▁SOLVE▁THE▁BIG▁PROBLEM▁AHEAD▁WITH▁ANYONE▁YET▁BECAUSE▁IN▁ANY▁ONE▁IS▁ALSO▁A▁SOCIAL▁ELEMENT▁PEOPLE▁SEEK▁ARE▁THE▁BEHAVING▁IN▁FACT▁EVERY▁DAY▁WHEN▁WE▁OPEN▁THE▁NEWS▁WE▁SEE▁A▁EXAMPLES▁OF▁PEOPLE▁CHEATING▁WHAT▁DOES▁THIS▁CAUSES▁US
+
+Finished

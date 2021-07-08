@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/KateOrff_2010W-0019349-0020666/data decode/KateOrff_2010W-0019349-0020666/log decode/KateOrff_2010W-0019349-0020666/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/KateOrff_2010W-0019349-0020666/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/KateOrff_2010W-0019349-0020666/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/KateOrff_2010W-0019349-0020666/log decode/KateOrff_2010W-0019349-0020666/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁EVERYTHING▁IN▁YELLOW▁IS▁UPLAND▁BUT▁YOU▁CAN▁SEE▁EVEN▁JUST▁LIKE▁INTO▁IT▁FROM▁THIS▁MAP▁THAT▁THE▁HARBOUR▁HAS▁SORT▁BEEN▁DREDGED▁AND▁FLATTENED▁ON▁AND▁WENT▁FROM▁A▁RICH▁THREE▁DIMENSIONAL▁MOSAIC▁TO▁KIND▁OF▁FLAT▁MOCK▁AND▁REALLY▁A▁MATTER▁OF▁YEARS
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0065973-0067336/data decode/WadeDavis_2003-0065973-0067336/log decode/WadeDavis_2003-0065973-0067336/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0065973-0067336/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0065973-0067336/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0065973-0067336/log decode/WadeDavis_2003-0065973-0067336/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THAT▁MADE▁ME▁A▁DIFFERENT▁HUMAN▁BEING▁THAN▁MY▁FRIENDS▁AMONGST▁THE▁QUAGIOS▁WHO▁BELIEVED▁THAT▁THOSE▁FORCES▁WERE▁THE▁ABODE▁OF▁HOOKUK▁AND▁THE▁CROOKED▁BEAK▁OF▁HEAVEN▁AND▁THE▁CANNIBAL▁SPIRITS▁THAT▁DWELLED▁AT▁THE▁NORTH▁END▁OF▁THE▁WORLD▁SPIRITS▁THEY▁WOULD▁HAVE▁TO▁ENGAGE▁DURING▁THEIR▁HOMITZA▁INITIATION
+
+Finished

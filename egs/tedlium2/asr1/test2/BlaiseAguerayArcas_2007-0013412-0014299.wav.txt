@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BlaiseAguerayArcas_2007-0013412-0014299/data decode/BlaiseAguerayArcas_2007-0013412-0014299/log decode/BlaiseAguerayArcas_2007-0013412-0014299/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BlaiseAguerayArcas_2007-0013412-0014299/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BlaiseAguerayArcas_2007-0013412-0014299/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BlaiseAguerayArcas_2007-0013412-0014299/log decode/BlaiseAguerayArcas_2007-0013412-0014299/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁OF▁COURSE▁MAPPING▁IS▁ONE▁OF▁THOSE▁REALLY▁OBVIOUS▁APPLICATIONS▁FOR▁A▁TECHNOLOGY▁LIKE▁THIS▁AND▁AND▁THIS▁ONE▁I▁I▁REALLY▁WON'T▁SPEND▁ANY▁TIME▁ON▁EXCEPT▁TO▁SAY▁THAT▁WE▁HAVE▁THINGS▁TO▁CONTRIBUTE▁TO▁THIS▁FIELD▁AS▁WELL
+
+Finished

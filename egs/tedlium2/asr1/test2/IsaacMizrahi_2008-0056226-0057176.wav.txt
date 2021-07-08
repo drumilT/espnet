@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/IsaacMizrahi_2008-0056226-0057176/data decode/IsaacMizrahi_2008-0056226-0057176/log decode/IsaacMizrahi_2008-0056226-0057176/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/IsaacMizrahi_2008-0056226-0057176/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/IsaacMizrahi_2008-0056226-0057176/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/IsaacMizrahi_2008-0056226-0057176/log decode/IsaacMizrahi_2008-0056226-0057176/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁I▁ALWAYS▁TELL▁HER▁THAT▁I▁FIND▁MYSELF▁WITH▁A▁LOT▁OF▁TIME▁ON▁THE▁COMPUTER▁BRIDGE▁PROGRAMME▁TOO▁MUCH▁TIME▁ON▁COMPUTER▁BRIDGE▁WHICH▁IS▁INOP▁LIKE▁THAT'S▁SO▁AND
+
+Finished

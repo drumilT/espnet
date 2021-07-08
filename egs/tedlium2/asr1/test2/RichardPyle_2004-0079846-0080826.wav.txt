@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/RichardPyle_2004-0079846-0080826/data decode/RichardPyle_2004-0079846-0080826/log decode/RichardPyle_2004-0079846-0080826/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/RichardPyle_2004-0079846-0080826/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/RichardPyle_2004-0079846-0080826/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/RichardPyle_2004-0079846-0080826/log decode/RichardPyle_2004-0079846-0080826/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁WITH▁A▁BLACK▁SPOT▁AND▁THEN▁I▁THOUGHT▁AH▁DAMN▁I▁SHOULD▁A▁CAUGHT▁ONE▁AH▁AND▁I▁THINK▁THAT'S▁A▁NEW▁SPECIES▁AN▁ADVENTURE▁GOT▁ROUND▁LOOKING▁IN▁MY▁BUCKET▁SURE▁ENOUGH▁I▁HAD▁CAUGHT▁ONE▁I▁JUST▁COMPLETELY▁FORGOT▁THAT▁I▁HAD▁CAUGHT▁ONE
+
+Finished

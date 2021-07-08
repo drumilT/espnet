@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁MOST▁OF▁THEM▁DO▁ANYWAY▁AND▁THEY'RE▁INEFFICIENT▁TAKE▁TUNA▁MAJOR▁DRAWBACK
+
+Finished

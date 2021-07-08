@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JimmyWales_2005G-0067245-0068022/data decode/JimmyWales_2005G-0067245-0068022/log decode/JimmyWales_2005G-0067245-0068022/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JimmyWales_2005G-0067245-0068022/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JimmyWales_2005G-0067245-0068022/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JimmyWales_2005G-0067245-0068022/log decode/JimmyWales_2005G-0067245-0068022/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁TOOLS▁AND▁THE▁SOFT▁WARE▁THERE'S▁LOTS▁OF▁TOOLS▁THAT▁ALLOW▁US▁ALLOW▁US▁MEANING▁THE▁COMMUNITY▁TO▁SELF▁MONITOR▁AND▁TO▁MONITOR▁ALL▁THE▁WORK▁THIS▁IS▁AN▁EXAMPLE▁OF▁A▁PAGE▁HISTORY
+
+Finished

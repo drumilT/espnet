@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AlaindeBotton_2009G-0011886-0012882/data decode/AlaindeBotton_2009G-0011886-0012882/log decode/AlaindeBotton_2009G-0011886-0012882/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AlaindeBotton_2009G-0011886-0012882/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AlaindeBotton_2009G-0011886-0012882/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AlaindeBotton_2009G-0011886-0012882/log decode/AlaindeBotton_2009G-0011886-0012882/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁ACCORDING▁TO▁HOW▁YOU▁ANSWER▁THAT▁QUESTION▁PEOPLE▁ARE▁EITHER▁INCREDIBLY▁DELIGHTED▁TO▁SEE▁YOU▁OR▁LOOK▁AT▁THEY▁WATCH▁AND▁MAKE▁THEIR▁EXCUSES▁NOW▁THE▁OPPOSITE▁OF▁A▁SNOB▁IS▁YOUR▁MOTHER▁ER
+
+Finished

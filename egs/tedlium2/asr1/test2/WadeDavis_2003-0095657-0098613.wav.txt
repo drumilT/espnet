@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0095657-0098613/data decode/WadeDavis_2003-0095657-0098613/log decode/WadeDavis_2003-0095657-0098613/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0095657-0098613/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0095657-0098613/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0095657-0098613/log decode/WadeDavis_2003-0095657-0098613/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁INTO▁THE▁MOUNTAINS▁OF▁THIBET▁WHERE▁I'M▁DOING▁A▁LOT▁OF▁RESEARCH▁RECENTLY▁YOU'LL▁SEE▁IT'S▁A▁CRUDE▁FACE▁OF▁POLITICAL▁DOMINATION▁NO▁GENESIDE▁THE▁PHYSICAL▁EXTINCTION▁OF▁A▁PEOPLE▁IS▁UNIVERSALLY▁CONDEMNED▁BUT▁ETHNE'S▁SIDE▁THE▁DESTRUCTION▁OF▁A▁PEOPLE'S▁WAY▁OF▁LIFE▁IS▁NOT▁ONLY▁NOT▁CONDEMNED▁IT'S▁UNIVERSALLY▁IN▁MANY▁QUARTERS▁CELEBRATED▁AS▁PART▁OF▁A▁DEVELOPMENT▁STRATEGY▁AND▁YOU▁CANNOT▁UNDERSTAND▁THE▁PAIN▁OF▁TH▁TIBET▁UNTIL▁YOU▁MOVE▁THROUGH▁IT▁THE▁GROUND▁LEVELUE▁I▁WANTS▁TRAVELS▁TOURSY▁AND▁CHINA▁OVER
+
+Finished

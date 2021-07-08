@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0038778-0041342/data decode/WadeDavis_2003-0038778-0041342/log decode/WadeDavis_2003-0038778-0041342/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0038778-0041342/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0038778-0041342/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0038778-0041342/log decode/WadeDavis_2003-0038778-0041342/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁BUT▁AT▁THE▁SAME▁TIME▁THEY▁HAD▁A▁PERSPICACIOUS▁KNOWLEDGE▁OF▁THE▁FORCE▁THAT▁WAS▁ASTONISHING▁THEIR▁HUNTERS▁COULD▁SMELL▁ANIMAL▁URN▁AT▁FORTY▁PACES▁AND▁TELL▁YOU▁WHAT▁SPECIES▁LEFT▁IT▁BEHIND▁IN▁THE▁EARLY▁EIGHTIES▁I▁HAD▁REALLY▁ASTONISHING▁ASSIGNMENT▁WHEN▁I▁WAS▁ASKED▁BY▁MY▁PROFESSOR▁AT▁HARVARD▁IF▁I▁WAS▁INSTANT▁GOING▁DOWN▁TO▁HAITI▁A▁INFULTATING▁THE▁SECRET▁SOCIETIES▁WHICH▁WERE▁THE▁FOUNDATION▁OF▁DOVALIA'S▁STRENGTH▁AND▁THE▁TONTAMACCOUT▁AND▁THE▁POISON▁USED▁TO▁MAKE▁XAMBIS
+
+Finished

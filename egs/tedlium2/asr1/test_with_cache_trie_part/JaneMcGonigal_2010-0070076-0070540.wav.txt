@@ -1,0 +1,5 @@
+stage 3: Decoding
+
+Recognized text: ▁NOT▁LIKE▁ME▁EMMA▁GOING▁DESIGN▁I▁AM▁EXUBERANT▁BUT▁HE▁SAYS▁HE▁SAYS
+
+Finished

@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/ClayShirky_2005G-0053479-0054295/data decode/ClayShirky_2005G-0053479-0054295/log decode/ClayShirky_2005G-0053479-0054295/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/ClayShirky_2005G-0053479-0054295/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/ClayShirky_2005G-0053479-0054295/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/ClayShirky_2005G-0053479-0054295/log decode/ClayShirky_2005G-0053479-0054295/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IS▁ACTUALLY▁HERE▁WAY▁TO▁THE▁LEFT▁THAT▁SOUNDS▁STRANGE▁TO▁OUR▁EARS▁BUT▁WHAT▁ENDS▁UP▁HAPPENING▁IS▁THAT▁EIGHTY▁PER▁CENT▁OF▁THE▁CONTRIBUTORS
+
+Finished

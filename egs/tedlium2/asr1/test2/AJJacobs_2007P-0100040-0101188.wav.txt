@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AJJacobs_2007P-0100040-0101188/data decode/AJJacobs_2007P-0100040-0101188/log decode/AJJacobs_2007P-0100040-0101188/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AJJacobs_2007P-0100040-0101188/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AJJacobs_2007P-0100040-0101188/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AJJacobs_2007P-0100040-0101188/log decode/AJJacobs_2007P-0100040-0101188/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁I'VE▁ALSO▁HAD▁SOME▁MEALS▁THAT▁MADE▁ME▁WANT▁A▁DRIVE▁HEAVE▁SO▁IT'S▁ABOUT▁CHOOSING▁THE▁PARTS▁OF▁THE▁BIBLE▁ABOUT▁COMPASSION▁A▁ABOUT▁TOLERANCE▁ABOUT▁LOVING▁YOUR▁NEIGHBOUR▁AS▁OPPOSED▁TO▁THE▁PARTS
+
+Finished

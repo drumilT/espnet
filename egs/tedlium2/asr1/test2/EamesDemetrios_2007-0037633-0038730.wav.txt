@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/EamesDemetrios_2007-0037633-0038730/data decode/EamesDemetrios_2007-0037633-0038730/log decode/EamesDemetrios_2007-0037633-0038730/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/EamesDemetrios_2007-0037633-0038730/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/EamesDemetrios_2007-0037633-0038730/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/EamesDemetrios_2007-0037633-0038730/log decode/EamesDemetrios_2007-0037633-0038730/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THEY▁DIDN'T▁OBSESS▁ABOUT▁STYLE▁FOR▁ITS▁OWN▁SAKE▁AND▁SINCE▁THEY▁ARE▁STYLE▁AS▁CURVES▁THAT'S▁MAKE▁THE▁HOUSE▁CURRY▁THEYNCE▁THEY▁ARE▁OUR▁STYLE▁IS▁GRIGGS▁LEST▁MAKE▁THE▁CHAIR▁GRITTY▁THEY▁SPOKEST▁ON▁THE▁KNEE▁THEY▁TRIED▁TO▁SOLVE▁THE▁DESIGN
+
+Finished

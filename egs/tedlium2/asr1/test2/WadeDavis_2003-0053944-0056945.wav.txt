@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0053944-0056945/data decode/WadeDavis_2003-0053944-0056945/log decode/WadeDavis_2003-0053944-0056945/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0053944-0056945/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0053944-0056945/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0053944-0056945/log decode/WadeDavis_2003-0053944-0056945/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁ARE▁INCULTURATED▁INTO▁THE▁VALLEYS▁OF▁THEIR▁SOCIETY▁VALUES▁THAT▁MAINTAIN▁THE▁PROPOSITION▁THAT▁THEIR▁PRAYERS▁AND▁THEIR▁PRAYERS▁ALONE▁MAINTAIN▁THE▁COSMIC▁OR▁WE▁MIGHT▁SAY▁THE▁ETHOLOGICAL▁BALANCE▁AND▁AT▁THE▁END▁OF▁THIS▁AMAZING▁INITIATION▁ONE▁DAY▁THEIR▁SUDDENLY▁TAKEN▁OUT▁AND▁FOR▁THE▁FIRST▁TIME▁IN▁THEIR▁LIVES▁THE▁AGE▁OF▁EIGHTEEN▁THEY▁SEE▁A▁SUN▁RIDES▁AND▁IN▁THAT▁CRYSTAL▁MOMENT▁OF▁AWARENESS▁THE▁FIRST▁LIGHT▁AS▁IF▁SUN▁BEGINS▁TO▁BATHE▁THE▁SLOPES▁OF▁THIS▁STUNNINGLY▁BEAUTIFUL▁LANDSCAPE'S▁AND▁IN▁THE▁ABSTRACT▁THEY▁HAVE▁LEARNED▁AND▁IN▁THE▁ABSTRACT▁AND▁IS▁THE▁IN▁THE▁INSUNNING▁GLORY
+
+Finished

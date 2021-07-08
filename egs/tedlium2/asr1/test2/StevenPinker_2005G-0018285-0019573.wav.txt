@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/StevenPinker_2005G-0018285-0019573/data decode/StevenPinker_2005G-0018285-0019573/log decode/StevenPinker_2005G-0018285-0019573/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/StevenPinker_2005G-0018285-0019573/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/StevenPinker_2005G-0018285-0019573/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/StevenPinker_2005G-0018285-0019573/log decode/StevenPinker_2005G-0018285-0019573/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IN▁A▁EXPLAINING▁HOW▁CHILDREN▁LEARN▁LANGUAGE▁PROBLEM▁IN▁A▁TEACHING▁LANGUAGE▁TO▁ADOLF▁SO▁THAT▁THEY▁DON'T▁MAKE▁GRAMMATICAL▁ERRORS▁PROBLEM▁IN▁PROGRAMME▁AND▁COMPUTERS▁TO▁USE▁LANGUAGE▁IS▁WHICH▁VERBS▁GO▁IN▁WHICH▁CONSTRUCTIONS
+
+Finished

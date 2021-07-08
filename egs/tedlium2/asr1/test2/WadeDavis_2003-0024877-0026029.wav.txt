@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/WadeDavis_2003-0024877-0026029/data decode/WadeDavis_2003-0024877-0026029/log decode/WadeDavis_2003-0024877-0026029/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/WadeDavis_2003-0024877-0026029/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/WadeDavis_2003-0024877-0026029/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/WadeDavis_2003-0024877-0026029/log decode/WadeDavis_2003-0024877-0026029/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁OF▁AN▁AGED▁AND▁TONGUE▁AND▁I▁KNOW▁THERE'S▁SOME▁OF▁YOU▁SAY▁WELL▁WOULDN'T▁BE▁BETTER▁WHEN▁THE▁WORLD▁BE▁A▁BETTER▁PLACE▁IF▁WE▁ALL▁JUST▁SPOKE▁ONE▁LANGUAGE▁AND▁I▁SAY▁GREAT▁LET'S▁MAKE▁THAT▁LANGUAGE▁YOUR▁BY▁LET'S▁MAKE▁A▁CANTONIES▁LET'S▁MAKE▁IT
+
+Finished

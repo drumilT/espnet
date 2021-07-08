@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/AlGore_2009-0015409-0016856/data decode/AlGore_2009-0015409-0016856/log decode/AlGore_2009-0015409-0016856/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/AlGore_2009-0015409-0016856/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/AlGore_2009-0015409-0016856/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/AlGore_2009-0015409-0016856/log decode/AlGore_2009-0015409-0016856/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IN▁THE▁HIMALAYAS▁THE▁THIRD▁LARGEST▁MASS▁OF▁ICE▁AT▁THE▁TOP▁YOU▁SEE▁NEW▁LAKES▁WHICH▁A▁FEW▁YEARS▁AGO▁WERE▁GLACIERS▁FORTY▁PER▁CENT▁OF▁ALL▁THE▁PEOPLE▁IN▁THE▁WORLD▁GET▁HALF▁OF▁THEIR▁DRINKING▁WATER▁FROM▁THAT▁MELTING▁FLOW▁IN▁THE▁ANDES▁THIS▁GLACIER▁IS▁THE▁SOURCE▁OF▁DRINKING▁WATER▁FOR▁THIS▁CITY
+
+Finished

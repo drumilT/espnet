@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/JohnDelaney_2010Z-0073391-0074388/data decode/JohnDelaney_2010Z-0073391-0074388/log decode/JohnDelaney_2010Z-0073391-0074388/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/JohnDelaney_2010Z-0073391-0074388/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/JohnDelaney_2010Z-0073391-0074388/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/JohnDelaney_2010Z-0073391-0074388/log decode/JohnDelaney_2010Z-0073391-0074388/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IT'S▁A▁VERY▁POWERFUL▁SYSTEM▁AND▁MOST▁OF▁OUR▁COMMUNICATION▁CONSIST▁OF▁IT▁SO▁THIS▁IS▁THE▁SYSTEM▁THAT▁I'M▁TALKING▁ABOUT▁OFF▁THE▁WEST▁COAST▁IS▁COINCIDENT▁WITH▁THE▁TECHTONIC▁PLATE▁THE▁WONDERFUL▁TETONIC▁PLATE
+
+Finished

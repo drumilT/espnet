@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/VilayanurRamachandran_2007-0102483-0103515/data decode/VilayanurRamachandran_2007-0102483-0103515/log decode/VilayanurRamachandran_2007-0102483-0103515/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/VilayanurRamachandran_2007-0102483-0103515/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/VilayanurRamachandran_2007-0102483-0103515/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/VilayanurRamachandran_2007-0102483-0103515/log decode/VilayanurRamachandran_2007-0102483-0103515/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁THE▁BONUS▁IS▁THE▁PAIN▁DISAPPEARS▁BECAUSE▁YOU▁CAN'T▁HAVE▁DISEMBODIED▁PAIN▁FLOATING▁OUT▁THERE▁IN▁SPACE▁SO▁THAT'S▁THE▁BONES▁NOW▁THIS▁TECHNIQUE▁HAS▁BEEN▁TRIED▁ON▁DOZENS▁OF▁PACES▁BY▁OTHER▁GROUPS▁IN▁HELSINKI
+
+Finished

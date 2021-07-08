@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/MechaiViravaidya_2010X-0030333-0031527/data decode/MechaiViravaidya_2010X-0030333-0031527/log decode/MechaiViravaidya_2010X-0030333-0031527/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/MechaiViravaidya_2010X-0030333-0031527/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/MechaiViravaidya_2010X-0030333-0031527/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/MechaiViravaidya_2010X-0030333-0031527/log decode/MechaiViravaidya_2010X-0030333-0031527/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁AND▁SINCE▁IT▁WAS▁NEAR▁LANDSTIME▁THEY▁SAID▁OR▁I▁WILL▁GIVE▁YOU▁SOME▁LUNCH▁OF▁COURSE▁IT▁MUST▁BE▁AMERICAN▁COAL▁A▁HUE▁THAT▁TWO▁BRANDS▁COOK▁AND▁PEPTY▁AND▁THEN▁THE▁FOOD▁IT'S▁EITHER▁HAMBURG▁OR▁HOT▁DOG▁I▁THOUGHT▁A▁HOT▁DOG▁WOULD▁BE▁MORE▁SYMBOLIC
+
+Finished

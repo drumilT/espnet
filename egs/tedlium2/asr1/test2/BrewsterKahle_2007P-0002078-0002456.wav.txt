@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/BrewsterKahle_2007P-0002078-0002456/data decode/BrewsterKahle_2007P-0002078-0002456/log decode/BrewsterKahle_2007P-0002078-0002456/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/BrewsterKahle_2007P-0002078-0002456/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/BrewsterKahle_2007P-0002078-0002456/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/BrewsterKahle_2007P-0002078-0002456/log decode/BrewsterKahle_2007P-0002078-0002456/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁IF▁WE▁DON'T▁DO▁THAT▁WE'RE▁GOING▁TO▁GET▁THE▁GENERATION▁WE▁DESERVE
+
+Finished

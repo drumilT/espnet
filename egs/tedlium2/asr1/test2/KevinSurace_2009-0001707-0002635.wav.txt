@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/KevinSurace_2009-0001707-0002635/data decode/KevinSurace_2009-0001707-0002635/log decode/KevinSurace_2009-0001707-0002635/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/KevinSurace_2009-0001707-0002635/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/KevinSurace_2009-0001707-0002635/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/KevinSurace_2009-0001707-0002635/log decode/KevinSurace_2009-0001707-0002635/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁TO▁THE▁CLIMATE▁IT▁IS▁UNPOLIEVABLY▁BAD▁THIS▁IS▁OBVIOUSLY▁THAT▁FAMOUS▁VIEW▁NOW▁OF▁THE▁ARCTIC▁WHICH▁IS▁LIKELY▁TO▁BE▁GONE▁AT▁THIS▁POINT▁IN▁THE▁NEXT▁THREE▁OR▁FOUR▁OR▁FIVE▁YEARS
+
+Finished

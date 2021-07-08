@@ -1,0 +1,16 @@
+stage 0: Data preparation
+stage 1: Feature Generation
+steps/make_fbank_pitch.sh --cmd run.pl --nj 1 --write_utt2num_frames true decode/SugataMitra_2007P-0109908-0110859/data decode/SugataMitra_2007P-0109908-0110859/log decode/SugataMitra_2007P-0109908-0110859/fbank
+utils/validate_data_dir.sh: WARNING: you have only one speaker.  This probably a bad idea.
+   Search for the word 'bold' in http://kaldi-asr.org/doc/data_prep.html
+   for more information.
+utils/validate_data_dir.sh: Successfully validated data-directory decode/SugataMitra_2007P-0109908-0110859/data
+steps/make_fbank_pitch.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating filterbank & pitch features for data
+/exp/drumil/espnet/egs/tedlium2/asr1/../../../utils/dump.sh --cmd run.pl --nj 1 --do_delta false decode/SugataMitra_2007P-0109908-0110859/data/feats.scp decode/download/librispeech.transformer.v1/data/train_960/cmvn.ark decode/SugataMitra_2007P-0109908-0110859/log decode/SugataMitra_2007P-0109908-0110859/dump
+stage 2: Json Data Preparation
+stage 3: Decoding
+
+Recognized text: ▁A▁TYPICAL▁EXAMPLE▁BEING▁SOMETIMES▁IT▁IS▁NECESSARY▁TO▁TELL▁LIVES▁THEY▁DON'T▁HAVE▁A▁WAY▁TO▁DETERMINE▁WITH▁WHICH▁WE▁ARE▁TO▁ANSWER▁THE▁QUESTION▁BUT▁HAVE▁NONE▁OF▁US
+
+Finished
