@@ -235,7 +235,7 @@ if [ ${stage} -le 3 ] && [ ${stop_stage} -ge 3 ]; then
         recog_opts=""
     fi
     feat_recog_dir=${decode_dir}/dump
-
+    speech=$(echo $base | cut -f1 -d-)
     ${decode_cmd} ${decode_dir}/log/decode.log \
         asr_recog.py \
         --config ${decode_config} \
@@ -247,6 +247,8 @@ if [ ${stage} -le 3 ] && [ ${stop_stage} -ge 3 ]; then
         --result-label ${decode_dir}/result.json \
         --model ${recog_model} \
         --api ${api} \
+        --cache-trie-file first_pass/corrects/${speech} \
+        --cache-trie-weight 5.0 \
         ${recog_opts}
 
     echo ""

@@ -14,9 +14,9 @@ fi
 
 # general configuration
 backend=pytorch
-stage=3        # start from 0 if you need to start from data preparation
+stage=0        # start from 0 if you need to start from data preparation
 stop_stage=100
-ngpu=0         # number of gpus ("0" uses cpu, otherwise use gpu)
+ngpu=1         # number of gpus ("0" uses cpu, otherwise use gpu)
 debugmode=1
 verbose=1     # verbose option
 
@@ -235,7 +235,7 @@ if [ ${stage} -le 3 ] && [ ${stop_stage} -ge 3 ]; then
         recog_opts=""
     fi
     feat_recog_dir=${decode_dir}/dump
-
+    speech=$(echo $base | cut -f1 -d-)
     ${decode_cmd} ${decode_dir}/log/decode.log \
         asr_recog.py \
         --config ${decode_config} \
@@ -247,6 +247,7 @@ if [ ${stage} -le 3 ] && [ ${stop_stage} -ge 3 ]; then
         --result-label ${decode_dir}/result.json \
         --model ${recog_model} \
         --api ${api} \
+        --cache-file first_pass/corrects/${speech} \
         ${recog_opts}
 
     echo ""
