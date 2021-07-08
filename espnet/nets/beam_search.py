@@ -89,7 +89,8 @@ class BeamSearch(torch.nn.Module):
                 self.full_scorers[k] = v
             if isinstance(v, torch.nn.Module):
                 self.nn_dict[k] = v
-
+        #print(self.full_scorers.keys())
+        #print(self.part_scorers.keys())
         # set configurations
         self.sos = sos
         self.eos = eos
@@ -166,10 +167,19 @@ class BeamSearch(torch.nn.Module):
                 and state values of `self.full_scorers`
 
         """
+        #print("full_scores", self.full_scorers)
         scores = dict()
         states = dict()
         for k, d in self.full_scorers.items():
             scores[k], states[k] = d.score(hyp.yseq, hyp.states[k], x)
+        #logging.info( scores["decoder"])
+        #logging.info( states["decoder"])
+        #print(scores["decoder"])
+        #_, indices =torch.topk(scores["decoder"],2)
+        #print( [ self.token_list[i] for i in indices])
+        if "cache_trie" in self.full_scorers.keys() and (self.full_scorers["cache_trie"] is not None):
+           #print(scores["cache_trie"].shape,scores["decoder"].shape)
+           scores["cache_trie"] = torch.exp(scores["decoder"])*scores["cache_trie"]
         return scores, states
 
     def score_partial(
@@ -190,6 +200,7 @@ class BeamSearch(torch.nn.Module):
                 and state values of `self.part_scorers`
 
         """
+        #print("part_scores", self.part_scorers)
         scores = dict()
         states = dict()
         for k, d in self.part_scorers.items():
@@ -214,6 +225,8 @@ class BeamSearch(torch.nn.Module):
         """
         # no pre beam performed
         if weighted_scores.size(0) == ids.size(0):
+        
+            #print( [ self.token_list[i] for i in weighted_scores.topk(3)[1]])
             top_ids = weighted_scores.topk(self.beam_size)[1]
             return top_ids, top_ids
 
@@ -223,6 +236,10 @@ class BeamSearch(torch.nn.Module):
         weighted_scores[ids] = tmp
         top_ids = weighted_scores.topk(self.beam_size)[1]
         local_ids = weighted_scores[ids].topk(self.beam_size)[1]
+        #logging.info( "In beam with beam size"+ str(self.beam_size) )
+        logging.info( [ self.token_list[i] for i in weighted_scores.topk(3)[1]])
+        #logging.info( [ self.token_list[i] for i in local_ids])
+        
         return top_ids, local_ids
 
     @staticmethod
@@ -316,6 +333,7 @@ class BeamSearch(torch.nn.Module):
             # update hyps
             for j, part_j in zip(*self.beam(weighted_scores, part_ids)):
                 # will be (2 x beam at most)
+                #logging.info("post beam j- {},token j{},part j{}".format(j,self.token_list[j],part_j))
                 best_hyps.append(
                     Hypothesis(
                         score=weighted_scores[j],
@@ -326,10 +344,10 @@ class BeamSearch(torch.nn.Module):
                         states=self.merge_states(states, part_states, part_j),
                     )
                 )
-
+            #print("####")
             # sort and prune 2 x beam -> beam
             best_hyps = sorted(best_hyps, key=lambda x: x.score, reverse=True)[
-                : min(len(best_hyps), self.beam_size)
+                : min(len(best_hyps),self.beam_size)
             ]
         return best_hyps
 
@@ -363,7 +381,7 @@ class BeamSearch(torch.nn.Module):
         running_hyps = self.init_hyp(x)
         ended_hyps = []
         for i in range(maxlen):
-            logging.debug("position " + str(i))
+            logging.info("position " + str(i))
             best = self.search(running_hyps, x)
             # post process of one iteration
             running_hyps = self.post_process(i, maxlen, maxlenratio, best, ended_hyps)
@@ -400,7 +418,7 @@ class BeamSearch(torch.nn.Module):
         logging.info(f"normalized log probability: {best.score / len(best.yseq):.2f}")
         logging.info(f"total number of ended hypotheses: {len(nbest_hyps)}")
         if self.token_list is not None:
-            logging.info(
+            logging.debug(
                 "best hypo: "
                 + "".join([self.token_list[x] for x in best.yseq[1:-1]])
                 + "\n"
