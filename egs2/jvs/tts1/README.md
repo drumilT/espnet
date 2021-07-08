@@ -1,7 +1,13 @@
-# ESPnet2 JVS TTS recipe
+# JVS RECIPE
+
+This is the recipe of the adaptation with Japanese single speaker in [JVS](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus) corpus.
 
 This recipe assumes the use of pretrained model.
 Please follow the usage to perform fine-tuning with pretrained model.
+
+See the following pages before asking the question:
+- [ESPnet2 Tutorial](https://espnet.github.io/espnet/espnet2_tutorial.html)
+- [ESPnet2 TTS FAQ](../../TEMPLATE/tts1/README.md#faq)
 
 ## How to run
 
@@ -23,7 +29,7 @@ If you have your own pretrained model, you can skip this step.
 
 ```sh
 $ . ./path.sh
-$ espnet_model_zoo_download --unpack true --cache_dir downloads kan-bayashi/jsut_tacotron2
+$ espnet_model_zoo_download --unpack true --cachedir downloads kan-bayashi/jsut_tacotron2
 ```
 
 You can find the other pretrained models in [ESPnet model zoo](https://github.com/espnet/espnet_model_zoo/blob/master/espnet_model_zoo/table.csv).
@@ -61,15 +67,14 @@ Now ready to perform fine-tuning!
 
 Run the recipe from stage 6.
 
-You need to specify `--pretrain_path` and `--pretrain_key` for `--train_args` to load pretrained parameters (Or you can write them in `*.yaml` config).
-If you want to load the entire network, please specify `--pretrain_key null`.
+You need to specify `--init_param` for `--train_args` to load pretrained parameters (Or you can write them in `*.yaml` config).
 
 ```sh
 # NOTE: The path may be changed. Please change it to match with your case.
 
 # Recommend using --tag to name the experiment directory
 $ ./run.sh --stage 6 --train_config conf/tuning/finetune_tacotron2.yaml \
-    --train_args "--pretrain_path downloads/2dc62478870c846065fe39e609ba6657/exp/tts_train_tacotron2_raw_phn_jaconv_pyopenjtalk/199epoch.pth --pretrain_key null" \
+    --train_args "--init_param downloads/2dc62478870c846065fe39e609ba6657/exp/tts_train_tacotron2_raw_phn_jaconv_pyopenjtalk/199epoch.pth" \
     --tag finetune_jsut_pretrained_tacotron2
 ```
 

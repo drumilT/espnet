@@ -15,11 +15,12 @@ ${CXX:-g++} -v
     if ${USE_CONDA}; then
         ./setup_anaconda.sh venv espnet ${ESPNET_PYTHON_VERSION}
     else
-        ./setup_python.sh "$(which python3)" venv
+        ./setup_python.sh "$(command -v python3)" venv
     fi
+    . ./activate_python.sh
     make TH_VERSION="${TH_VERSION}"
 
-    make nkf.done moses.done mwerSegmenter.done pesq pyopenjtalk.done py3mmseg.done
+    make warp-ctc.done warp-transducer.done chainer_ctc.done nkf.done moses.done mwerSegmenter.done pesq pyopenjtalk.done py3mmseg.done
     rm -rf kaldi
 )
 . tools/activate_python.sh

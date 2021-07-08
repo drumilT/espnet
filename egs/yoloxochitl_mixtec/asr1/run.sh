@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Copyright 2020 Johns Hopkins University (Shinji Watanabe)
 #  Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
@@ -29,6 +29,7 @@ annodir=${download_dir}/Transcriptions-for-ASR/ELAN-files-with-underlying-and-su
 # feature configuration
 do_delta=false
 
+preprocess_config=conf/specaug.yaml
 train_config=conf/train.yaml
 lm_config=conf/lm.yaml
 decode_config=conf/decode.yaml
@@ -74,10 +75,23 @@ if [ ${stage} -le 0 ] && [ ${stop_stage} -ge 0 ]; then
                               -m ${annotation_type} -i local/speaker_wav_mapping_mixtec_remove_reserve.csv \
                               -f ${text_format}
 
-    data/${annotation_id}/remix_script.sh
+    chmod +x ./data/${annotation_id}/remix_script.sh
+    ./data/${annotation_id}/remix_script.sh
 
-    # split by speakers ( official split of data)
-    local/split_tr_dt_et.sh ${annotation_id} ${train_set} ${train_dev} ${test_set} local/spk-train-test-split.txt
+    # ESPNet Version (same as voxforge)
+    # consider duplicated sentences (does not consider speaker split)
+    # filter out the same sentences (also same text) of test&dev set from validated set
+    local/split_tr_dt_et.sh data/${annotation_id} data/${train_set} data/${train_dev} data/${test_set}
+
+    # add speed perturbation
+    train_set_org=${train_set}
+    utils/perturb_data_dir_speed.sh 0.9 data/${train_set_org} data/temp1
+    utils/perturb_data_dir_speed.sh 1.0 data/${train_set_org} data/temp2
+    utils/perturb_data_dir_speed.sh 1.1 data/${train_set_org} data/temp3
+    train_set=train_${annotation_id}_sp
+    utils/combine_data.sh --extra-files utt2uniq data/${train_set} data/temp1 data/temp2 data/temp3
+    rm -r data/temp1 data/temp2 data/temp3
+
 fi
 
 feat_tr_dir=${dumpdir}/${train_set}/delta${do_delta}; mkdir -p ${feat_tr_dir}
@@ -189,6 +203,7 @@ if [ ${stage} -le 4 ] && [ ${stop_stage} -ge 4 ]; then
         --config ${train_config} \
         --ngpu ${ngpu} \
         --backend ${backend} \
+        --preprocess-conf ${preprocess_config} \
         --outdir ${expdir}/results \
         --tensorboard-dir tensorboard/${expname} \
         --debugmode ${debugmode} \
@@ -205,7 +220,9 @@ if [ ${stage} -le 5 ] && [ ${stop_stage} -ge 5 ]; then
     echo "stage 5: Decoding"
     nj=4
     if [[ $(get_yaml.py ${train_config} model-module) = *transformer* ]] || \
-       [[ $(get_yaml.py ${train_config} model-module) = *conformer* ]]; then
+           [[ $(get_yaml.py ${train_config} model-module) = *conformer* ]] || \
+           [[ $(get_yaml.py ${train_config} etype) = custom ]] || \
+           [[ $(get_yaml.py ${train_config} dtype) = custom ]]; then
 	recog_model=model.last${n_average}.avg.best
 	average_checkpoints.py --backend ${backend} \
 			       --snapshots ${expdir}/results/snapshot.ep.* \

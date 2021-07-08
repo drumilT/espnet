@@ -13,7 +13,7 @@ from espnet.nets.pytorch_backend.transformer import plot
 def make_arg(**kwargs):
     defaults = dict(
         adim=2,
-        aheads=2,
+        aheads=1,
         dropout_rate=0.0,
         transformer_attn_dropout_rate=None,
         elayers=1,
@@ -44,29 +44,27 @@ def prepare(args):
     odim = 5
     model = E2E(idim, odim, args)
     batchsize = 2
-    x = torch.randn(batchsize, 10, idim)
     ilens = [10, 9]
-    n_token = odim - 1
-    y_src = (torch.rand(batchsize, 4) * n_token % n_token).long()
-    y_tgt = (torch.rand(batchsize, 4) * n_token % n_token).long()
     olens = [3, 4]
+    n_token = odim - 1
+    x = torch.randn(batchsize, max(ilens), idim)
+    y_src = (torch.rand(batchsize, max(olens)) * n_token % n_token).long()
+    y_tgt = (torch.rand(batchsize, max(olens)) * n_token % n_token).long()
     for i in range(batchsize):
         x[i, ilens[i] :] = -1
         y_tgt[i, olens[i] :] = model.ignore_id
         y_src[i, olens[i] :] = model.ignore_id
 
-    data = []
+    data = {}
+    uttid_list = []
     for i in range(batchsize):
-        data.append(
-            (
-                "utt%d" % i,
-                {
-                    "input": [{"shape": [ilens[i], idim]}],
-                    "output": [{"shape": [olens[i]]}],
-                },
-            )
-        )
-    return model, x, torch.tensor(ilens), y_tgt, y_src, data
+        data["utt%d" % i] = {
+            "input": [{"shape": [ilens[i], idim]}],
+            "output": [{"shape": [olens[i]]}],
+        }
+        uttid_list.append("utt%d" % i)
+
+    return model, x, torch.tensor(ilens), y_tgt, y_src, data, uttid_list
 
 
 ldconv_lconv_args = dict(
@@ -138,7 +136,7 @@ def _savefn(*args, **kwargs):
 )
 def test_transformer_trainable_and_decodable(model_dict):
     args = make_arg(**model_dict)
-    model, x, ilens, y_tgt, y_src, data = prepare(args)
+    model, x, ilens, y_tgt, y_src, data, uttid_list = prepare(args)
 
     # test beam search
     trans_args = argparse.Namespace(
@@ -162,7 +160,7 @@ def test_transformer_trainable_and_decodable(model_dict):
     attn_dict = model.calculate_all_attentions(
         x[0:1], ilens[0:1], y_tgt[0:1], y_src[0:1]
     )
-    plot.plot_multi_head_attention(data, attn_dict, "", savefn=_savefn)
+    plot.plot_multi_head_attention(data, uttid_list, attn_dict, "", savefn=_savefn)
 
     # test CTC plot
     ctc_probs = model.calculate_all_ctc_probs(

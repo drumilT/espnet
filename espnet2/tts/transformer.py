@@ -158,8 +158,8 @@ class Transformer(AbsTTS):
         positionwise_conv_kernel_size: int = 1,
         use_scaled_pos_enc: bool = True,
         use_batch_norm: bool = True,
-        encoder_normalize_before: bool = False,
-        decoder_normalize_before: bool = False,
+        encoder_normalize_before: bool = True,
+        decoder_normalize_before: bool = True,
         encoder_concat_after: bool = False,
         decoder_concat_after: bool = False,
         reduction_factor: int = 1,
@@ -361,7 +361,7 @@ class Transformer(AbsTTS):
         self._reset_parameters(
             init_type=init_type,
             init_enc_alpha=init_enc_alpha,
-            init_dec_alpha=init_enc_alpha,
+            init_dec_alpha=init_dec_alpha,
         )
 
     def _reset_parameters(self, init_type, init_enc_alpha=1.0, init_dec_alpha=1.0):
