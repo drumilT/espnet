@@ -4,7 +4,7 @@ import json
 import logging
 
 import torch
-
+import numpy as np
 from espnet.asr.asr_utils import add_results_to_json
 from espnet.asr.asr_utils import get_model_conf
 from espnet.asr.asr_utils import torch_load
@@ -31,6 +31,7 @@ def recog_v2(args):
         See py:func:`espnet.bin.asr_recog.get_parser` for details
 
     """
+    print("In V2")
     logging.warning("experimental API for custom LMs is selected by --api v2")
     if args.batchsize > 1:
         raise NotImplementedError("multi-utt batch decoding is not implemented")
@@ -75,18 +76,48 @@ def recog_v2(args):
             ngram = NgramPartScorer(args.ngram_model, train_args.char_list)
     else:
         ngram = None
+    print("printing Cache")
+    if args.cache_file:
+        from espnet.nets.scorers.cache import CacheFullScorer
+        from espnet.nets.scorers.cache import CachePartScorer
+
+        if args.cache_scorer == "full":
+            cache = CacheFullScorer(args.cache_file, train_args.char_list)
+        else:
+            cache = CachePartScorer(args.cache_file, train_args.char_list)
+    else:
+        cache = None
+
+    
+    if args.cache_trie_file:
+        print("printing Cache Trie")
+        from espnet.nets.scorers.cache_trie import CacheTrieFullScorer
+        from espnet.nets.scorers.cache_trie import CacheTriePartScorer
+        
+        if args.cache_trie_scorer == "full":
+            cache_trie = CacheTrieFullScorer(args.cache_trie_file, train_args.char_list)
+        else:
+            cache_trie = CacheTriePartScorer(args.cache_trie_file, train_args.char_list)
+    else:
+        cache_trie = None
+    
 
     scorers = model.scorers()
     scorers["lm"] = lm
     scorers["ngram"] = ngram
     scorers["length_bonus"] = LengthBonus(len(train_args.char_list))
+    scorers["cache"] = cache
+    scorers["cache_trie"] = cache_trie
     weights = dict(
         decoder=1.0 - args.ctc_weight,
         ctc=args.ctc_weight,
         lm=args.lm_weight,
+        cache=args.cache_weight,
         ngram=args.ngram_weight,
         length_bonus=args.penalty,
+        cache_trie=args.cache_trie_weight,
     )
+    print(scorers)
     beam_search = BeamSearch(
         beam_size=args.beam_size,
         vocab_size=len(train_args.char_list),
@@ -134,9 +165,12 @@ def recog_v2(args):
             batch = [(name, js[name])]
             feat = load_inputs_and_targets(batch)[0][0]
             enc = model.encode(torch.as_tensor(feat).to(device=device, dtype=dtype))
+            logging.info( enc.shape)
+            #logging.info(torch.argmax(enc,axis=-1))
             nbest_hyps = beam_search(
                 x=enc, maxlenratio=args.maxlenratio, minlenratio=args.minlenratio
             )
+            #print(nbest_hyps)
             nbest_hyps = [
                 h.asdict() for h in nbest_hyps[: min(len(nbest_hyps), args.nbest)]
             ]
